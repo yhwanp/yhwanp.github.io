@@ -3,11 +3,11 @@
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>개발 일기</title>
+    <title>devNote</title>
     <link>https://yhwanp.github.io/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
-    <description></description>
+    <description>devNote</description>
     <pubDate>Sat, 13 Jul 2019 06:35:01 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
