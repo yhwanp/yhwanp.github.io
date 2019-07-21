@@ -11,6 +11,8 @@
     
     
     
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/feed.xml">
+    
     <script type="application/ld+json">{"@context":"http://schema.org","@type":"Website","@id":"https://yhwanp.github.io","author":{"@type":"Person","name":"younghwan park","sameAs":["https://github.com/","http://stackoverflow.com/users","https://twitter.com/","https://facebook.com/","https://plus.google.com/","https://www.linkedin.com/profile/","mailto"]},"name":"개발 일기","description":null,"url":"https://yhwanp.github.io"}</script>
     <meta property="og:type" content="blog">
 <meta property="og:title" content="개발 일기">
@@ -34,11 +36,20 @@
     <link rel="stylesheet" href="/assets/css/tranquilpeak.css">
     <!--STYLES END-->
     
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143811384-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-143811384-1');
+    </script>
+
 
     
 
     
-    <link rel="canonical" href="https://yhwanp.github.io/"/>
+    <link rel="canonical" href="https://yhwanp.github.io/">
 </head>
 
     <body>
@@ -51,21 +62,13 @@
 <header id="header" data-behavior="1">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
-        <a
-            class="header-title-link"
-            href="/ "
-            aria-label=""
-        >
+        <a class="header-title-link" href="/ " aria-label>
             개발 일기
         </a>
     </div>
     
         
-            <a
-                class="header-right-picture "
-                href="#about"
-                aria-label="Open the link: /#about"
-            >
+            <a class="header-right-picture " href="#about" aria-label="Open the link: /#about">
         
         
         </a>
@@ -83,11 +86,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/ "
-                            
-                            title="Home"
-                        >
+                        <a class="sidebar-button-link " href="/ " title="Home">
                     
                         <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Home</span>
@@ -96,11 +95,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/all-categories"
-                            
-                            title="Categories"
-                        >
+                        <a class="sidebar-button-link " href="/all-categories" title="Categories">
                     
                         <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Categories</span>
@@ -109,11 +104,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/all-tags"
-                            
-                            title="Tags"
-                        >
+                        <a class="sidebar-button-link " href="/all-tags" title="Tags">
                     
                         <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Tags</span>
@@ -122,11 +113,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/all-archives"
-                            
-                            title="Archives"
-                        >
+                        <a class="sidebar-button-link " href="/all-archives" title="Archives">
                     
                         <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Archives</span>
@@ -135,11 +122,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link open-algolia-search"
-                             href="#search"
-                            
-                            title="Search"
-                        >
+                        <a class="sidebar-button-link open-algolia-search" href="#search" title="Search">
                     
                         <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Search</span>
@@ -148,11 +131,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="#about"
-                            
-                            title="About"
-                        >
+                        <a class="sidebar-button-link " href="#about" title="About">
                     
                         <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">About</span>
@@ -165,7 +144,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link " href="https://github.com/" target="_blank" rel="noopener" title="GitHub">
+                        <a class="sidebar-button-link " href="https://github.com/" target="_blank" rel="external nofollow noopener noreferrer" title="GitHub">
                     
                         <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">GitHub</span>
@@ -174,7 +153,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link " href="http://stackoverflow.com/users" target="_blank" rel="noopener" title="Stack Overflow">
+                        <a class="sidebar-button-link " href="http://stackoverflow.com/users" target="_blank" rel="external nofollow noopener noreferrer" title="Stack Overflow">
                     
                         <i class="sidebar-button-icon fab fa-stack-overflow" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Stack Overflow</span>
@@ -183,7 +162,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link " href="https://twitter.com/" target="_blank" rel="noopener" title="Twitter">
+                        <a class="sidebar-button-link " href="https://twitter.com/" target="_blank" rel="external nofollow noopener noreferrer" title="Twitter">
                     
                         <i class="sidebar-button-icon fab fa-twitter" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Twitter</span>
@@ -192,7 +171,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link " href="https://facebook.com/" target="_blank" rel="noopener" title="Facebook">
+                        <a class="sidebar-button-link " href="https://facebook.com/" target="_blank" rel="external nofollow noopener noreferrer" title="Facebook">
                     
                         <i class="sidebar-button-icon fab fa-facebook" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Facebook</span>
@@ -201,7 +180,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link " href="https://plus.google.com/" target="_blank" rel="noopener" title="Google +">
+                        <a class="sidebar-button-link " href="https://plus.google.com/" target="_blank" rel="external nofollow noopener noreferrer" title="Google +">
                     
                         <i class="sidebar-button-icon fab fa-google-plus" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Google +</span>
@@ -210,7 +189,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link " href="https://www.linkedin.com/profile/" target="_blank" rel="noopener" title="LinkedIn">
+                        <a class="sidebar-button-link " href="https://www.linkedin.com/profile/" target="_blank" rel="external nofollow noopener noreferrer" title="LinkedIn">
                     
                         <i class="sidebar-button-icon fab fa-linkedin" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">LinkedIn</span>
@@ -219,10 +198,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/mailto"
-                            title="Mail"
-                        >
+                        <a class="sidebar-button-link " href="/mailto" title="Mail">
                     
                         <i class="sidebar-button-icon fa fa-envelope" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Mail</span>
@@ -235,11 +211,7 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/atom.xml"
-                            
-                            title="RSS"
-                        >
+                        <a class="sidebar-button-link " href="/atom.xml" title="RSS">
                     
                         <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">RSS</span>
@@ -252,8 +224,7 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
-                 class="
+            <div id="main" data-behavior="1" class="
                         hasCoverMetaIn
                         ">
                 <section class="postShorten-group main-content-wrap">
@@ -265,11 +236,7 @@
             <div class="postShorten-header">
                 <h1 class="postShorten-title">
                     
-                        <a
-                            class="link-unstyled"
-                            href="/2019/07/13/Test-writ-post-글쓰기-테스트/"
-                            aria-label=": Test writ post / 글쓰기 테스트"
-                        >
+                        <a class="link-unstyled" href="/2019/07/13/Test-writ-post-글쓰기-테스트/" aria-label=": Test writ post / 글쓰기 테스트">
                             Test writ post / 글쓰기 테스트
                         </a>
                     
@@ -294,11 +261,7 @@
                     
                     
                         <p>
-                            <a
-                                href="/2019/07/13/Test-writ-post-글쓰기-테스트/#post-footer"
-                                class="postShorten-excerpt_link link"
-                                aria-label=""
-                            >
+                            <a href="/2019/07/13/Test-writ-post-글쓰기-테스트/#post-footer" class="postShorten-excerpt_link link" aria-label>
                                 Comment and share
                             </a>
                         </p>
@@ -316,11 +279,7 @@
             <div class="postShorten-header">
                 <h1 class="postShorten-title">
                     
-                        <a
-                            class="link-unstyled"
-                            href="/2019/07/13/hello-world/"
-                            aria-label=": Hello World 헬로우 월드"
-                        >
+                        <a class="link-unstyled" href="/2019/07/13/hello-world/" aria-label=": Hello World 헬로우 월드">
                             Hello World 헬로우 월드
                         </a>
                     
@@ -337,19 +296,19 @@
             </div>
             
                 <div class="postShorten-content">
-                    <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+                    <p>Welcome to <a href="https://hexo.io/" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" rel="external nofollow noopener noreferrer" target="_blank">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" rel="external nofollow noopener noreferrer" target="_blank">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" rel="external nofollow noopener noreferrer" target="_blank">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<p>More info: <a href="https://hexo.io/docs/writing.html" rel="external nofollow noopener noreferrer" target="_blank">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<p>More info: <a href="https://hexo.io/docs/server.html" rel="external nofollow noopener noreferrer" target="_blank">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<p>More info: <a href="https://hexo.io/docs/generating.html" rel="external nofollow noopener noreferrer" target="_blank">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" rel="external nofollow noopener noreferrer" target="_blank">Deployment</a></p>
 
                     
                         
@@ -358,11 +317,7 @@
                     
                     
                         <p>
-                            <a
-                                href="/2019/07/13/hello-world/#post-footer"
-                                class="postShorten-excerpt_link link"
-                                aria-label=""
-                            >
+                            <a href="/2019/07/13/hello-world/#post-footer" class="postShorten-excerpt_link link" aria-label>
                                 Comment and share
                             </a>
                         </p>
@@ -410,7 +365,7 @@
         
             <div id="about-card-job">
                 <i class="fa fa-briefcase"></i>
-                <br/>
+                <br>
                 <p>author.job</p>
 
             </div>
