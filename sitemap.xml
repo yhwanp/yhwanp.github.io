@@ -4,12 +4,22 @@
 
     <sitemap>
         <loc>https://yhwanp.github.io/post-sitemap.xml</loc>
-        <lastmod>2019-07-27T08:55:36.878Z</lastmod>
+        <lastmod>2019-07-27T12:10:35.242Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>https://yhwanp.github.io/page-sitemap.xml</loc>
         <lastmod>2019-07-13T06:15:31.095Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://yhwanp.github.io/category-sitemap.xml</loc>
+        <lastmod>2019-07-27T12:10:35.242Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://yhwanp.github.io/tag-sitemap.xml</loc>
+        <lastmod>2019-07-27T12:10:35.242Z</lastmod>
     </sitemap>
 
 </sitemapindex>
