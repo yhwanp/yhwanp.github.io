@@ -8,8 +8,20 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 13 Jul 2019 06:35:01 GMT</pubDate>
+    <pubDate>Sat, 27 Jul 2019 08:55:36 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>테스트</title>
+      <link>https://yhwanp.github.io/2019/07/27/%ED%85%8C%EC%8A%A4%ED%8A%B8/</link>
+      <guid>https://yhwanp.github.io/2019/07/27/%ED%85%8C%EC%8A%A4%ED%8A%B8/</guid>
+      <pubDate>Sat, 27 Jul 2019 08:53:38 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>https://yhwanp.github.io/2019/07/27/%ED%85%8C%EC%8A%A4%ED%8A%B8/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Test writ post / 글쓰기 테스트</title>
