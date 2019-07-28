@@ -8,13 +8,32 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>yhwanp&#39;s devNote</description>
-    <pubDate>Sun, 28 Jul 2019 08:42:58 GMT</pubDate>
+    <pubDate>Sun, 28 Jul 2019 09:37:19 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
+      <title>Hexo 블로그 폰트 사이즈 수정하기 - (Hueman 테마)</title>
+      <link>https://yhwanp.github.io/2019/07/28/Hexo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%8F%B0%ED%8A%B8-%EC%82%AC%EC%9D%B4%EC%A6%88-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0-Hueman-%ED%85%8C%EB%A7%88/</link>
+      <guid>https://yhwanp.github.io/2019/07/28/Hexo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%8F%B0%ED%8A%B8-%EC%82%AC%EC%9D%B4%EC%A6%88-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0-Hueman-%ED%85%8C%EB%A7%88/</guid>
+      <pubDate>Sun, 28 Jul 2019 09:17:21 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h1 id=&quot;블로그-게시글의-폰트-사이즈-수정하기-Hueman-Theme&quot;&gt;&lt;a href=&quot;#블로그-게시글의-폰트-사이즈-수정하기-Hueman-Theme&quot; class=&quot;headerlink&quot; title=&quot;블로그 게시글의 폰트 사이즈 수정하기 - (Hu
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="블로그-게시글의-폰트-사이즈-수정하기-Hueman-Theme"><a href="#블로그-게시글의-폰트-사이즈-수정하기-Hueman-Theme" class="headerlink" title="블로그 게시글의 폰트 사이즈 수정하기 - (Hueman Theme)"></a>블로그 게시글의 폰트 사이즈 수정하기 - (Hueman Theme)</h1><p>앞서 <a href="https://yhwanp.github.io/2019/07/27/Hexo-blog-셋팅-정리/">Hexo-blog-셋팅-정리</a> 에서 소개한 블로그들에서 소개되지 않은 부분이 있는데, 바로 게시글의 폰트 사이즈를 수정하는 방법입니다.<br>기본 사이즈는 18px 로 설정되어 있는데, 미묘하게 큰 사이즈여서 포스트가 한 눈에 들어오지 않는 것 같아 사이즈를 수정했습니다.</p><p>수정하기 위해서 <code>/$HEXO_HOME/themes/hueman/source/css/_variables.styl</code> 파일을 엽니다.<br>그리고, <code>font-size-article</code> 을 찾아서 원하는 사이즈로 수정합니다.</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//font-size-article = 18px</span></span><br><span class="line"><span class="attribute">font-size</span>-article = <span class="number">17px</span></span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      <comments>https://yhwanp.github.io/2019/07/28/Hexo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%8F%B0%ED%8A%B8-%EC%82%AC%EC%9D%B4%EC%A6%88-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0-Hueman-%ED%85%8C%EB%A7%88/#disqus_thread</comments>
+    </item>
+    
+    <item>
       <title>Hexo blog 셋팅 정리</title>
-      <link>https://yhwanp.github.io/2019/07/27/Hexo-blog-%EC%85%8B%ED%8C%85-%EC%A0%95%EB%A6%AC/</link>
-      <guid>https://yhwanp.github.io/2019/07/27/Hexo-blog-%EC%85%8B%ED%8C%85-%EC%A0%95%EB%A6%AC/</guid>
+      <link>https://yhwanp.github.io/2019/07/27/Hexo-%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3-%E1%84%89%E1%85%A6%E1%86%BA%E1%84%90%E1%85%B5%E1%86%BC-%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%85%E1%85%B5/</link>
+      <guid>https://yhwanp.github.io/2019/07/27/Hexo-%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3-%E1%84%89%E1%85%A6%E1%86%BA%E1%84%90%E1%85%B5%E1%86%BC-%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%85%E1%85%B5/</guid>
       <pubDate>Sat, 27 Jul 2019 12:30:51 GMT</pubDate>
       <description>
       
@@ -25,9 +44,28 @@
       
       </description>
       
-      <content:encoded><![CDATA[<h2 id="Hexo-blog-만들기"><a href="#Hexo-blog-만들기" class="headerlink" title="Hexo blog 만들기"></a>Hexo blog 만들기</h2><p>hexo blog 를 만들기 위해 참고했던 사이트를 정리해보려 합니다.<br>아래에 있는 블로그만 참조해도 꽤 괜찮은 블로그를 만들 수 있습니다.<br>그 중에서도 <code>Eric Han</code> 님의 블로그의 글이 포스팅 된 지 가장 오래된 글임에도 많은 도움이 됐습니다.</p><h4 id="튜토리얼-with-Hueman-테마"><a href="#튜토리얼-with-Hueman-테마" class="headerlink" title="튜토리얼 with Hueman 테마"></a>튜토리얼 with Hueman 테마</h4><p><a href="https://futurecreator.github.io/categories/Hexo/" rel="external nofollow noopener noreferrer" target="_blank">Eric Han’s IT Blog Powered by Hexo</a><br><a href="https://d2fault.github.io/categories/Blog/Hexo/" rel="external nofollow noopener noreferrer" target="_blank">d2fault</a></p><h4 id="튜토리얼-with-Tranquilpeak-테마"><a href="#튜토리얼-with-Tranquilpeak-테마" class="headerlink" title="튜토리얼 with Tranquilpeak 테마"></a>튜토리얼 with Tranquilpeak 테마</h4><p><a href="https://mingpd.github.io/categories/개발/hexo/" rel="external nofollow noopener noreferrer" target="_blank">밍피디</a></p><p>+ Hexo blog 에서 글을 쓰기 위해 Markdown 문법을 알아야 합니다.</p><h4 id="Markdown-사용법"><a href="#Markdown-사용법" class="headerlink" title="Markdown 사용법"></a>Markdown 사용법</h4><p><a href="https://heropy.blog/2017/09/30/markdown/" rel="external nofollow noopener noreferrer" target="_blank">MarkDown 사용법 총정리</a></p>]]></content:encoded>
+      <content:encoded><![CDATA[<h2 id="Hexo-blog-만들기"><a href="#Hexo-blog-만들기" class="headerlink" title="Hexo blog 만들기"></a>Hexo blog 만들기</h2><p>hexo blog 를 만들기 위해 참고했던 사이트를 정리해보려 합니다.<br>아래에 있는 블로그만 참조해도 꽤 괜찮은 블로그를 만들 수 있습니다.<br>그 중에서도 <code>Eric Han</code> 님의 블로그의 글이 포스팅 된 지 가장 오래된 글임에도 많은 도움이 됐습니다.</p><h4 id="튜토리얼-with-Hueman-테마"><a href="#튜토리얼-with-Hueman-테마" class="headerlink" title="튜토리얼 with Hueman 테마"></a>튜토리얼 with Hueman 테마</h4><p><a href="https://futurecreator.github.io/categories/Hexo/" rel="external nofollow noopener noreferrer" target="_blank">Eric Han’s IT Blog Powered by Hexo</a><br><a href="https://d2fault.github.io/categories/Blog/Hexo/" rel="external nofollow noopener noreferrer" target="_blank">d2fault</a></p><h4 id="튜토리얼-with-Tranquilpeak-테마"><a href="#튜토리얼-with-Tranquilpeak-테마" class="headerlink" title="튜토리얼 with Tranquilpeak 테마"></a>튜토리얼 with Tranquilpeak 테마</h4><p><a href="https://mingpd.github.io/categories/개발/hexo/" rel="external nofollow noopener noreferrer" target="_blank">밍피디</a></p><h4 id="Markdown-문법"><a href="#Markdown-문법" class="headerlink" title="Markdown 문법"></a>Markdown 문법</h4><p><a href="https://heropy.blog/2017/09/30/markdown/" rel="external nofollow noopener noreferrer" target="_blank">MarkDown 사용법 총정리</a></p>]]></content:encoded>
       
-      <comments>https://yhwanp.github.io/2019/07/27/Hexo-blog-%EC%85%8B%ED%8C%85-%EC%A0%95%EB%A6%AC/#disqus_thread</comments>
+      <comments>https://yhwanp.github.io/2019/07/27/Hexo-%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3-%E1%84%89%E1%85%A6%E1%86%BA%E1%84%90%E1%85%B5%E1%86%BC-%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%85%E1%85%B5/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Hexo 블로그 셋팅 정리</title>
+      <link>https://yhwanp.github.io/2019/07/27/hello-world/</link>
+      <guid>https://yhwanp.github.io/2019/07/27/hello-world/</guid>
+      <pubDate>Sat, 27 Jul 2019 12:30:51 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h2 id=&quot;Hexo-블로그-만들기&quot;&gt;&lt;a href=&quot;#Hexo-블로그-만들기&quot; class=&quot;headerlink&quot; title=&quot;Hexo 블로그 만들기&quot;&gt;&lt;/a&gt;Hexo 블로그 만들기&lt;/h2&gt;&lt;p&gt;hexo 블로그를 만들기 위해 참고했던 사이트를 정리해
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="Hexo-블로그-만들기"><a href="#Hexo-블로그-만들기" class="headerlink" title="Hexo 블로그 만들기"></a>Hexo 블로그 만들기</h2><p>hexo 블로그를 만들기 위해 참고했던 사이트를 정리해보려 합니다.<br>아래에 있는 블로그만 참조해도 꽤 괜찮은 블로그를 만들 수 있습니다.<br>그 중에서도 <code>Eric Han</code> 님의 블로그의 글이 포스팅 된 지 가장 오래된 글임에도 많은 도움이 됐습니다.</p><h4 id="튜토리얼-with-Hueman-테마"><a href="#튜토리얼-with-Hueman-테마" class="headerlink" title="튜토리얼 with Hueman 테마"></a>튜토리얼 with Hueman 테마</h4><p><a href="https://futurecreator.github.io/categories/Hexo/" rel="external nofollow noopener noreferrer" target="_blank">Eric Han’s IT Blog Powered by Hexo</a><br><a href="https://d2fault.github.io/categories/Blog/Hexo/" rel="external nofollow noopener noreferrer" target="_blank">d2fault</a></p><h4 id="튜토리얼-with-Tranquilpeak-테마"><a href="#튜토리얼-with-Tranquilpeak-테마" class="headerlink" title="튜토리얼 with Tranquilpeak 테마"></a>튜토리얼 with Tranquilpeak 테마</h4><p><a href="https://mingpd.github.io/categories/개발/hexo/" rel="external nofollow noopener noreferrer" target="_blank">밍피디</a></p><h4 id="Markdown-문법"><a href="#Markdown-문법" class="headerlink" title="Markdown 문법"></a>Markdown 문법</h4><p><a href="https://heropy.blog/2017/09/30/markdown/" rel="external nofollow noopener noreferrer" target="_blank">MarkDown 사용법 총정리</a></p>]]></content:encoded>
+      
+      <comments>https://yhwanp.github.io/2019/07/27/hello-world/#disqus_thread</comments>
     </item>
     
     <item>
@@ -40,25 +78,6 @@
       </description>
       
       <comments>https://yhwanp.github.io/2019/07/13/Test-writ-post-%EA%B8%80%EC%93%B0%EA%B8%B0-%ED%85%8C%EC%8A%A4%ED%8A%B8/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Hello World 헬로우 월드</title>
-      <link>https://yhwanp.github.io/2019/07/13/hello-world/</link>
-      <guid>https://yhwanp.github.io/2019/07/13/hello-world/</guid>
-      <pubDate>Sat, 13 Jul 2019 06:27:07 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; rel=&quot;external nofollow noopener noreferrer&quot; target=&quot;_blank&quot;&gt;Hexo&lt;/a&gt;! This is your very first post.
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<p>Welcome to <a href="https://hexo.io/" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" rel="external nofollow noopener noreferrer" target="_blank">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" rel="external nofollow noopener noreferrer" target="_blank">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" rel="external nofollow noopener noreferrer" target="_blank">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" rel="external nofollow noopener noreferrer" target="_blank">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" rel="external nofollow noopener noreferrer" target="_blank">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" rel="external nofollow noopener noreferrer" target="_blank">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" rel="external nofollow noopener noreferrer" target="_blank">Deployment</a></p>]]></content:encoded>
-      
-      <comments>https://yhwanp.github.io/2019/07/13/hello-world/#disqus_thread</comments>
     </item>
     
   </channel>
