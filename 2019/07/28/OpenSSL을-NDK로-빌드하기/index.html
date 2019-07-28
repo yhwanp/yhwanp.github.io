@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="Android,NDK,OpenSSL">
     
-    <meta name="description" content="##">
+    <meta name="description" content="보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는 라이브러리">
 <meta name="keywords" content="Android,NDK,OpenSSL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OpenSSL을 NDK로 빌드하기">
 <meta property="og:url" content="https://yhwanp.github.io/2019/07/28/OpenSSL을-NDK로-빌드하기/index.html">
 <meta property="og:site_name" content="yhwanp&#39;s devNote">
-<meta property="og:description" content="##">
+<meta property="og:description" content="보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는 라이브러리">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://yhwanp.github.io/images/opimage.jpg">
-<meta property="og:updated_time" content="2019-07-28T10:05:14.770Z">
+<meta property="og:updated_time" content="2019-07-28T10:41:32.456Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OpenSSL을 NDK로 빌드하기">
-<meta name="twitter:description" content="##">
+<meta name="twitter:description" content="보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는 라이브러리">
 <meta name="twitter:image" content="https://yhwanp.github.io/images/opimage.jpg">
     
     <link rel="canonical" href="https://yhwanp.github.io/2019/07/28/openssl을-ndk로-빌드하기/">
@@ -202,7 +202,34 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>## </p>
+            <p>보통 실습 용도나 로컬에서 테스트를 할 경우에는 <code>Precompiled library</code> 를 사용해도 되지만 상용 프로그램에 포함할 경우 <code>암호화 알고리즘 라이센스</code> 문제가 발생할 수 있습니다.<br>문제가 되는 암호화 알고리즘을 제외한 <code>Precompiled library</code> 가 있으면 해결되지만, 특정 <code>NDK</code>, <code>OpenSSL</code> 버전을 맞춰야 하는 경우 이에 만족하는 라이브러리를 찾기가 힘들어서, 직접 빌드하는 편이 빠릅니다.</p>
+<h2 id="빌드-환경-및-사용-버전"><a href="#빌드-환경-및-사용-버전" class="headerlink" title="빌드 환경 및 사용 버전"></a>빌드 환경 및 사용 버전</h2><ol>
+<li>NDK r18b</li>
+<li>OpenSSL 1.0.2l</li>
+<li>Ubuntu 18.04</li>
+</ol>
+<h2 id="빌드-시작하기"><a href="#빌드-시작하기" class="headerlink" title="빌드 시작하기"></a>빌드 시작하기</h2><ol>
+<li><p>NDK 이용해 <code>custom toolchain</code> 생성</p>
+<p>(<a href="https://developer.android.com/ndk/guides/standalone_toolchain" rel="external nofollow noopener noreferrer" target="_blank">https://developer.android.com/ndk/guides/standalone_toolchain</a>)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 <span class="variable">$NDK</span>/build/tools/make_standalone_toolchain.py --arch arm64 --api 26 --install-dir /opt/android-26-arm64</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>OpenSSL 폴더로 이동</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> openssl-1.0.2l</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Clang 에서 <code>&#39;-mandroid&#39;</code> 를 지원하지 않으므로 Configure 파일에서 해당 부분 삭제</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i -e <span class="string">'s/-mandroid//'</span> Configure</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>Confiigure</code> 시작</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CROSS_COMPILE=/opt/android-26-arm64/bin/aarch64-linux-android- ./Configure android shared no-idea no-mdc2 no-rc5</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>make</code> 시작</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">make depend</span><br><span class="line">make ANDROID_DEV=/opt/android-26-arm64/sysroot/usr CALC_VERSIONS=<span class="string">"SHLIB_COMPAT=; SHLIB_SOVER="</span> build_libs</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>생성된 library 가 올바르게 빌드 됐는지 확인</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">readelf -h ./libcrypto.a | grep -i <span class="string">'class\|machine'</span> | head -2</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
 
         </div>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -288,9 +315,8 @@ ga('send', 'pageview');
         "dateCreated": "2019-07-28",
         "dateModified": "2019-07-28",
         "url": "https://yhwanp.github.io/2019/07/28/OpenSSL을-NDK로-빌드하기/",
-        "description": "## 
-"
-        "wordCount": 2
+        "description": "보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는 라이브러리"
+        "wordCount": 174
     }
 </script>
 
@@ -395,15 +421,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/ETC/">ETC</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/ETC/Hexo/">Hexo</a></p>
-                            <p class="item-title"><a href="/2019/07/27/hello-world/" class="title">Hexo 블로그 셋팅 정리</a></p>
-                            <p class="item-date"><time datetime="2019-07-27T12:30:51.000Z" itemprop="datePublished">2019-07-27</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -413,7 +430,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/NDK/">NDK</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/ETC/">ETC</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/ETC/Hexo/">Hexo</a><span class="category-list-count">3</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/NDK/">NDK</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/ETC/">ETC</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/ETC/Hexo/">Hexo</a><span class="category-list-count">2</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -423,7 +440,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">4</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -433,7 +450,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Font/">Font</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NDK/">NDK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenSSL/">OpenSSL</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Font/">Font</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NDK/">NDK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenSSL/">OpenSSL</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -443,7 +460,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Font/" style="font-size: 10px;">Font</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 15px;">Markdown</a> <a href="/tags/NDK/" style="font-size: 10px;">NDK</a> <a href="/tags/OpenSSL/" style="font-size: 10px;">OpenSSL</a>
+            <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Font/" style="font-size: 10px;">Font</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NDK/" style="font-size: 10px;">NDK</a> <a href="/tags/OpenSSL/" style="font-size: 10px;">OpenSSL</a>
         </div>
     </div>
 

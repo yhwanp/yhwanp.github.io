@@ -8,7 +8,7 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>yhwanp&#39;s devNote</description>
-    <pubDate>Sun, 28 Jul 2019 10:05:14 GMT</pubDate>
+    <pubDate>Sun, 28 Jul 2019 10:41:32 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -20,13 +20,12 @@
       
         
         
-          &lt;p&gt;## &lt;/p&gt;
-
+          &lt;p&gt;보통 실습 용도나 로컬에서 테스트를 할 경우에는 &lt;code&gt;Precompiled library&lt;/code&gt; 를 사용해도 되지만 상용 프로그램에 포함할 경우 &lt;code&gt;암호화 알고리즘 라이센스&lt;/code&gt; 문제가 발생할 수 있습니다.&lt;br&gt;문제가 
         
       
       </description>
       
-      <content:encoded><![CDATA[<p>## </p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>보통 실습 용도나 로컬에서 테스트를 할 경우에는 <code>Precompiled library</code> 를 사용해도 되지만 상용 프로그램에 포함할 경우 <code>암호화 알고리즘 라이센스</code> 문제가 발생할 수 있습니다.<br>문제가 되는 암호화 알고리즘을 제외한 <code>Precompiled library</code> 가 있으면 해결되지만, 특정 <code>NDK</code>, <code>OpenSSL</code> 버전을 맞춰야 하는 경우 이에 만족하는 라이브러리를 찾기가 힘들어서, 직접 빌드하는 편이 빠릅니다.</p><h2 id="빌드-환경-및-사용-버전"><a href="#빌드-환경-및-사용-버전" class="headerlink" title="빌드 환경 및 사용 버전"></a>빌드 환경 및 사용 버전</h2><ol><li>NDK r18b</li><li>OpenSSL 1.0.2l</li><li>Ubuntu 18.04</li></ol><h2 id="빌드-시작하기"><a href="#빌드-시작하기" class="headerlink" title="빌드 시작하기"></a>빌드 시작하기</h2><ol><li><p>NDK 이용해 <code>custom toolchain</code> 생성</p><p>(<a href="https://developer.android.com/ndk/guides/standalone_toolchain" rel="external nofollow noopener noreferrer" target="_blank">https://developer.android.com/ndk/guides/standalone_toolchain</a>)</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 <span class="variable">$NDK</span>/build/tools/make_standalone_toolchain.py --arch arm64 --api 26 --install-dir /opt/android-26-arm64</span><br></pre></td></tr></table></figure></li><li><p>OpenSSL 폴더로 이동</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> openssl-1.0.2l</span><br></pre></td></tr></table></figure></li><li><p>Clang 에서 <code>&#39;-mandroid&#39;</code> 를 지원하지 않으므로 Configure 파일에서 해당 부분 삭제</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i -e <span class="string">'s/-mandroid//'</span> Configure</span><br></pre></td></tr></table></figure></li><li><p><code>Confiigure</code> 시작</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CROSS_COMPILE=/opt/android-26-arm64/bin/aarch64-linux-android- ./Configure android shared no-idea no-mdc2 no-rc5</span><br></pre></td></tr></table></figure></li><li><p><code>make</code> 시작</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">make depend</span><br><span class="line">make ANDROID_DEV=/opt/android-26-arm64/sysroot/usr CALC_VERSIONS=<span class="string">"SHLIB_COMPAT=; SHLIB_SOVER="</span> build_libs</span><br></pre></td></tr></table></figure></li><li><p>생성된 library 가 올바르게 빌드 됐는지 확인</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">readelf -h ./libcrypto.a | grep -i <span class="string">'class\|machine'</span> | head -2</span><br></pre></td></tr></table></figure></li></ol>]]></content:encoded>
       
       <comments>https://yhwanp.github.io/2019/07/28/OpenSSL%EC%9D%84-NDK%EB%A1%9C-%EB%B9%8C%EB%93%9C%ED%95%98%EA%B8%B0/#disqus_thread</comments>
     </item>
@@ -67,25 +66,6 @@
       <content:encoded><![CDATA[<h2 id="Hexo-블로그-만들기"><a href="#Hexo-블로그-만들기" class="headerlink" title="Hexo 블로그 만들기"></a>Hexo 블로그 만들기</h2><p>hexo 블로그를 만들기 위해 참고했던 사이트를 정리해보려 합니다.<br>아래에 있는 블로그만 참조해도 꽤 괜찮은 블로그를 만들 수 있습니다.<br>그 중에서도 <code>Eric Han</code> 님의 블로그의 글이 포스팅 된 지 가장 오래된 글임에도 많은 도움이 됐습니다.</p><h4 id="튜토리얼-with-Hueman-테마"><a href="#튜토리얼-with-Hueman-테마" class="headerlink" title="튜토리얼 with Hueman 테마"></a>튜토리얼 with Hueman 테마</h4><p><a href="https://futurecreator.github.io/categories/Hexo/" rel="external nofollow noopener noreferrer" target="_blank">Eric Han’s IT Blog Powered by Hexo</a><br><a href="https://d2fault.github.io/categories/Blog/Hexo/" rel="external nofollow noopener noreferrer" target="_blank">d2fault</a></p><h4 id="튜토리얼-with-Tranquilpeak-테마"><a href="#튜토리얼-with-Tranquilpeak-테마" class="headerlink" title="튜토리얼 with Tranquilpeak 테마"></a>튜토리얼 with Tranquilpeak 테마</h4><p><a href="https://mingpd.github.io/categories/개발/hexo/" rel="external nofollow noopener noreferrer" target="_blank">밍피디</a></p><h4 id="Markdown-문법"><a href="#Markdown-문법" class="headerlink" title="Markdown 문법"></a>Markdown 문법</h4><p><a href="https://heropy.blog/2017/09/30/markdown/" rel="external nofollow noopener noreferrer" target="_blank">MarkDown 사용법 총정리</a></p>]]></content:encoded>
       
       <comments>https://yhwanp.github.io/2019/07/27/Hexo-%E1%84%87%E1%85%B3%E1%86%AF%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3-%E1%84%89%E1%85%A6%E1%86%BA%E1%84%90%E1%85%B5%E1%86%BC-%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%85%E1%85%B5/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Hexo 블로그 셋팅 정리</title>
-      <link>https://yhwanp.github.io/2019/07/27/hello-world/</link>
-      <guid>https://yhwanp.github.io/2019/07/27/hello-world/</guid>
-      <pubDate>Sat, 27 Jul 2019 12:30:51 GMT</pubDate>
-      <description>
-      
-        
-        
-          &lt;h2 id=&quot;Hexo-블로그-만들기&quot;&gt;&lt;a href=&quot;#Hexo-블로그-만들기&quot; class=&quot;headerlink&quot; title=&quot;Hexo 블로그 만들기&quot;&gt;&lt;/a&gt;Hexo 블로그 만들기&lt;/h2&gt;&lt;p&gt;hexo 블로그를 만들기 위해 참고했던 사이트를 정리해
-        
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h2 id="Hexo-블로그-만들기"><a href="#Hexo-블로그-만들기" class="headerlink" title="Hexo 블로그 만들기"></a>Hexo 블로그 만들기</h2><p>hexo 블로그를 만들기 위해 참고했던 사이트를 정리해보려 합니다.<br>아래에 있는 블로그만 참조해도 꽤 괜찮은 블로그를 만들 수 있습니다.<br>그 중에서도 <code>Eric Han</code> 님의 블로그의 글이 포스팅 된 지 가장 오래된 글임에도 많은 도움이 됐습니다.</p><h4 id="튜토리얼-with-Hueman-테마"><a href="#튜토리얼-with-Hueman-테마" class="headerlink" title="튜토리얼 with Hueman 테마"></a>튜토리얼 with Hueman 테마</h4><p><a href="https://futurecreator.github.io/categories/Hexo/" rel="external nofollow noopener noreferrer" target="_blank">Eric Han’s IT Blog Powered by Hexo</a><br><a href="https://d2fault.github.io/categories/Blog/Hexo/" rel="external nofollow noopener noreferrer" target="_blank">d2fault</a></p><h4 id="튜토리얼-with-Tranquilpeak-테마"><a href="#튜토리얼-with-Tranquilpeak-테마" class="headerlink" title="튜토리얼 with Tranquilpeak 테마"></a>튜토리얼 with Tranquilpeak 테마</h4><p><a href="https://mingpd.github.io/categories/개발/hexo/" rel="external nofollow noopener noreferrer" target="_blank">밍피디</a></p><h4 id="Markdown-문법"><a href="#Markdown-문법" class="headerlink" title="Markdown 문법"></a>Markdown 문법</h4><p><a href="https://heropy.blog/2017/09/30/markdown/" rel="external nofollow noopener noreferrer" target="_blank">MarkDown 사용법 총정리</a></p>]]></content:encoded>
-      
-      <comments>https://yhwanp.github.io/2019/07/27/hello-world/#disqus_thread</comments>
     </item>
     
   </channel>

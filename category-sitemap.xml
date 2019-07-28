@@ -8,6 +8,20 @@
     </url>
 
     <url>
+        <loc>https://yhwanp.github.io/categories/Android/NDK/</loc>
+        <lastmod>2019-07-28T10:41:32.456Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://yhwanp.github.io/categories/Android/</loc>
+        <lastmod>2019-07-28T10:41:32.456Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://yhwanp.github.io/categories/ETC/Hexo/</loc>
         <lastmod>2019-07-28T10:06:33.978Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -17,20 +31,6 @@
     <url>
         <loc>https://yhwanp.github.io/categories/ETC/</loc>
         <lastmod>2019-07-28T10:06:33.978Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://yhwanp.github.io/categories/Android/NDK/</loc>
-        <lastmod>2019-07-28T10:05:14.770Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://yhwanp.github.io/categories/Android/</loc>
-        <lastmod>2019-07-28T10:05:14.770Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
