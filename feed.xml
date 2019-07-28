@@ -8,7 +8,7 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>yhwanp&#39;s devNote</description>
-    <pubDate>Sun, 28 Jul 2019 09:37:19 GMT</pubDate>
+    <pubDate>Sun, 28 Jul 2019 09:50:15 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -20,12 +20,12 @@
       
         
         
-          &lt;h1 id=&quot;블로그-게시글의-폰트-사이즈-수정하기-Hueman-Theme&quot;&gt;&lt;a href=&quot;#블로그-게시글의-폰트-사이즈-수정하기-Hueman-Theme&quot; class=&quot;headerlink&quot; title=&quot;블로그 게시글의 폰트 사이즈 수정하기 - (Hu
+          &lt;h3 id=&quot;블로그-게시글의-폰트-사이즈-수정하기-Hueman-Theme&quot;&gt;&lt;a href=&quot;#블로그-게시글의-폰트-사이즈-수정하기-Hueman-Theme&quot; class=&quot;headerlink&quot; title=&quot;블로그 게시글의 폰트 사이즈 수정하기 - (Hu
         
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="블로그-게시글의-폰트-사이즈-수정하기-Hueman-Theme"><a href="#블로그-게시글의-폰트-사이즈-수정하기-Hueman-Theme" class="headerlink" title="블로그 게시글의 폰트 사이즈 수정하기 - (Hueman Theme)"></a>블로그 게시글의 폰트 사이즈 수정하기 - (Hueman Theme)</h1><p>앞서 <a href="https://yhwanp.github.io/2019/07/27/Hexo-blog-셋팅-정리/">Hexo-blog-셋팅-정리</a> 에서 소개한 블로그들에서 소개되지 않은 부분이 있는데, 바로 게시글의 폰트 사이즈를 수정하는 방법입니다.<br>기본 사이즈는 18px 로 설정되어 있는데, 미묘하게 큰 사이즈여서 포스트가 한 눈에 들어오지 않는 것 같아 사이즈를 수정했습니다.</p><p>수정하기 위해서 <code>/$HEXO_HOME/themes/hueman/source/css/_variables.styl</code> 파일을 엽니다.<br>그리고, <code>font-size-article</code> 을 찾아서 원하는 사이즈로 수정합니다.</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//font-size-article = 18px</span></span><br><span class="line"><span class="attribute">font-size</span>-article = <span class="number">17px</span></span><br></pre></td></tr></table></figure>]]></content:encoded>
+      <content:encoded><![CDATA[<h3 id="블로그-게시글의-폰트-사이즈-수정하기-Hueman-Theme"><a href="#블로그-게시글의-폰트-사이즈-수정하기-Hueman-Theme" class="headerlink" title="블로그 게시글의 폰트 사이즈 수정하기 - (Hueman Theme)"></a>블로그 게시글의 폰트 사이즈 수정하기 - (Hueman Theme)</h3><p>앞서 <a href="https://yhwanp.github.io/2019/07/27/Hexo-blog-셋팅-정리/">Hexo-blog-셋팅-정리</a> 에서 소개한 블로그들에서 소개되지 않은 부분이 있는데, 바로 게시글의 폰트 사이즈를 수정하는 방법입니다.<br>기본 사이즈는 18px 로 설정되어 있는데, 미묘하게 큰 사이즈여서 포스트가 한 눈에 들어오지 않는 것 같아 사이즈를 수정했습니다.</p><p>수정하기 위해서 <code>/$HEXO_HOME/themes/hueman/source/css/_variables.styl</code> 파일을 엽니다.<br>그리고, <code>font-size-article</code> 을 찾아서 원하는 사이즈로 수정합니다.</p><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//font-size-article = 18px</span></span><br><span class="line"><span class="attribute">font-size</span>-article = <span class="number">17px</span></span><br></pre></td></tr></table></figure>]]></content:encoded>
       
       <comments>https://yhwanp.github.io/2019/07/28/Hexo-%EB%B8%94%EB%A1%9C%EA%B7%B8-%ED%8F%B0%ED%8A%B8-%EC%82%AC%EC%9D%B4%EC%A6%88-%EC%88%98%EC%A0%95%ED%95%98%EA%B8%B0-Hueman-%ED%85%8C%EB%A7%88/#disqus_thread</comments>
     </item>
@@ -66,18 +66,6 @@
       <content:encoded><![CDATA[<h2 id="Hexo-블로그-만들기"><a href="#Hexo-블로그-만들기" class="headerlink" title="Hexo 블로그 만들기"></a>Hexo 블로그 만들기</h2><p>hexo 블로그를 만들기 위해 참고했던 사이트를 정리해보려 합니다.<br>아래에 있는 블로그만 참조해도 꽤 괜찮은 블로그를 만들 수 있습니다.<br>그 중에서도 <code>Eric Han</code> 님의 블로그의 글이 포스팅 된 지 가장 오래된 글임에도 많은 도움이 됐습니다.</p><h4 id="튜토리얼-with-Hueman-테마"><a href="#튜토리얼-with-Hueman-테마" class="headerlink" title="튜토리얼 with Hueman 테마"></a>튜토리얼 with Hueman 테마</h4><p><a href="https://futurecreator.github.io/categories/Hexo/" rel="external nofollow noopener noreferrer" target="_blank">Eric Han’s IT Blog Powered by Hexo</a><br><a href="https://d2fault.github.io/categories/Blog/Hexo/" rel="external nofollow noopener noreferrer" target="_blank">d2fault</a></p><h4 id="튜토리얼-with-Tranquilpeak-테마"><a href="#튜토리얼-with-Tranquilpeak-테마" class="headerlink" title="튜토리얼 with Tranquilpeak 테마"></a>튜토리얼 with Tranquilpeak 테마</h4><p><a href="https://mingpd.github.io/categories/개발/hexo/" rel="external nofollow noopener noreferrer" target="_blank">밍피디</a></p><h4 id="Markdown-문법"><a href="#Markdown-문법" class="headerlink" title="Markdown 문법"></a>Markdown 문법</h4><p><a href="https://heropy.blog/2017/09/30/markdown/" rel="external nofollow noopener noreferrer" target="_blank">MarkDown 사용법 총정리</a></p>]]></content:encoded>
       
       <comments>https://yhwanp.github.io/2019/07/27/hello-world/#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Test writ post / 글쓰기 테스트</title>
-      <link>https://yhwanp.github.io/2019/07/13/Test-writ-post-%EA%B8%80%EC%93%B0%EA%B8%B0-%ED%85%8C%EC%8A%A4%ED%8A%B8/</link>
-      <guid>https://yhwanp.github.io/2019/07/13/Test-writ-post-%EA%B8%80%EC%93%B0%EA%B8%B0-%ED%85%8C%EC%8A%A4%ED%8A%B8/</guid>
-      <pubDate>Sat, 13 Jul 2019 06:35:01 GMT</pubDate>
-      <description>
-      
-      </description>
-      
-      <comments>https://yhwanp.github.io/2019/07/13/Test-writ-post-%EA%B8%80%EC%93%B0%EA%B8%B0-%ED%85%8C%EC%8A%A4%ED%8A%B8/#disqus_thread</comments>
     </item>
     
   </channel>
