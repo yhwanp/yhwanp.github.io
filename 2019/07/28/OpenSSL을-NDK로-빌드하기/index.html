@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="Android,NDK,OpenSSL">
     
-    <meta name="description" content="보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는 라이브러리">
+    <meta name="description" content="시작에 앞서보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는">
 <meta name="keywords" content="Android,NDK,OpenSSL">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OpenSSL을 NDK로 빌드하기">
 <meta property="og:url" content="https://yhwanp.github.io/2019/07/28/OpenSSL을-NDK로-빌드하기/index.html">
 <meta property="og:site_name" content="yhwanp&#39;s devNote">
-<meta property="og:description" content="보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는 라이브러리">
+<meta property="og:description" content="시작에 앞서보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://yhwanp.github.io/images/opimage.jpg">
-<meta property="og:updated_time" content="2019-07-28T10:41:32.456Z">
+<meta property="og:updated_time" content="2019-07-28T10:43:14.047Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OpenSSL을 NDK로 빌드하기">
-<meta name="twitter:description" content="보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는 라이브러리">
+<meta name="twitter:description" content="시작에 앞서보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는">
 <meta name="twitter:image" content="https://yhwanp.github.io/images/opimage.jpg">
     
     <link rel="canonical" href="https://yhwanp.github.io/2019/07/28/openssl을-ndk로-빌드하기/">
@@ -202,7 +202,7 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>보통 실습 용도나 로컬에서 테스트를 할 경우에는 <code>Precompiled library</code> 를 사용해도 되지만 상용 프로그램에 포함할 경우 <code>암호화 알고리즘 라이센스</code> 문제가 발생할 수 있습니다.<br>문제가 되는 암호화 알고리즘을 제외한 <code>Precompiled library</code> 가 있으면 해결되지만, 특정 <code>NDK</code>, <code>OpenSSL</code> 버전을 맞춰야 하는 경우 이에 만족하는 라이브러리를 찾기가 힘들어서, 직접 빌드하는 편이 빠릅니다.</p>
+            <h2 id="시작에-앞서"><a href="#시작에-앞서" class="headerlink" title="시작에 앞서"></a>시작에 앞서</h2><p>보통 실습 용도나 로컬에서 테스트를 할 경우에는 <code>Precompiled library</code> 를 사용해도 되지만 상용 프로그램에 포함할 경우 <code>암호화 알고리즘 라이센스</code> 문제가 발생할 수 있습니다.<br>문제가 되는 암호화 알고리즘을 제외한 <code>Precompiled library</code> 가 있으면 해결되지만, 특정 <code>NDK</code>, <code>OpenSSL</code> 버전을 맞춰야 하는 경우 이에 만족하는 라이브러리를 찾기가 힘들어서, 직접 빌드하는 편이 빠릅니다.</p>
 <h2 id="빌드-환경-및-사용-버전"><a href="#빌드-환경-및-사용-버전" class="headerlink" title="빌드 환경 및 사용 버전"></a>빌드 환경 및 사용 버전</h2><ol>
 <li>NDK r18b</li>
 <li>OpenSSL 1.0.2l</li>
@@ -315,8 +315,8 @@ ga('send', 'pageview');
         "dateCreated": "2019-07-28",
         "dateModified": "2019-07-28",
         "url": "https://yhwanp.github.io/2019/07/28/OpenSSL을-NDK로-빌드하기/",
-        "description": "보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는 라이브러리"
-        "wordCount": 174
+        "description": "시작에 앞서보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는"
+        "wordCount": 180
     }
 </script>
 
