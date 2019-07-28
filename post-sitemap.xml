@@ -8,8 +8,16 @@
     </url>
 
     <url>
-        <loc>https://yhwanp.github.io/2019/07/27/category-%EC%99%80-tag-%EC%A0%81%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/</loc>
-        <lastmod>2019-07-27T12:10:35.242Z</lastmod>
+        <loc>https://yhwanp.github.io/2019/07/27/Hexo-blog-%EC%85%8B%ED%8C%85-%EC%A0%95%EB%A6%AC/</loc>
+        <lastmod>2019-07-28T08:42:58.762Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://yhwanp.github.io/2019/07/13/hello-world/</loc>
+        <lastmod>2019-07-27T12:29:51.060Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -18,14 +26,6 @@
     <url>
         <loc>https://yhwanp.github.io/2019/07/13/Test-writ-post-%EA%B8%80%EC%93%B0%EA%B8%B0-%ED%85%8C%EC%8A%A4%ED%8A%B8/</loc>
         <lastmod>2019-07-13T06:35:01.531Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://yhwanp.github.io/2019/07/13/hello-world/</loc>
-        <lastmod>2019-07-13T06:27:07.258Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

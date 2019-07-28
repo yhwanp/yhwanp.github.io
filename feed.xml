@@ -8,19 +8,26 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>yhwanp&#39;s devNote</description>
-    <pubDate>Sat, 27 Jul 2019 12:10:35 GMT</pubDate>
+    <pubDate>Sun, 28 Jul 2019 08:42:58 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>category 와 tag 적용해보기</title>
-      <link>https://yhwanp.github.io/2019/07/27/category-%EC%99%80-tag-%EC%A0%81%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/</link>
-      <guid>https://yhwanp.github.io/2019/07/27/category-%EC%99%80-tag-%EC%A0%81%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/</guid>
-      <pubDate>Sat, 27 Jul 2019 12:10:00 GMT</pubDate>
+      <title>Hexo blog 셋팅 정리</title>
+      <link>https://yhwanp.github.io/2019/07/27/Hexo-blog-%EC%85%8B%ED%8C%85-%EC%A0%95%EB%A6%AC/</link>
+      <guid>https://yhwanp.github.io/2019/07/27/Hexo-blog-%EC%85%8B%ED%8C%85-%EC%A0%95%EB%A6%AC/</guid>
+      <pubDate>Sat, 27 Jul 2019 12:30:51 GMT</pubDate>
       <description>
+      
+        
+        
+          &lt;h2 id=&quot;Hexo-blog-만들기&quot;&gt;&lt;a href=&quot;#Hexo-blog-만들기&quot; class=&quot;headerlink&quot; title=&quot;Hexo blog 만들기&quot;&gt;&lt;/a&gt;Hexo blog 만들기&lt;/h2&gt;&lt;p&gt;hexo blog 를 만들기 위해 참고했던 사이
+        
       
       </description>
       
-      <comments>https://yhwanp.github.io/2019/07/27/category-%EC%99%80-tag-%EC%A0%81%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/#disqus_thread</comments>
+      <content:encoded><![CDATA[<h2 id="Hexo-blog-만들기"><a href="#Hexo-blog-만들기" class="headerlink" title="Hexo blog 만들기"></a>Hexo blog 만들기</h2><p>hexo blog 를 만들기 위해 참고했던 사이트를 정리해보려 합니다.<br>아래에 있는 블로그만 참조해도 꽤 괜찮은 블로그를 만들 수 있습니다.<br>그 중에서도 <code>Eric Han</code> 님의 블로그의 글이 포스팅 된 지 가장 오래된 글임에도 많은 도움이 됐습니다.</p><h4 id="튜토리얼-with-Hueman-테마"><a href="#튜토리얼-with-Hueman-테마" class="headerlink" title="튜토리얼 with Hueman 테마"></a>튜토리얼 with Hueman 테마</h4><p><a href="https://futurecreator.github.io/categories/Hexo/" rel="external nofollow noopener noreferrer" target="_blank">Eric Han’s IT Blog Powered by Hexo</a><br><a href="https://d2fault.github.io/categories/Blog/Hexo/" rel="external nofollow noopener noreferrer" target="_blank">d2fault</a></p><h4 id="튜토리얼-with-Tranquilpeak-테마"><a href="#튜토리얼-with-Tranquilpeak-테마" class="headerlink" title="튜토리얼 with Tranquilpeak 테마"></a>튜토리얼 with Tranquilpeak 테마</h4><p><a href="https://mingpd.github.io/categories/개발/hexo/" rel="external nofollow noopener noreferrer" target="_blank">밍피디</a></p><p>+ Hexo blog 에서 글을 쓰기 위해 Markdown 문법을 알아야 합니다.</p><h4 id="Markdown-사용법"><a href="#Markdown-사용법" class="headerlink" title="Markdown 사용법"></a>Markdown 사용법</h4><p><a href="https://heropy.blog/2017/09/30/markdown/" rel="external nofollow noopener noreferrer" target="_blank">MarkDown 사용법 총정리</a></p>]]></content:encoded>
+      
+      <comments>https://yhwanp.github.io/2019/07/27/Hexo-blog-%EC%85%8B%ED%8C%85-%EC%A0%95%EB%A6%AC/#disqus_thread</comments>
     </item>
     
     <item>

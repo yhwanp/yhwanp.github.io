@@ -8,8 +8,15 @@
     </url>
 
     <url>
-        <loc>https://yhwanp.github.io/categories/hexo/</loc>
-        <lastmod>2019-07-27T12:10:35.242Z</lastmod>
+        <loc>https://yhwanp.github.io/categories/ETC/Hexo/</loc>
+        <lastmod>2019-07-28T08:42:58.762Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://yhwanp.github.io/categories/ETC/</loc>
+        <lastmod>2019-07-28T08:42:58.762Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
