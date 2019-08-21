@@ -8,8 +8,27 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>yhwanp&#39;s devNote</description>
-    <pubDate>Sun, 28 Jul 2019 10:43:14 GMT</pubDate>
+    <pubDate>Wed, 21 Aug 2019 16:14:39 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>CMake 에서 상대경로를 절대경로로 바꾸기</title>
+      <link>https://yhwanp.github.io/2019/08/22/cmake-convert-to-absolute-path/</link>
+      <guid>https://yhwanp.github.io/2019/08/22/cmake-convert-to-absolute-path/</guid>
+      <pubDate>Wed, 21 Aug 2019 15:57:53 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h2 id=&quot;CMake-에서-상대경로를-절대경로로-바꿔보자&quot;&gt;&lt;a href=&quot;#CMake-에서-상대경로를-절대경로로-바꿔보자&quot; class=&quot;headerlink&quot; title=&quot;CMake 에서 상대경로를 절대경로로 바꿔보자&quot;&gt;&lt;/a&gt;CMake 에서 상대
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="CMake-에서-상대경로를-절대경로로-바꿔보자"><a href="#CMake-에서-상대경로를-절대경로로-바꿔보자" class="headerlink" title="CMake 에서 상대경로를 절대경로로 바꿔보자"></a>CMake 에서 상대경로를 절대경로로 바꿔보자</h2><blockquote><p>왜 필요한가?</p></blockquote><p><code>CMake</code> 에서 지원하는 여러 명령들 중에 상대 경로로 입력하면 오류가 출력되는 function 들이 있습니다.<br>이때, 상대 경로를 절대 경로로 변환하기 위해 <code>get_filename_component</code> 을 사용하면 됩니다.</p><p>원형:</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">get_filename_component</span>(&lt;var&gt; &lt;FileName&gt; &lt;mode&gt; [CACHE])</span><br></pre></td></tr></table></figure><p>아래는 ../../.. 에 해당하는 상대경로를 절대경로로 변환해서, MY_ABSOLUTE_PATH 라는 변수로 저장 시키는 예제 입니다.</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">get_filename_component</span>(MY_ABSOLUTE_PATH <span class="string">"../../.."</span> ABSOLUTE)</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      <comments>https://yhwanp.github.io/2019/08/22/cmake-convert-to-absolute-path/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>OpenSSL을 NDK로 빌드하기</title>
