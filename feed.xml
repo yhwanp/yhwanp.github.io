@@ -8,8 +8,27 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>yhwanp&#39;s devNote</description>
-    <pubDate>Wed, 21 Aug 2019 16:14:39 GMT</pubDate>
+    <pubDate>Wed, 21 Aug 2019 17:15:19 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>iTerm2 3.3 release 이후 Theme 변경 및 Status Bar 사용하기</title>
+      <link>https://yhwanp.github.io/2019/08/22/iterm2-3-3-update/</link>
+      <guid>https://yhwanp.github.io/2019/08/22/iterm2-3-3-update/</guid>
+      <pubDate>Wed, 21 Aug 2019 16:36:27 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h2 id=&quot;새롭게-추가된-Minimal-Theme&quot;&gt;&lt;a href=&quot;#새롭게-추가된-Minimal-Theme&quot; class=&quot;headerlink&quot; title=&quot;새롭게 추가된 Minimal Theme&quot;&gt;&lt;/a&gt;새롭게 추가된 Minimal Theme&lt;/
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="새롭게-추가된-Minimal-Theme"><a href="#새롭게-추가된-Minimal-Theme" class="headerlink" title="새롭게 추가된 Minimal Theme"></a>새롭게 추가된 Minimal Theme</h2><p><img src="https://user-images.githubusercontent.com/36141584/63451781-e9911180-c47f-11e9-98f5-32e2281a9f41.png" alt><br>하단의 Try it now 를 클릭하면 자동으로 변경됩니다. 이전 기본 테마보다 훨씬 깔끔하네요. 다시 이전 테마로 돌아가고 싶다면 Preferences - Appearance  에서 변경 할 수 있습니다.</p><h2 id="Status-Bar-표시"><a href="#Status-Bar-표시" class="headerlink" title="Status Bar 표시"></a>Status Bar 표시</h2><p><img src="https://user-images.githubusercontent.com/36141584/63452629-b64f8200-c481-11e9-99b9-800b6be28d8b.png" alt>status bar 는 개인설정이 가능합니다. 배터리, CPU, RAM 사용량, 네트워크 대역폭 등 여러 정보 및 Tool 을 status bar 에 설정할 수 있네요.<img src="https://user-images.githubusercontent.com/36141584/63452391-227db600-c481-11e9-870e-98e5c052694c.png" alt></p><h2 id="개인-설정까지-완료된-모습"><a href="#개인-설정까지-완료된-모습" class="headerlink" title="개인 설정까지 완료된 모습"></a>개인 설정까지 완료된 모습</h2><p><img src="https://user-images.githubusercontent.com/36141584/63452195-a3887d80-c480-11e9-8117-a20b645d7b4a.png" alt></p>]]></content:encoded>
+      
+      <comments>https://yhwanp.github.io/2019/08/22/iterm2-3-3-update/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>CMake 에서 상대경로를 절대경로로 바꾸기</title>
