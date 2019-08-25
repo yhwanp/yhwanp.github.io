@@ -8,8 +8,27 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>yhwanp&#39;s devNote</description>
-    <pubDate>Wed, 21 Aug 2019 17:15:19 GMT</pubDate>
+    <pubDate>Sun, 25 Aug 2019 19:54:20 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>일론 머스크의 뉴럴링크, 뇌와 컴퓨터의 연결</title>
+      <link>https://yhwanp.github.io/2019/08/25/elon-musk-neuralink/</link>
+      <guid>https://yhwanp.github.io/2019/08/25/elon-musk-neuralink/</guid>
+      <pubDate>Sun, 25 Aug 2019 13:31:10 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h2 id=&quot;일론-머스크의-뉴럴링크에-대해-잘-설명된-유튜브-영상을-보자&quot;&gt;&lt;a href=&quot;#일론-머스크의-뉴럴링크에-대해-잘-설명된-유튜브-영상을-보자&quot; class=&quot;headerlink&quot; title=&quot;일론 머스크의 뉴럴링크에 대해 잘 설명된 유튜브
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="일론-머스크의-뉴럴링크에-대해-잘-설명된-유튜브-영상을-보자"><a href="#일론-머스크의-뉴럴링크에-대해-잘-설명된-유튜브-영상을-보자" class="headerlink" title="일론 머스크의 뉴럴링크에 대해 잘 설명된 유튜브 영상을 보자"></a>일론 머스크의 뉴럴링크에 대해 잘 설명된 유튜브 영상을 보자</h2><div class="video-container"><iframe src="//www.youtube.com/embed/bBSaxXEOQcM" frameborder="0" allowfullscreen></iframe></div><br><div class="video-container"><iframe src="//www.youtube.com/embed/KezI_Lqnj5Q" frameborder="0" allowfullscreen></iframe></div><p>영상의 내용을 아주 간단하게 요약하자면, <code>뉴럴링크</code>란 뇌의 대뇌피질에 작은 칩을 연결해 뇌의 뉴런들이 전달하는 전자기적 신호를 <code>알고리즘</code>으로 분석해서 사람의 생각, 감각, 운동능력 등에 영향을 줄 수 있는 기술이다.<br>1차적으로 <code>파킨슨병</code> 같은 뇌 질환을 앓고 있는 환자들을 위해 사용될 것이고, 2020년 말에는 일반인들에게도 상용화가 될 것이라고 예상한다고 한다.</p><p>뉴럴링크가 상용화된다면, 이제 더 이상 <code>마우스</code>나 <code>키보드</code>, <code>모니터</code> 와 같은 뇌와 컴퓨터간의 <code>입력 매체</code> 및 <code>출력매체</code>가  필요 없어질 수 있다. 다양한 입력 매체의 도움없이도 훨씬 빠르게, 내가 <code>생각하는 속도</code>로 컴퓨터를 조작하고, 출력 매체가 없이도 얻고자 하는 정보를 뇌에 <code>주입</code> 시킬 수도 있는 것이다. 사람들은 인공지능 컴퓨터의 도움으로 현재보다 훨씬 많은 정보를 빠르고 쉽게 습득할 수 있을 것이다. </p><p>과연 2020년 말에는 생각만으로 상호작용을 하는 고도화된 인공지능 비서를 가질 수 있을까?<br><img src="ironman.jpg" alt="아이언맨도 음성인식으로 프라이데이와 통신하는데.."></p><p>아직은 전혀 실감이 나지 않지만 동물을 통한 실험도 어느정도 진행되었고 유의미한 성과를 이룬 것으로 보인다. 인간에게 적용되었을 때 안전성 / 보안성 문제만 해결된다면, <code>특이점</code>을 불러올 기술이라고 생각된다.<br><code>뉴럴링크</code>는 기존의 지식, 인프라를 무너뜨릴 수도 있을 것이다. 한편으론 내가 수년 간 쌓은 지식, 경험이 이 기술이 개발됨에 따라 남들이 쉽게 따라할 수 있다고 생각하면 당장 의욕이 떨어질 수도 있겠다. 하지만 이런 시대가 올 수 있다고 아직 장담할 수 없는 단계이고, 당장 할 수 있는 것도 없다. 그저 경각심을 가지고 현실을 열심히 살면 <code>뉴럴링크</code> 의 시대에도 내가 할 수 있는 것이 있을 것이라고 믿고, 준비해야 한다고 생각한다.</p>]]></content:encoded>
+      
+      <comments>https://yhwanp.github.io/2019/08/25/elon-musk-neuralink/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>iTerm2 3.3 release 이후 Theme 변경 및 Status Bar 사용하기</title>
