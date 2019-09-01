@@ -3,6 +3,27 @@
 
 
     <url>
+        <loc>https://yhwanp.github.io/tags/Automation/</loc>
+        <lastmod>2019-09-01T09:05:34.361Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://yhwanp.github.io/tags/SCP/</loc>
+        <lastmod>2019-09-01T09:05:34.361Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://yhwanp.github.io/tags/SSH/</loc>
+        <lastmod>2019-09-01T09:05:34.361Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://yhwanp.github.io/tags/Elon-Musk/</loc>
         <lastmod>2019-08-25T19:54:20.044Z</lastmod>
         <changefreq>weekly</changefreq>

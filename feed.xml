@@ -8,8 +8,27 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>yhwanp&#39;s devNote</description>
-    <pubDate>Sun, 25 Aug 2019 19:54:20 GMT</pubDate>
+    <pubDate>Sun, 01 Sep 2019 09:05:34 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>plink, pscp 로 SSH, SCP 써보기 (command-line, 자동화)</title>
+      <link>https://yhwanp.github.io/2019/09/01/how-to-ssh-scp-with-command-line/</link>
+      <guid>https://yhwanp.github.io/2019/09/01/how-to-ssh-scp-with-command-line/</guid>
+      <pubDate>Sun, 01 Sep 2019 08:24:56 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h2 id=&quot;plink-pscp-어떻게-쓰면-좋을까&quot;&gt;&lt;a href=&quot;#plink-pscp-어떻게-쓰면-좋을까&quot; class=&quot;headerlink&quot; title=&quot;plink, pscp 어떻게 쓰면 좋을까?&quot;&gt;&lt;/a&gt;plink, pscp 어떻게 쓰면 좋을
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="plink-pscp-어떻게-쓰면-좋을까"><a href="#plink-pscp-어떻게-쓰면-좋을까" class="headerlink" title="plink, pscp 어떻게 쓰면 좋을까?"></a>plink, pscp 어떻게 쓰면 좋을까?</h2><p>회사에서 일을 할 때 <code>SSH</code> 나 <code>SCP</code> 등을 사용할 일이 많은데, 보통 아래와 같은 조합으로 사용했다.<br>SSH : TeraTerm, Putty, PowerShell<br>파일 전송 : FileZilla, WinSCP</p><p>위 프로그램들은 잘 사용하고 있었지만, 업무 상 반복적인 작업 들이 있었고 이를 위해 매번 같은 버튼 누르고, 같은  타이핑 하는 등.. 같은 action 을 반복하는 것이 귀찮았다.<br><em>ex) SSH password / 명령어 입력, 테스트를 위해 binary 교체 및 권한 설정 등..</em></p><p><code>plink</code>, <code>pscp</code> 는 이런 전송 반복적인 작업들을 피하기 위해 command-line 기반으로 어떻게 <code>자동화</code>를 할 수 있을 지 알아보다 발견한 툴이다.<br>이미 Putty 를 쓰고 있다면 Putty 에 포함되어 있는 프로그램이고, 다운로드 받고 싶다면 아래 링크에서 받을 수 있다.</p><p><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" rel="external nofollow noopener noreferrer" target="_blank">Download link</a><br><img src="image-20190901174340033.png" alt="Putty 전체를 받지 않고 plink, pscp 만 따로 받을 수도 있다."></p><p>그리고, 아래와 같이 사용하면 된다. 사용법도 간단하고 pw 를 지정할 수도 있어서 자동화할 때 이용하기 좋다.</p><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 192.168.11.10 의 host 로 접속해서 pwd 명령</span></span><br><span class="line">plink.exe -ssh -pw &lt;password&gt; host@<span class="number">192.168</span>.<span class="number">11.10</span> <span class="string">"pwd"</span></span><br><span class="line"><span class="comment"># 192.168.11.10 의 ~/dest 폴더로 example.txt 를 복사</span></span><br><span class="line">pscp.exe -scp -r -pw &lt;password&gt; example.txt host@<span class="number">192.168</span>.<span class="number">11.10</span>:~/dest</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      <comments>https://yhwanp.github.io/2019/09/01/how-to-ssh-scp-with-command-line/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>일론 머스크의 뉴럴링크, 뇌와 컴퓨터의 연결</title>
