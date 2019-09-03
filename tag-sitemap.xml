@@ -3,6 +3,20 @@
 
 
     <url>
+        <loc>https://yhwanp.github.io/tags/markdown/</loc>
+        <lastmod>2019-09-03T17:24:16.628Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://yhwanp.github.io/tags/hexo/</loc>
+        <lastmod>2019-09-03T17:24:16.628Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://yhwanp.github.io/tags/automation/</loc>
         <lastmod>2019-09-01T09:49:01.707Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -54,20 +68,6 @@
     <url>
         <loc>https://yhwanp.github.io/tags/font/</loc>
         <lastmod>2019-08-11T15:26:21.050Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://yhwanp.github.io/tags/hexo/</loc>
-        <lastmod>2019-08-11T15:26:21.050Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://yhwanp.github.io/tags/markdown/</loc>
-        <lastmod>2019-08-04T17:58:08.205Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
