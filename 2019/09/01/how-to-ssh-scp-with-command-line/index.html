@@ -21,7 +21,7 @@
 <meta property="og:description" content="plink, pscp 어떻게 쓰면 좋을까?회사에서 일을 할 때 SSH 나 SCP 등을 사용할 일이 많은데, 보통 아래와 같은 조합으로 사용했다.SSH : TeraTerm, Putty, PowerShell파일 전송 : FileZilla, WinSCP 위 프로그램들은 잘 사용하고 있었지만, 업무 상 반복적인 작업 들이 있었고 이를 위해 매번 같은 버튼 누르고,">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://yhwanp.github.io/images/opimage.jpg">
-<meta property="og:updated_time" content="2019-09-01T09:05:34.361Z">
+<meta property="og:updated_time" content="2019-09-01T09:49:01.707Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="plink, pscp 로 SSH, SCP 써보기 (command-line, 자동화)">
 <meta name="twitter:description" content="plink, pscp 어떻게 쓰면 좋을까?회사에서 일을 할 때 SSH 나 SCP 등을 사용할 일이 많은데, 보통 아래와 같은 조합으로 사용했다.SSH : TeraTerm, Putty, PowerShell파일 전송 : FileZilla, WinSCP 위 프로그램들은 잘 사용하고 있었지만, 업무 상 반복적인 작업 들이 있었고 이를 위해 매번 같은 버튼 누르고,">
@@ -97,7 +97,7 @@ ga('send', 'pageview');
                                     <a class="main-nav-list-link" href="/">Home</a>
                                 </li>
                             
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Android/">Android</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Android/NDK/">NDK</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/ETC/">ETC</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/ETC/CMake/">CMake</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/ETC/Hexo/">Hexo</a></li></ul></li></ul>
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/android/">Android</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/android/ndk/">NDK</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/etc/">ETC</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/etc/cmake/">CMake</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/etc/hexo/">Hexo</a></li></ul></li></ul>
                                     
                                 <li class="main-nav-list-item">
                                     <a class="main-nav-list-link" href="/about/index.html">About</a>
@@ -156,7 +156,7 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/ETC/">ETC</a>
+    <a class="page-title-link" href="/categories/etc/">ETC</a>
     </h1>
 </div>
 
@@ -195,7 +195,7 @@ ga('send', 'pageview');
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Automation/">Automation</a>, <a class="tag-link" href="/tags/SCP/">SCP</a>, <a class="tag-link" href="/tags/SSH/">SSH</a>
+        <a class="tag-link" href="/tags/automation/">Automation</a>, <a class="tag-link" href="/tags/scp/">SCP</a>, <a class="tag-link" href="/tags/ssh/">SSH</a>
     </div>
 
             </div>
@@ -206,7 +206,7 @@ ga('send', 'pageview');
 <p>위 프로그램들은 잘 사용하고 있었지만, 업무 상 반복적인 작업 들이 있었고 이를 위해 매번 같은 버튼 누르고, 같은  타이핑 하는 등.. 같은 action 을 반복하는 것이 귀찮았다.<br><em>ex) SSH password / 명령어 입력, 테스트를 위해 binary 교체 및 권한 설정 등..</em></p>
 <p><code>plink</code>, <code>pscp</code> 는 이런 전송 반복적인 작업들을 피하기 위해 command-line 기반으로 어떻게 <code>자동화</code>를 할 수 있을 지 알아보다 발견한 툴이다.<br>이미 Putty 를 쓰고 있다면 Putty 에 포함되어 있는 프로그램이고, 다운로드 받고 싶다면 아래 링크에서 받을 수 있다.</p>
 <p><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" rel="external nofollow noopener noreferrer" target="_blank">Download link</a><br><img src="image-20190901174340033.png" alt="Putty 전체를 받지 않고 plink, pscp 만 따로 받을 수도 있다."></p>
-<p>그리고, 아래와 같이 사용하면 된다. 사용법도 간단하고 pw 를 지정할 수도 있어서 자동화할 때 이용하기 좋다.</p>
+<p>그리고, 아래와 같이 사용하면 된다. 사용법도 간단하고 pw 를 지정할 수도 있어서 자동화할 때 좋다.</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 192.168.11.10 의 host 로 접속해서 pwd 명령</span></span><br><span class="line">plink.exe -ssh -pw &lt;password&gt; host@<span class="number">192.168</span>.<span class="number">11.10</span> <span class="string">"pwd"</span></span><br><span class="line"><span class="comment"># 192.168.11.10 의 ~/dest 폴더로 example.txt 를 복사</span></span><br><span class="line">pscp.exe -scp -r -pw &lt;password&gt; example.txt host@<span class="number">192.168</span>.<span class="number">11.10</span>:~/dest</span><br></pre></td></tr></table></figure>
 
 
@@ -296,7 +296,7 @@ ga('send', 'pageview');
         "url": "https://yhwanp.github.io/2019/09/01/how-to-ssh-scp-with-command-line/",
         "description": "plink, pscp 어떻게 쓰면 좋을까?회사에서 일을 할 때 SSH 나 SCP 등을 사용할 일이 많은데, 보통 아래와 같은 조합으로 사용했다.SSH : TeraTerm, Putty, PowerShell파일 전송 : FileZilla, WinSCP
 위 프로그램들은 잘 사용하고 있었지만, 업무 상 반복적인 작업 들이 있었고 이를 위해 매번 같은 버튼 누르고,"
-        "wordCount": 190
+        "wordCount": 189
     }
 </script>
 
@@ -377,7 +377,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/ETC/">ETC</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/etc/">ETC</a></p>
                             <p class="item-title"><a href="/2019/09/01/how-to-ssh-scp-with-command-line/" class="title">plink, pscp 로 SSH, SCP 써보기 (command-line, 자동화)</a></p>
                             <p class="item-date"><time datetime="2019-09-01T08:24:56.000Z" itemprop="datePublished">2019-09-01</time></p>
                         </div>
@@ -386,7 +386,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/ETC/">ETC</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/etc/">ETC</a></p>
                             <p class="item-title"><a href="/2019/08/25/elon-musk-neuralink/" class="title">일론 머스크의 뉴럴링크, 뇌와 컴퓨터의 연결</a></p>
                             <p class="item-date"><time datetime="2019-08-25T13:31:10.000Z" itemprop="datePublished">2019-08-25</time></p>
                         </div>
@@ -395,7 +395,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/ETC/">ETC</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/etc/">ETC</a></p>
                             <p class="item-title"><a href="/2019/08/22/iterm2-3-3-update/" class="title">iTerm2 3.3 release 이후 Theme 변경 및 Status Bar 사용하기</a></p>
                             <p class="item-date"><time datetime="2019-08-21T16:36:27.000Z" itemprop="datePublished">2019-08-22</time></p>
                         </div>
@@ -404,7 +404,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/ETC/">ETC</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/ETC/CMake/">CMake</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/etc/">ETC</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/etc/cmake/">CMake</a></p>
                             <p class="item-title"><a href="/2019/08/22/cmake-convert-to-absolute-path/" class="title">CMake 에서 상대경로를 절대경로로 바꾸기</a></p>
                             <p class="item-date"><time datetime="2019-08-21T15:57:53.000Z" itemprop="datePublished">2019-08-22</time></p>
                         </div>
@@ -413,7 +413,7 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/Android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/Android/NDK/">NDK</a></p>
+                            <p class="item-category"><a class="article-category-link" href="/categories/android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/android/ndk/">NDK</a></p>
                             <p class="item-title"><a href="/2019/07/28/OpenSSL을-NDK로-빌드하기/" class="title">OpenSSL을 NDK로 빌드하기</a></p>
                             <p class="item-date"><time datetime="2019-07-28T10:02:06.000Z" itemprop="datePublished">2019-07-28</time></p>
                         </div>
@@ -428,7 +428,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/NDK/">NDK</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/ETC/">ETC</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/ETC/CMake/">CMake</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/ETC/Hexo/">Hexo</a><span class="category-list-count">2</span></li></ul></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/android/">Android</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/android/ndk/">NDK</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">ETC</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/etc/cmake/">CMake</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/hexo/">Hexo</a><span class="category-list-count">2</span></li></ul></li></ul>
         </div>
     </div>
 
@@ -448,7 +448,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Automation/">Automation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CMake/">CMake</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Elon-Musk/">Elon Musk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Font/">Font</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NDK/">NDK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Neuralink/">Neuralink</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OpenSSL/">OpenSSL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SCP/">SCP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSH/">SSH</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iTerm2/">iTerm2</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automation/">Automation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cmake/">CMake</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elon-musk/">Elon Musk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font/">Font</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">Hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ndk/">NDK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/neuralink/">Neuralink</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openssl/">OpenSSL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scp/">SCP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">SSH</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm2/">iTerm2</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -458,7 +458,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Automation/" style="font-size: 10px;">Automation</a> <a href="/tags/CMake/" style="font-size: 10px;">CMake</a> <a href="/tags/Elon-Musk/" style="font-size: 10px;">Elon Musk</a> <a href="/tags/Font/" style="font-size: 10px;">Font</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NDK/" style="font-size: 10px;">NDK</a> <a href="/tags/Neuralink/" style="font-size: 10px;">Neuralink</a> <a href="/tags/OpenSSL/" style="font-size: 10px;">OpenSSL</a> <a href="/tags/SCP/" style="font-size: 10px;">SCP</a> <a href="/tags/SSH/" style="font-size: 10px;">SSH</a> <a href="/tags/iTerm2/" style="font-size: 10px;">iTerm2</a>
+            <a href="/tags/android/" style="font-size: 10px;">Android</a> <a href="/tags/automation/" style="font-size: 10px;">Automation</a> <a href="/tags/cmake/" style="font-size: 10px;">CMake</a> <a href="/tags/elon-musk/" style="font-size: 10px;">Elon Musk</a> <a href="/tags/font/" style="font-size: 10px;">Font</a> <a href="/tags/hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/ndk/" style="font-size: 10px;">NDK</a> <a href="/tags/neuralink/" style="font-size: 10px;">Neuralink</a> <a href="/tags/openssl/" style="font-size: 10px;">OpenSSL</a> <a href="/tags/scp/" style="font-size: 10px;">SCP</a> <a href="/tags/ssh/" style="font-size: 10px;">SSH</a> <a href="/tags/iterm2/" style="font-size: 10px;">iTerm2</a>
         </div>
     </div>
 
