@@ -21,7 +21,7 @@
 <meta property="og:description" content="Rvalue 란 무엇인가?Rvalue, 우측값은 대입 시에 항상 오른쪽에만 오는 식을 말한다.예제로 이해하는 것이 쉽다. 123456789101112131415int doSomething()&amp;#123;  ...  return z;&amp;#125;int x = 10;		// x 는 Lvalue, 10은 Rvalueint y = 20;		// y 는 Lvalue,">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://yhwanp.github.io/images/opimage.jpg">
-<meta property="og:updated_time" content="2019-09-08T10:48:09.768Z">
+<meta property="og:updated_time" content="2019-09-08T16:58:15.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++ Rvalue 와 std::move 에 대한 이해">
 <meta name="twitter:description" content="Rvalue 란 무엇인가?Rvalue, 우측값은 대입 시에 항상 오른쪽에만 오는 식을 말한다.예제로 이해하는 것이 쉽다. 123456789101112131415int doSomething()&amp;#123;  ...  return z;&amp;#125;int x = 10;		// x 는 Lvalue, 10은 Rvalueint y = 20;		// y 는 Lvalue,">
@@ -203,9 +203,9 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
             <h2 id="Rvalue-란-무엇인가"><a href="#Rvalue-란-무엇인가" class="headerlink" title="Rvalue 란 무엇인가?"></a>Rvalue 란 무엇인가?</h2><p>Rvalue, 우측값은 대입 시에 항상 오른쪽에만 오는 식을 말한다.<br>예제로 이해하는 것이 쉽다.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">doSomething</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">return</span> z;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> x = <span class="number">10</span>;		<span class="comment">// x 는 Lvalue, 10은 Rvalue</span></span><br><span class="line"><span class="keyword">int</span> y = <span class="number">20</span>;		<span class="comment">// y 는 Lvalue, 20은 Rvalue</span></span><br><span class="line"></span><br><span class="line">x = y; 				<span class="comment">// x 와 y 모두 Lvalue</span></span><br><span class="line">x = (x + y);		<span class="comment">// x 는 Lvalue, x + Y 는 Rvalue</span></span><br><span class="line"></span><br><span class="line">x + y = <span class="number">30</span>;		<span class="comment">// 잘 못된 코드, Rvalue 인 x + y 에 대입하고 있다.</span></span><br><span class="line"></span><br><span class="line">x = doSomething()		<span class="comment">// doSomething() 은 Rvalue</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">doSomething</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">return</span> z;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> x = <span class="number">10</span>;		<span class="comment">// x 는 Lvalue, 10은 Rvalue</span></span><br><span class="line"><span class="keyword">int</span> y = <span class="number">20</span>;		<span class="comment">// y 는 Lvalue, 20은 Rvalue</span></span><br><span class="line"></span><br><span class="line">x = y; 				<span class="comment">// x 와 y 모두 Lvalue</span></span><br><span class="line">x = (x + y);		<span class="comment">// x 는 Lvalue, x + y 는 Rvalue</span></span><br><span class="line"></span><br><span class="line">x + y = <span class="number">30</span>;		<span class="comment">// 잘 못된 코드, Rvalue 인 x + y 에 대입하고 있다.</span></span><br><span class="line"></span><br><span class="line">x = doSomething()		<span class="comment">// doSomething() 은 Rvalue</span></span><br></pre></td></tr></table></figure>
 
-<p>x, y 처럼 이름을 가지고 있고, 그 이름으로 접근할 수 있는 것이 Lvalue 이다.<br>그에 비해 (x + y) 나 상수 10, 20 등은 이름을 가지고 있지 않고 식이 끝난 후 다음 라인에서 그 값에 접근할 수 없다.</p>
+<p>x, y 처럼 이름을 가지고 있고, 그 이름으로 접근할 수 있는 것이 Lvalue 이다.<br>그와 반대로 (x + y) 나 상수 10, 20 등은 이름을 가지고 있지 않고 식이 끝난 후 다음 라인에서 그 값에 접근할 수 없다.</p>
 <p>Rvalue 를 함수의 매개변수로 받고 싶으면 A&amp;&amp; 로 선언한다.<br>참고로 doSomethingWithRvalue 안에서 rhs 를 다시 사용할 때는 rhs 가 Lvalue 라는 것을 주의하자. Rvalue 로 사용하고 싶으면 다시 std::move(rhs) 와 같이 사용해주어야 한다.</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>;</span></span><br><span class="line"><span class="comment">// class A의 instance를 Rvalue 로 받고 싶을 때</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">doSomethingWithRvalue</span><span class="params">(A&amp;&amp; rhs)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -308,7 +308,7 @@ ga('send', 'pageview');
         "genre": "C++",
         "datePublished": "2019-09-08",
         "dateCreated": "2019-09-08",
-        "dateModified": "2019-09-08",
+        "dateModified": "2019-09-09",
         "url": "https://yhwanp.github.io/2019/09/08/rvalue-and-move/",
         "description": "Rvalue 란 무엇인가?Rvalue, 우측값은 대입 시에 항상 오른쪽에만 오는 식을 말한다.예제로 이해하는 것이 쉽다.
 123456789101112131415int doSomething()&#123;  ...  return z;&#125;int x = 10;		// x 는 Lvalue, 10은 Rvalueint y = 20;		// y 는 Lvalue, "
@@ -403,6 +403,15 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/c/">C++</a></p>
+                            <p class="item-title"><a href="/2019/09/09/c-vector-emplace-back/" class="title">C++ std::vector push_back 보단 emplace_back 을 사용하자</a></p>
+                            <p class="item-date"><time datetime="2019-09-08T16:58:39.000Z" itemprop="datePublished">2019-09-09</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/linux/">Linux</a></p>
                             <p class="item-title"><a href="/2019/09/08/ubuntu-ssh-welcome-message/" class="title">Ubuntu SSH Welcome message 추가하기</a></p>
                             <p class="item-date"><time datetime="2019-09-08T10:59:05.000Z" itemprop="datePublished">2019-09-08</time></p>
@@ -436,15 +445,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/etc/">ETC</a></p>
-                            <p class="item-title"><a href="/2019/08/25/elon-musk-neuralink/" class="title">일론 머스크의 뉴럴링크, 뇌와 컴퓨터의 연결</a></p>
-                            <p class="item-date"><time datetime="2019-08-25T13:31:10.000Z" itemprop="datePublished">2019-08-25</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -454,7 +454,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/android/">Android</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/android/ndk/">NDK</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/c/">C++</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">ETC</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/etc/cmake/">CMake</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/hexo/">Hexo</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">Linux</a><span class="category-list-count">2</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/android/">Android</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/android/ndk/">NDK</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/c/">C++</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">ETC</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/etc/cmake/">CMake</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/hexo/">Hexo</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">Linux</a><span class="category-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -464,7 +464,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -474,7 +474,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automation/">Automation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cmake/">CMake</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elon-musk/">Elon Musk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font/">Font</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">Hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ndk/">NDK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/neuralink/">Neuralink</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openssl/">OpenSSL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvalue/">Rvalue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scp/">SCP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">SSH</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm2/">iTerm2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mount/">mount</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/std/">std</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automation/">Automation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">C++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cmake/">CMake</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elon-musk/">Elon Musk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font/">Font</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">Hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ndk/">NDK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/neuralink/">Neuralink</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openssl/">OpenSSL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvalue/">Rvalue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scp/">SCP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">SSH</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm2/">iTerm2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mount/">mount</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/std/">std</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vector/">vector</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -484,7 +484,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/android/" style="font-size: 10px;">Android</a> <a href="/tags/automation/" style="font-size: 10px;">Automation</a> <a href="/tags/c/" style="font-size: 10px;">C++</a> <a href="/tags/cmake/" style="font-size: 10px;">CMake</a> <a href="/tags/elon-musk/" style="font-size: 10px;">Elon Musk</a> <a href="/tags/font/" style="font-size: 10px;">Font</a> <a href="/tags/hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/linux/" style="font-size: 10px;">Linux</a> <a href="/tags/markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/ndk/" style="font-size: 10px;">NDK</a> <a href="/tags/neuralink/" style="font-size: 10px;">Neuralink</a> <a href="/tags/openssl/" style="font-size: 10px;">OpenSSL</a> <a href="/tags/rvalue/" style="font-size: 10px;">Rvalue</a> <a href="/tags/scp/" style="font-size: 10px;">SCP</a> <a href="/tags/ssh/" style="font-size: 20px;">SSH</a> <a href="/tags/iterm2/" style="font-size: 10px;">iTerm2</a> <a href="/tags/mount/" style="font-size: 10px;">mount</a> <a href="/tags/std/" style="font-size: 10px;">std</a>
+            <a href="/tags/android/" style="font-size: 10px;">Android</a> <a href="/tags/automation/" style="font-size: 10px;">Automation</a> <a href="/tags/c/" style="font-size: 20px;">C++</a> <a href="/tags/cmake/" style="font-size: 10px;">CMake</a> <a href="/tags/elon-musk/" style="font-size: 10px;">Elon Musk</a> <a href="/tags/font/" style="font-size: 10px;">Font</a> <a href="/tags/hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/linux/" style="font-size: 10px;">Linux</a> <a href="/tags/markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/ndk/" style="font-size: 10px;">NDK</a> <a href="/tags/neuralink/" style="font-size: 10px;">Neuralink</a> <a href="/tags/openssl/" style="font-size: 10px;">OpenSSL</a> <a href="/tags/rvalue/" style="font-size: 10px;">Rvalue</a> <a href="/tags/scp/" style="font-size: 10px;">SCP</a> <a href="/tags/ssh/" style="font-size: 20px;">SSH</a> <a href="/tags/iterm2/" style="font-size: 10px;">iTerm2</a> <a href="/tags/mount/" style="font-size: 10px;">mount</a> <a href="/tags/std/" style="font-size: 20px;">std</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a>
         </div>
     </div>
 

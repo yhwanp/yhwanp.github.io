@@ -8,8 +8,15 @@
     </url>
 
     <url>
+        <loc>https://yhwanp.github.io/categories/c/</loc>
+        <lastmod>2019-09-08T17:58:44.427Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://yhwanp.github.io/categories/linux/</loc>
-        <lastmod>2019-09-08T11:11:58.423Z</lastmod>
+        <lastmod>2019-09-08T15:55:20.424Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -17,13 +24,6 @@
     <url>
         <loc>https://yhwanp.github.io/categories/etc/</loc>
         <lastmod>2019-09-08T10:55:22.604Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://yhwanp.github.io/categories/c/</loc>
-        <lastmod>2019-09-08T10:48:09.768Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

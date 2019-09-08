@@ -12,19 +12,19 @@
     
         <meta name="keywords" content="SSH">
     
-    <meta name="description" content="client 가 SSH 에 접속할 때마다 나오는 Welcome message 를 추가하는 방법이다.(Ubuntu 18.04 기준) 123456# /etc/update-motd.d 에 99-custom 을 생성해줌.vi /etc/update-motd.d/99-custom# 내용 예제printf &quot;### 내용 입력 ###&quot;who  who 는 현재 SSH con">
+    <meta name="description" content="client 가 SSH 에 접속할 때마다 출력되는 Welcome message 를 추가하는 방법이다.(Ubuntu 18.04 기준) 123456# /etc/update-motd.d 에 99-custom 을 생성해줌.vi /etc/update-motd.d/99-custom# 내용 예제printf &quot;### 내용 입력 ###&quot;who  who 는 현재 SSH co">
 <meta name="keywords" content="SSH">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu SSH Welcome message 추가하기">
 <meta property="og:url" content="https://yhwanp.github.io/2019/09/08/ubuntu-ssh-welcome-message/index.html">
 <meta property="og:site_name" content="yhwanp&#39;s devNote">
-<meta property="og:description" content="client 가 SSH 에 접속할 때마다 나오는 Welcome message 를 추가하는 방법이다.(Ubuntu 18.04 기준) 123456# /etc/update-motd.d 에 99-custom 을 생성해줌.vi /etc/update-motd.d/99-custom# 내용 예제printf &quot;### 내용 입력 ###&quot;who  who 는 현재 SSH con">
+<meta property="og:description" content="client 가 SSH 에 접속할 때마다 출력되는 Welcome message 를 추가하는 방법이다.(Ubuntu 18.04 기준) 123456# /etc/update-motd.d 에 99-custom 을 생성해줌.vi /etc/update-motd.d/99-custom# 내용 예제printf &quot;### 내용 입력 ###&quot;who  who 는 현재 SSH co">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://yhwanp.github.io/images/opimage.jpg">
-<meta property="og:updated_time" content="2019-09-08T11:11:58.423Z">
+<meta property="og:updated_time" content="2019-09-08T15:55:20.424Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu SSH Welcome message 추가하기">
-<meta name="twitter:description" content="client 가 SSH 에 접속할 때마다 나오는 Welcome message 를 추가하는 방법이다.(Ubuntu 18.04 기준) 123456# /etc/update-motd.d 에 99-custom 을 생성해줌.vi /etc/update-motd.d/99-custom# 내용 예제printf &quot;### 내용 입력 ###&quot;who  who 는 현재 SSH con">
+<meta name="twitter:description" content="client 가 SSH 에 접속할 때마다 출력되는 Welcome message 를 추가하는 방법이다.(Ubuntu 18.04 기준) 123456# /etc/update-motd.d 에 99-custom 을 생성해줌.vi /etc/update-motd.d/99-custom# 내용 예제printf &quot;### 내용 입력 ###&quot;who  who 는 현재 SSH co">
 <meta name="twitter:image" content="https://yhwanp.github.io/images/opimage.jpg">
     
     <link rel="canonical" href="https://yhwanp.github.io/2019/09/08/ubuntu-ssh-welcome-message/">
@@ -202,7 +202,7 @@ ga('send', 'pageview');
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>client 가 SSH 에 접속할 때마다 나오는 <code>Welcome message</code> 를 추가하는 방법이다.<br><em>(Ubuntu 18.04 기준)</em></p>
+            <p>client 가 SSH 에 접속할 때마다 출력되는 <code>Welcome message</code> 를 추가하는 방법이다.<br><em>(Ubuntu 18.04 기준)</em></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># /etc/update-motd.d 에 99-custom 을 생성해줌.</span></span><br><span class="line">vi /etc/update-motd.d/99-custom</span><br><span class="line"></span><br><span class="line"><span class="comment"># 내용 예제</span></span><br><span class="line"><span class="built_in">printf</span> <span class="string">"### 내용 입력 ###"</span></span><br><span class="line">who</span><br></pre></td></tr></table></figure>
 
 <p>who 는 현재 SSH connect 되어있는 client 목록을 보여준다.<br>출력하고 싶은 내용을 자유롭게 입력하면 된다.</p>
@@ -289,12 +289,12 @@ ga('send', 'pageview');
         "genre": "Linux",
         "datePublished": "2019-09-08",
         "dateCreated": "2019-09-08",
-        "dateModified": "2019-09-08",
+        "dateModified": "2019-09-09",
         "url": "https://yhwanp.github.io/2019/09/08/ubuntu-ssh-welcome-message/",
-        "description": "client 가 SSH 에 접속할 때마다 나오는 Welcome message 를 추가하는 방법이다.(Ubuntu 18.04 기준)
+        "description": "client 가 SSH 에 접속할 때마다 출력되는 Welcome message 를 추가하는 방법이다.(Ubuntu 18.04 기준)
 123456# /etc/update-motd.d 에 99-custom 을 생성해줌.vi /etc/update-motd.d/99-custom# 내용 예제printf "### 내용 입력 ###"who
 
-who 는 현재 SSH con"
+who 는 현재 SSH co"
         "wordCount": 59
     }
 </script>
@@ -351,6 +351,16 @@ who 는 현재 SSH con"
         
 <nav id="article-nav">
     
+        <a href="/2019/09/09/c-vector-emplace-back/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">newer</strong>
+        <p class="article-nav-title">
+        
+            C++ std::vector push_back 보단 emplace_back 을 사용하자
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2019/09/08/rvalue-and-move/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
@@ -372,6 +382,15 @@ who 는 현재 SSH con"
         <h3 class="widget-title">recents</h3>
         <div class="widget">
             <ul id="recent-post" class="no-thumbnail">
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/c/">C++</a></p>
+                            <p class="item-title"><a href="/2019/09/09/c-vector-emplace-back/" class="title">C++ std::vector push_back 보단 emplace_back 을 사용하자</a></p>
+                            <p class="item-date"><time datetime="2019-09-08T16:58:39.000Z" itemprop="datePublished">2019-09-09</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -409,15 +428,6 @@ who 는 현재 SSH con"
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/etc/">ETC</a></p>
-                            <p class="item-title"><a href="/2019/08/25/elon-musk-neuralink/" class="title">일론 머스크의 뉴럴링크, 뇌와 컴퓨터의 연결</a></p>
-                            <p class="item-date"><time datetime="2019-08-25T13:31:10.000Z" itemprop="datePublished">2019-08-25</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -427,7 +437,7 @@ who 는 현재 SSH con"
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/android/">Android</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/android/ndk/">NDK</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/c/">C++</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">ETC</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/etc/cmake/">CMake</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/hexo/">Hexo</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">Linux</a><span class="category-list-count">2</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/android/">Android</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/android/ndk/">NDK</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/c/">C++</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">ETC</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/etc/cmake/">CMake</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/hexo/">Hexo</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">Linux</a><span class="category-list-count">2</span></li></ul>
         </div>
     </div>
 
@@ -437,7 +447,7 @@ who 는 현재 SSH con"
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -447,7 +457,7 @@ who 는 현재 SSH con"
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automation/">Automation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cmake/">CMake</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elon-musk/">Elon Musk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font/">Font</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">Hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ndk/">NDK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/neuralink/">Neuralink</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openssl/">OpenSSL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvalue/">Rvalue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scp/">SCP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">SSH</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm2/">iTerm2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mount/">mount</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/std/">std</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automation/">Automation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">C++</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cmake/">CMake</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elon-musk/">Elon Musk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font/">Font</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">Hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">Linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ndk/">NDK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/neuralink/">Neuralink</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openssl/">OpenSSL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvalue/">Rvalue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scp/">SCP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">SSH</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm2/">iTerm2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mount/">mount</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/std/">std</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vector/">vector</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -457,7 +467,7 @@ who 는 현재 SSH con"
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/android/" style="font-size: 10px;">Android</a> <a href="/tags/automation/" style="font-size: 10px;">Automation</a> <a href="/tags/c/" style="font-size: 10px;">C++</a> <a href="/tags/cmake/" style="font-size: 10px;">CMake</a> <a href="/tags/elon-musk/" style="font-size: 10px;">Elon Musk</a> <a href="/tags/font/" style="font-size: 10px;">Font</a> <a href="/tags/hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/linux/" style="font-size: 10px;">Linux</a> <a href="/tags/markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/ndk/" style="font-size: 10px;">NDK</a> <a href="/tags/neuralink/" style="font-size: 10px;">Neuralink</a> <a href="/tags/openssl/" style="font-size: 10px;">OpenSSL</a> <a href="/tags/rvalue/" style="font-size: 10px;">Rvalue</a> <a href="/tags/scp/" style="font-size: 10px;">SCP</a> <a href="/tags/ssh/" style="font-size: 20px;">SSH</a> <a href="/tags/iterm2/" style="font-size: 10px;">iTerm2</a> <a href="/tags/mount/" style="font-size: 10px;">mount</a> <a href="/tags/std/" style="font-size: 10px;">std</a>
+            <a href="/tags/android/" style="font-size: 10px;">Android</a> <a href="/tags/automation/" style="font-size: 10px;">Automation</a> <a href="/tags/c/" style="font-size: 20px;">C++</a> <a href="/tags/cmake/" style="font-size: 10px;">CMake</a> <a href="/tags/elon-musk/" style="font-size: 10px;">Elon Musk</a> <a href="/tags/font/" style="font-size: 10px;">Font</a> <a href="/tags/hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/linux/" style="font-size: 10px;">Linux</a> <a href="/tags/markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/ndk/" style="font-size: 10px;">NDK</a> <a href="/tags/neuralink/" style="font-size: 10px;">Neuralink</a> <a href="/tags/openssl/" style="font-size: 10px;">OpenSSL</a> <a href="/tags/rvalue/" style="font-size: 10px;">Rvalue</a> <a href="/tags/scp/" style="font-size: 10px;">SCP</a> <a href="/tags/ssh/" style="font-size: 20px;">SSH</a> <a href="/tags/iterm2/" style="font-size: 10px;">iTerm2</a> <a href="/tags/mount/" style="font-size: 10px;">mount</a> <a href="/tags/std/" style="font-size: 20px;">std</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a>
         </div>
     </div>
 
