@@ -3,6 +3,27 @@
 
 
     <url>
+        <loc>https://yhwanp.github.io/tags/std/</loc>
+        <lastmod>2019-09-08T10:48:09.768Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://yhwanp.github.io/tags/rvalue/</loc>
+        <lastmod>2019-09-08T10:48:09.768Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://yhwanp.github.io/tags/c/</loc>
+        <lastmod>2019-09-08T10:48:09.768Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://yhwanp.github.io/tags/mount/</loc>
         <lastmod>2019-09-08T09:13:13.067Z</lastmod>
         <changefreq>weekly</changefreq>
