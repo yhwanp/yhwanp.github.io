@@ -6,28 +6,24 @@
     
 
     
-    <title>OpenSSL을 NDK로 빌드하기 | yhwanp&#39;s devNote</title>
+    <title>Tag: Linux | yhwanp&#39;s devNote</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Android,NDK,OpenSSL">
-    
-    <meta name="description" content="시작에 앞서보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는">
-<meta name="keywords" content="Android,NDK,OpenSSL">
-<meta property="og:type" content="article">
-<meta property="og:title" content="OpenSSL을 NDK로 빌드하기">
-<meta property="og:url" content="https://yhwanp.github.io/2019/07/28/OpenSSL을-NDK로-빌드하기/index.html">
+    <meta name="description" content="yhwanp&apos;s devNote">
+<meta property="og:type" content="website">
+<meta property="og:title" content="yhwanp&#39;s devNote">
+<meta property="og:url" content="https://yhwanp.github.io/tags/linux/index.html">
 <meta property="og:site_name" content="yhwanp&#39;s devNote">
-<meta property="og:description" content="시작에 앞서보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는">
+<meta property="og:description" content="yhwanp&apos;s devNote">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://yhwanp.github.io/images/opimage.jpg">
-<meta property="og:updated_time" content="2019-07-28T10:43:14.047Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OpenSSL을 NDK로 빌드하기">
-<meta name="twitter:description" content="시작에 앞서보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는">
+<meta name="twitter:title" content="yhwanp&#39;s devNote">
+<meta name="twitter:description" content="yhwanp&apos;s devNote">
 <meta name="twitter:image" content="https://yhwanp.github.io/images/opimage.jpg">
     
-    <link rel="canonical" href="https://yhwanp.github.io/2019/07/28/openssl을-ndk로-빌드하기/">
+    <link rel="canonical" href="https://yhwanp.github.io/tags/linux/">
 
     
         <link rel="alternate" href="/feed.xml" title="yhwanp&#39;s devNote" type="application/atom+xml">
@@ -156,7 +152,7 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/android/">Android</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/android/ndk/">NDK</a>
+    <i class="icon fa fa-tag"></i>Tag: <em>Linux</em>
     </h1>
 </div>
 
@@ -168,169 +164,53 @@ ga('send', 'pageview');
     enable_page_level_ads: true
   });
 </script>
-                            <article id="post-OpenSSL을-NDK로-빌드하기" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+                            
+
+    
+    
         
-            <header class="article-header">
-                
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
+            </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/linux/">Linux</a>
+            </div>
+            <div class="date"><time datetime="2019-09-08T08:41:06.000Z" itemprop="datePublished">2019-09-08</time></div>
+        </div>
+        
     
         <h1 class="article-title" itemprop="name">
-        OpenSSL을 NDK로 빌드하기
+        <a href="/2019/09/08/linux-mount-and-auto-mount/">Linux mount 및 reboot 후에도 자동으로 mount 시켜주기</a>
         </h1>
     
 
-            </header>
-        
-        
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2019/07/28/OpenSSL을-NDK로-빌드하기/" class="article-date">
-            <time datetime="2019-07-28T10:02:06.000Z" itemprop="datePublished">2019-07-28</time>
-        </a>
+        <p class="article-excerpt">
+            mount 기본 명령어기본적으로 아래 명령어를 사용하면 된다.
+12# /dev/sda1 저장매체를 /mnt/myMount 로 마운트한다.mount /dev/sda1 /mnt/myMount
+
+이 때 마운트할 대상의 이름을 모르겠다면 ( 위 예제에서 /dev/sda1 과 같은 )fdisk -l 과 df -h 로 확인하자.
+1234# 디스크 / 파티션 정보 출력
+        </p>
     </div>
-
-		
-
-                
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/android/">Android</a>, <a class="tag-link" href="/tags/ndk/">NDK</a>, <a class="tag-link" href="/tags/openssl/">OpenSSL</a>
-    </div>
-
-            </div>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            <h2 id="시작에-앞서"><a href="#시작에-앞서" class="headerlink" title="시작에 앞서"></a>시작에 앞서</h2><p>보통 실습 용도나 로컬에서 테스트를 할 경우에는 <code>Precompiled library</code> 를 사용해도 되지만 상용 프로그램에 포함할 경우 <code>암호화 알고리즘 라이센스</code> 문제가 발생할 수 있습니다.<br>문제가 되는 암호화 알고리즘을 제외한 <code>Precompiled library</code> 가 있으면 해결되지만, 특정 <code>NDK</code>, <code>OpenSSL</code> 버전을 맞춰야 하는 경우 이에 만족하는 라이브러리를 찾기가 힘들어서, 직접 빌드하는 편이 빠릅니다.</p>
-<h2 id="빌드-환경-및-사용-버전"><a href="#빌드-환경-및-사용-버전" class="headerlink" title="빌드 환경 및 사용 버전"></a>빌드 환경 및 사용 버전</h2><ol>
-<li>NDK r18b</li>
-<li>OpenSSL 1.0.2l</li>
-<li>Ubuntu 18.04</li>
-</ol>
-<h2 id="빌드-시작하기"><a href="#빌드-시작하기" class="headerlink" title="빌드 시작하기"></a>빌드 시작하기</h2><ol>
-<li><p>NDK 이용해 <code>custom toolchain</code> 생성</p>
-<p>(<a href="https://developer.android.com/ndk/guides/standalone_toolchain" rel="external nofollow noopener noreferrer" target="_blank">https://developer.android.com/ndk/guides/standalone_toolchain</a>)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 <span class="variable">$NDK</span>/build/tools/make_standalone_toolchain.py --arch arm64 --api 26 --install-dir /opt/android-26-arm64</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>OpenSSL 폴더로 이동</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> openssl-1.0.2l</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Clang 에서 <code>&#39;-mandroid&#39;</code> 를 지원하지 않으므로 Configure 파일에서 해당 부분 삭제</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i -e <span class="string">'s/-mandroid//'</span> Configure</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>Confiigure</code> 시작</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CROSS_COMPILE=/opt/android-26-arm64/bin/aarch64-linux-android- ./Configure android shared no-idea no-mdc2 no-rc5</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>make</code> 시작</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">make depend</span><br><span class="line">make ANDROID_DEV=/opt/android-26-arm64/sysroot/usr CALC_VERSIONS=<span class="string">"SHLIB_COMPAT=; SHLIB_SOVER="</span> build_libs</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>생성된 library 가 올바르게 빌드 됐는지 확인</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">readelf -h ./libcrypto.a | grep -i <span class="string">'class\|machine'</span> | head -2</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-
-        </div>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-3048351155943387",
-    enable_page_level_ads: true
-  });
-</script>
-        <footer class="article-footer">
-            
-
-
-    <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
-    <span class="a2a_divider"></span>
-    <a class="a2a_button_facebook"></a>
-    <a class="a2a_button_twitter"></a>
-    <a class="a2a_button_google_plus"></a>
-    <a class="a2a_button_pinterest"></a>
-    <a class="a2a_button_tumblr"></a>
-</div>
-<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
-<style>
-    .a2a_menu {
-        border-radius: 4px;
-    }
-    .a2a_menu a {
-        margin: 2px 0;
-        font-size: 14px;
-        line-height: 16px;
-        border-radius: 4px;
-        color: inherit !important;
-        font-family: 'Microsoft Yahei';
-    }
-    #a2apage_dropdown {
-        margin: 10px 0;
-    }
-    .a2a_mini_services {
-        padding: 10px;
-    }
-    a.a2a_i,
-    i.a2a_i {
-        width: 122px;
-        line-height: 16px;
-    }
-    a.a2a_i .a2a_svg,
-    a.a2a_more .a2a_svg {
-        width: 16px;
-        height: 16px;
-        line-height: 16px;
-        vertical-align: top;
-        background-size: 16px;
-    }
-    a.a2a_i {
-        border: none !important;
-    }
-    a.a2a_menu_show_more_less {
-        margin: 0;
-        padding: 10px 0;
-        line-height: 16px;
-    }
-    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
-    .a2a_mini_services{*+height:1%;}
-</style>
-
-
-        </footer>
-    </div>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "author": {
-            "@type": "Person",
-            "name": "yhwanp"
-        },
-        "headline": "OpenSSL을 NDK로 빌드하기",
-        "image": "https://yhwanp.github.io",
-        "keywords": "Android NDK OpenSSL",
-        "genre": "Android NDK",
-        "datePublished": "2019-07-28",
-        "dateCreated": "2019-07-28",
-        "dateModified": "2019-07-28",
-        "url": "https://yhwanp.github.io/2019/07/28/OpenSSL을-NDK로-빌드하기/",
-        "description": "시작에 앞서보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는"
-        "wordCount": 180
-    }
-</script>
-
 </article>
-
-    <section id="comments">
     
-        
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-
+        </div>
     
-    </section>
+
+
+    </div></section>
 
 
 
@@ -368,29 +248,6 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2019/08/22/cmake-convert-to-absolute-path/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            CMake 에서 상대경로를 절대경로로 바꾸기
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
-    
-    
-        <a href="/2019/07/28/Hexo-블로그-폰트-사이즈-수정하기-Hueman-테마/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Hexo 블로그 폰트 사이즈 수정하기 - (Hueman 테마)</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
     
     <div class="widgets-container">
         
@@ -551,13 +408,11 @@ ga('send', 'pageview');
     var disqus_shortname = 'https-yhwanp-github-io';
     
     
-    var disqus_url = 'https://yhwanp.github.io/2019/07/28/OpenSSL을-NDK로-빌드하기/';
-    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>

@@ -8,8 +8,28 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>yhwanp&#39;s devNote</description>
-    <pubDate>Sun, 01 Sep 2019 09:49:01 GMT</pubDate>
+    <pubDate>Sun, 08 Sep 2019 09:13:13 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Linux mount 및 reboot 후에도 자동으로 mount 시켜주기</title>
+      <link>https://yhwanp.github.io/2019/09/08/linux-mount-and-auto-mount/</link>
+      <guid>https://yhwanp.github.io/2019/09/08/linux-mount-and-auto-mount/</guid>
+      <pubDate>Sun, 08 Sep 2019 08:41:06 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h2 id=&quot;mount-기본-명령어&quot;&gt;&lt;a href=&quot;#mount-기본-명령어&quot; class=&quot;headerlink&quot; title=&quot;mount 기본 명령어&quot;&gt;&lt;/a&gt;mount 기본 명령어&lt;/h2&gt;&lt;p&gt;기본적으로 아래 명령어를 사용하면 된다.&lt;/p&gt;
+&lt;fi
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="mount-기본-명령어"><a href="#mount-기본-명령어" class="headerlink" title="mount 기본 명령어"></a>mount 기본 명령어</h2><p>기본적으로 아래 명령어를 사용하면 된다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># /dev/sda1 저장매체를 /mnt/myMount 로 마운트한다.</span></span><br><span class="line">mount /dev/sda1 /mnt/myMount</span><br></pre></td></tr></table></figure><p>이 때 마운트할 대상의 이름을 모르겠다면 ( 위 예제에서 /dev/sda1 과 같은 )<br>fdisk -l 과 df -h 로 확인하자.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 디스크 / 파티션 정보 출력</span></span><br><span class="line">sudo fdisk -l</span><br><span class="line"><span class="comment"># 현재 linux system 에 mount 된 list 및 용량 출력</span></span><br><span class="line">df -h</span><br></pre></td></tr></table></figure><h2 id="자동으로-mount-하기"><a href="#자동으로-mount-하기" class="headerlink" title="자동으로 mount 하기"></a>자동으로 mount 하기</h2><p>위 설명대로 mount 하면 시스템을 종료하기 전까지는 mount 가 유지되지만 리붓하면 mount를 다시 해줘야 하는 불편함이 있다.<br>reboot 이후에도 mount 상태를 유지하고 싶으면 <code>/etc/fstab</code> 을 수정하면 된다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># stock fstab - you probably want to override this with a machine specific one</span></span><br><span class="line"></span><br><span class="line">/dev/root/autodefaults11</span><br><span class="line">proc/procprocdefaults00</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">/dev/sda1/mnt/myMountautodefaults11</span><br></pre></td></tr></table></figure><p>사용자마다 /etc/fstab 내용은 다를 수 있다. 기본으로 입력되어 있는 정보들은 잘 못 건드리면 부팅이 안될 수도 있으니 건드리지 말고, 마지막 줄에 mount 하고자 하는 내용을 입력하면 된다.<br>나는 마지막 줄에 /dev/sda1 을 /mnt/myMount 로 mount 하는 line 을 추가했다. </p>]]></content:encoded>
+      
+      <comments>https://yhwanp.github.io/2019/09/08/linux-mount-and-auto-mount/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>plink, pscp 로 SSH, SCP 써보기 (command-line, 자동화)</title>

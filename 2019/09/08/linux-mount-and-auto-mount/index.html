@@ -6,28 +6,28 @@
     
 
     
-    <title>OpenSSL을 NDK로 빌드하기 | yhwanp&#39;s devNote</title>
+    <title>Linux mount 및 reboot 후에도 자동으로 mount 시켜주기 | yhwanp&#39;s devNote</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="Android,NDK,OpenSSL">
+        <meta name="keywords" content="Linux,mount">
     
-    <meta name="description" content="시작에 앞서보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는">
-<meta name="keywords" content="Android,NDK,OpenSSL">
+    <meta name="description" content="mount 기본 명령어기본적으로 아래 명령어를 사용하면 된다. 12# /dev/sda1 저장매체를 /mnt/myMount 로 마운트한다.mount /dev/sda1 /mnt/myMount  이 때 마운트할 대상의 이름을 모르겠다면 ( 위 예제에서 /dev/sda1 과 같은 )fdisk -l 과 df -h 로 확인하자. 1234# 디스크 / 파티션 정보 출력">
+<meta name="keywords" content="Linux,mount">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OpenSSL을 NDK로 빌드하기">
-<meta property="og:url" content="https://yhwanp.github.io/2019/07/28/OpenSSL을-NDK로-빌드하기/index.html">
+<meta property="og:title" content="Linux mount 및 reboot 후에도 자동으로 mount 시켜주기">
+<meta property="og:url" content="https://yhwanp.github.io/2019/09/08/linux-mount-and-auto-mount/index.html">
 <meta property="og:site_name" content="yhwanp&#39;s devNote">
-<meta property="og:description" content="시작에 앞서보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는">
+<meta property="og:description" content="mount 기본 명령어기본적으로 아래 명령어를 사용하면 된다. 12# /dev/sda1 저장매체를 /mnt/myMount 로 마운트한다.mount /dev/sda1 /mnt/myMount  이 때 마운트할 대상의 이름을 모르겠다면 ( 위 예제에서 /dev/sda1 과 같은 )fdisk -l 과 df -h 로 확인하자. 1234# 디스크 / 파티션 정보 출력">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://yhwanp.github.io/images/opimage.jpg">
-<meta property="og:updated_time" content="2019-07-28T10:43:14.047Z">
+<meta property="og:updated_time" content="2019-09-08T09:13:13.067Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OpenSSL을 NDK로 빌드하기">
-<meta name="twitter:description" content="시작에 앞서보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는">
+<meta name="twitter:title" content="Linux mount 및 reboot 후에도 자동으로 mount 시켜주기">
+<meta name="twitter:description" content="mount 기본 명령어기본적으로 아래 명령어를 사용하면 된다. 12# /dev/sda1 저장매체를 /mnt/myMount 로 마운트한다.mount /dev/sda1 /mnt/myMount  이 때 마운트할 대상의 이름을 모르겠다면 ( 위 예제에서 /dev/sda1 과 같은 )fdisk -l 과 df -h 로 확인하자. 1234# 디스크 / 파티션 정보 출력">
 <meta name="twitter:image" content="https://yhwanp.github.io/images/opimage.jpg">
     
-    <link rel="canonical" href="https://yhwanp.github.io/2019/07/28/openssl을-ndk로-빌드하기/">
+    <link rel="canonical" href="https://yhwanp.github.io/2019/09/08/linux-mount-and-auto-mount/">
 
     
         <link rel="alternate" href="/feed.xml" title="yhwanp&#39;s devNote" type="application/atom+xml">
@@ -156,7 +156,7 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/android/">Android</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/android/ndk/">NDK</a>
+    <a class="page-title-link" href="/categories/linux/">Linux</a>
     </h1>
 </div>
 
@@ -168,14 +168,14 @@ ga('send', 'pageview');
     enable_page_level_ads: true
   });
 </script>
-                            <article id="post-OpenSSL을-NDK로-빌드하기" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-linux-mount-and-auto-mount" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        OpenSSL을 NDK로 빌드하기
+        Linux mount 및 reboot 후에도 자동으로 mount 시켜주기
         </h1>
     
 
@@ -185,8 +185,8 @@ ga('send', 'pageview');
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/07/28/OpenSSL을-NDK로-빌드하기/" class="article-date">
-            <time datetime="2019-07-28T10:02:06.000Z" itemprop="datePublished">2019-07-28</time>
+        <a href="/2019/09/08/linux-mount-and-auto-mount/" class="article-date">
+            <time datetime="2019-09-08T08:41:06.000Z" itemprop="datePublished">2019-09-08</time>
         </a>
     </div>
 
@@ -195,41 +195,23 @@ ga('send', 'pageview');
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/android/">Android</a>, <a class="tag-link" href="/tags/ndk/">NDK</a>, <a class="tag-link" href="/tags/openssl/">OpenSSL</a>
+        <a class="tag-link" href="/tags/linux/">Linux</a>, <a class="tag-link" href="/tags/mount/">mount</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="시작에-앞서"><a href="#시작에-앞서" class="headerlink" title="시작에 앞서"></a>시작에 앞서</h2><p>보통 실습 용도나 로컬에서 테스트를 할 경우에는 <code>Precompiled library</code> 를 사용해도 되지만 상용 프로그램에 포함할 경우 <code>암호화 알고리즘 라이센스</code> 문제가 발생할 수 있습니다.<br>문제가 되는 암호화 알고리즘을 제외한 <code>Precompiled library</code> 가 있으면 해결되지만, 특정 <code>NDK</code>, <code>OpenSSL</code> 버전을 맞춰야 하는 경우 이에 만족하는 라이브러리를 찾기가 힘들어서, 직접 빌드하는 편이 빠릅니다.</p>
-<h2 id="빌드-환경-및-사용-버전"><a href="#빌드-환경-및-사용-버전" class="headerlink" title="빌드 환경 및 사용 버전"></a>빌드 환경 및 사용 버전</h2><ol>
-<li>NDK r18b</li>
-<li>OpenSSL 1.0.2l</li>
-<li>Ubuntu 18.04</li>
-</ol>
-<h2 id="빌드-시작하기"><a href="#빌드-시작하기" class="headerlink" title="빌드 시작하기"></a>빌드 시작하기</h2><ol>
-<li><p>NDK 이용해 <code>custom toolchain</code> 생성</p>
-<p>(<a href="https://developer.android.com/ndk/guides/standalone_toolchain" rel="external nofollow noopener noreferrer" target="_blank">https://developer.android.com/ndk/guides/standalone_toolchain</a>)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 <span class="variable">$NDK</span>/build/tools/make_standalone_toolchain.py --arch arm64 --api 26 --install-dir /opt/android-26-arm64</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>OpenSSL 폴더로 이동</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> openssl-1.0.2l</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Clang 에서 <code>&#39;-mandroid&#39;</code> 를 지원하지 않으므로 Configure 파일에서 해당 부분 삭제</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i -e <span class="string">'s/-mandroid//'</span> Configure</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>Confiigure</code> 시작</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CROSS_COMPILE=/opt/android-26-arm64/bin/aarch64-linux-android- ./Configure android shared no-idea no-mdc2 no-rc5</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>make</code> 시작</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">make depend</span><br><span class="line">make ANDROID_DEV=/opt/android-26-arm64/sysroot/usr CALC_VERSIONS=<span class="string">"SHLIB_COMPAT=; SHLIB_SOVER="</span> build_libs</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>생성된 library 가 올바르게 빌드 됐는지 확인</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">readelf -h ./libcrypto.a | grep -i <span class="string">'class\|machine'</span> | head -2</span><br></pre></td></tr></table></figure>
+            <h2 id="mount-기본-명령어"><a href="#mount-기본-명령어" class="headerlink" title="mount 기본 명령어"></a>mount 기본 명령어</h2><p>기본적으로 아래 명령어를 사용하면 된다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># /dev/sda1 저장매체를 /mnt/myMount 로 마운트한다.</span></span><br><span class="line">mount /dev/sda1 /mnt/myMount</span><br></pre></td></tr></table></figure>
 
-</li>
-</ol>
+<p>이 때 마운트할 대상의 이름을 모르겠다면 ( 위 예제에서 /dev/sda1 과 같은 )<br>fdisk -l 과 df -h 로 확인하자.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 디스크 / 파티션 정보 출력</span></span><br><span class="line">sudo fdisk -l</span><br><span class="line"><span class="comment"># 현재 linux system 에 mount 된 list 및 용량 출력</span></span><br><span class="line">df -h</span><br></pre></td></tr></table></figure>
+
+<h2 id="자동으로-mount-하기"><a href="#자동으로-mount-하기" class="headerlink" title="자동으로 mount 하기"></a>자동으로 mount 하기</h2><p>위 설명대로 mount 하면 시스템을 종료하기 전까지는 mount 가 유지되지만 리붓하면 mount를 다시 해줘야 하는 불편함이 있다.<br>reboot 이후에도 mount 상태를 유지하고 싶으면 <code>/etc/fstab</code> 을 수정하면 된다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># stock fstab - you probably want to override this with a machine specific one</span></span><br><span class="line"></span><br><span class="line">/dev/root		/			auto		defaults		1		1</span><br><span class="line">proc			/proc			proc		defaults		0		0</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">/dev/sda1		/mnt/myMount		auto		defaults		1		1</span><br></pre></td></tr></table></figure>
+
+<p>사용자마다 /etc/fstab 내용은 다를 수 있다. 기본으로 입력되어 있는 정보들은 잘 못 건드리면 부팅이 안될 수도 있으니 건드리지 말고, 마지막 줄에 mount 하고자 하는 내용을 입력하면 된다.<br>나는 마지막 줄에 /dev/sda1 을 /mnt/myMount 로 mount 하는 line 을 추가했다. </p>
 
         </div>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -307,16 +289,20 @@ ga('send', 'pageview');
             "@type": "Person",
             "name": "yhwanp"
         },
-        "headline": "OpenSSL을 NDK로 빌드하기",
+        "headline": "Linux mount 및 reboot 후에도 자동으로 mount 시켜주기",
         "image": "https://yhwanp.github.io",
-        "keywords": "Android NDK OpenSSL",
-        "genre": "Android NDK",
-        "datePublished": "2019-07-28",
-        "dateCreated": "2019-07-28",
-        "dateModified": "2019-07-28",
-        "url": "https://yhwanp.github.io/2019/07/28/OpenSSL을-NDK로-빌드하기/",
-        "description": "시작에 앞서보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는"
-        "wordCount": 180
+        "keywords": "Linux mount",
+        "genre": "Linux",
+        "datePublished": "2019-09-08",
+        "dateCreated": "2019-09-08",
+        "dateModified": "2019-09-08",
+        "url": "https://yhwanp.github.io/2019/09/08/linux-mount-and-auto-mount/",
+        "description": "mount 기본 명령어기본적으로 아래 명령어를 사용하면 된다.
+12# /dev/sda1 저장매체를 /mnt/myMount 로 마운트한다.mount /dev/sda1 /mnt/myMount
+
+이 때 마운트할 대상의 이름을 모르겠다면 ( 위 예제에서 /dev/sda1 과 같은 )fdisk -l 과 df -h 로 확인하자.
+1234# 디스크 / 파티션 정보 출력"
+        "wordCount": 183
     }
 </script>
 
@@ -372,20 +358,10 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
-        <a href="/2019/08/22/cmake-convert-to-absolute-path/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            CMake 에서 상대경로를 절대경로로 바꾸기
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/07/28/Hexo-블로그-폰트-사이즈-수정하기-Hueman-테마/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/09/01/how-to-ssh-scp-with-command-line/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Hexo 블로그 폰트 사이즈 수정하기 - (Hueman 테마)</p>
+        <p class="article-nav-title">plink, pscp 로 SSH, SCP 써보기 (command-line, 자동화)</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -551,7 +527,7 @@ ga('send', 'pageview');
     var disqus_shortname = 'https-yhwanp-github-io';
     
     
-    var disqus_url = 'https://yhwanp.github.io/2019/07/28/OpenSSL을-NDK로-빌드하기/';
+    var disqus_url = 'https://yhwanp.github.io/2019/09/08/linux-mount-and-auto-mount/';
     
     (function() {
     var dsq = document.createElement('script');
