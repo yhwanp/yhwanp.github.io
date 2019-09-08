@@ -8,6 +8,22 @@
     </url>
 
     <url>
+        <loc>https://yhwanp.github.io/2019/09/08/ubuntu-ssh-welcome-message/</loc>
+        <lastmod>2019-09-08T11:11:58.423Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://yhwanp.github.io/2019/09/01/how-to-ssh-scp-with-command-line/</loc>
+        <lastmod>2019-09-08T10:55:22.604Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://yhwanp.github.io/2019/09/08/rvalue-and-move/</loc>
         <lastmod>2019-09-08T10:48:09.768Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -26,14 +42,6 @@
     <url>
         <loc>https://yhwanp.github.io/2019/07/27/Hexo-blog-setting/</loc>
         <lastmod>2019-09-03T17:36:59.158Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://yhwanp.github.io/2019/09/01/how-to-ssh-scp-with-command-line/</loc>
-        <lastmod>2019-09-01T09:49:01.707Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

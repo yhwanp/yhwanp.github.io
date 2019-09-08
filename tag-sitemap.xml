@@ -3,6 +3,27 @@
 
 
     <url>
+        <loc>https://yhwanp.github.io/tags/ssh/</loc>
+        <lastmod>2019-09-08T11:11:58.423Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://yhwanp.github.io/tags/automation/</loc>
+        <lastmod>2019-09-08T10:55:22.604Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://yhwanp.github.io/tags/scp/</loc>
+        <lastmod>2019-09-08T10:55:22.604Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://yhwanp.github.io/tags/std/</loc>
         <lastmod>2019-09-08T10:48:09.768Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -47,27 +68,6 @@
     <url>
         <loc>https://yhwanp.github.io/tags/hexo/</loc>
         <lastmod>2019-09-03T17:36:59.158Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://yhwanp.github.io/tags/automation/</loc>
-        <lastmod>2019-09-01T09:49:01.707Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://yhwanp.github.io/tags/scp/</loc>
-        <lastmod>2019-09-01T09:49:01.707Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://yhwanp.github.io/tags/ssh/</loc>
-        <lastmod>2019-09-01T09:49:01.707Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

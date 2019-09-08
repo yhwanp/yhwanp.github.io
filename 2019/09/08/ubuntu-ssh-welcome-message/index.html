@@ -6,28 +6,28 @@
     
 
     
-    <title>CMake 에서 상대경로를 절대경로로 바꾸기 | yhwanp&#39;s devNote</title>
+    <title>Ubuntu SSH Welcome message 추가하기 | yhwanp&#39;s devNote</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="CMake">
+        <meta name="keywords" content="SSH">
     
-    <meta name="description" content="CMake 에서 상대경로를 절대경로로 바꿔보자 왜 필요한가?  CMake 에서 지원하는 여러 명령들 중에 상대 경로로 입력하면 오류가 출력되는 function 들이 있습니다.이때, 상대 경로를 절대 경로로 변환하기 위해 get_filename_component 을 사용하면 됩니다. 원형: 1get_filename_component(&amp;lt;var&amp;gt; &amp;l">
-<meta name="keywords" content="CMake">
+    <meta name="description" content="client 가 SSH 에 접속할 때마다 나오는 Welcome message 를 추가하는 방법이다.(Ubuntu 18.04 기준) 123456# /etc/update-motd.d 에 99-custom 을 생성해줌.vi /etc/update-motd.d/99-custom# 내용 예제printf &quot;### 내용 입력 ###&quot;who  who 는 현재 SSH con">
+<meta name="keywords" content="SSH">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CMake 에서 상대경로를 절대경로로 바꾸기">
-<meta property="og:url" content="https://yhwanp.github.io/2019/08/22/cmake-convert-to-absolute-path/index.html">
+<meta property="og:title" content="Ubuntu SSH Welcome message 추가하기">
+<meta property="og:url" content="https://yhwanp.github.io/2019/09/08/ubuntu-ssh-welcome-message/index.html">
 <meta property="og:site_name" content="yhwanp&#39;s devNote">
-<meta property="og:description" content="CMake 에서 상대경로를 절대경로로 바꿔보자 왜 필요한가?  CMake 에서 지원하는 여러 명령들 중에 상대 경로로 입력하면 오류가 출력되는 function 들이 있습니다.이때, 상대 경로를 절대 경로로 변환하기 위해 get_filename_component 을 사용하면 됩니다. 원형: 1get_filename_component(&amp;lt;var&amp;gt; &amp;l">
+<meta property="og:description" content="client 가 SSH 에 접속할 때마다 나오는 Welcome message 를 추가하는 방법이다.(Ubuntu 18.04 기준) 123456# /etc/update-motd.d 에 99-custom 을 생성해줌.vi /etc/update-motd.d/99-custom# 내용 예제printf &quot;### 내용 입력 ###&quot;who  who 는 현재 SSH con">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://yhwanp.github.io/images/opimage.jpg">
-<meta property="og:updated_time" content="2019-08-21T16:14:39.261Z">
+<meta property="og:updated_time" content="2019-09-08T11:11:58.423Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CMake 에서 상대경로를 절대경로로 바꾸기">
-<meta name="twitter:description" content="CMake 에서 상대경로를 절대경로로 바꿔보자 왜 필요한가?  CMake 에서 지원하는 여러 명령들 중에 상대 경로로 입력하면 오류가 출력되는 function 들이 있습니다.이때, 상대 경로를 절대 경로로 변환하기 위해 get_filename_component 을 사용하면 됩니다. 원형: 1get_filename_component(&amp;lt;var&amp;gt; &amp;l">
+<meta name="twitter:title" content="Ubuntu SSH Welcome message 추가하기">
+<meta name="twitter:description" content="client 가 SSH 에 접속할 때마다 나오는 Welcome message 를 추가하는 방법이다.(Ubuntu 18.04 기준) 123456# /etc/update-motd.d 에 99-custom 을 생성해줌.vi /etc/update-motd.d/99-custom# 내용 예제printf &quot;### 내용 입력 ###&quot;who  who 는 현재 SSH con">
 <meta name="twitter:image" content="https://yhwanp.github.io/images/opimage.jpg">
     
-    <link rel="canonical" href="https://yhwanp.github.io/2019/08/22/cmake-convert-to-absolute-path/">
+    <link rel="canonical" href="https://yhwanp.github.io/2019/09/08/ubuntu-ssh-welcome-message/">
 
     
         <link rel="alternate" href="/feed.xml" title="yhwanp&#39;s devNote" type="application/atom+xml">
@@ -156,7 +156,7 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/etc/">ETC</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/etc/cmake/">CMake</a>
+    <a class="page-title-link" href="/categories/linux/">Linux</a>
     </h1>
 </div>
 
@@ -168,14 +168,14 @@ ga('send', 'pageview');
     enable_page_level_ads: true
   });
 </script>
-                            <article id="post-cmake-convert-to-absolute-path" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-ubuntu-ssh-welcome-message" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        CMake 에서 상대경로를 절대경로로 바꾸기
+        Ubuntu SSH Welcome message 추가하기
         </h1>
     
 
@@ -185,8 +185,8 @@ ga('send', 'pageview');
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/08/22/cmake-convert-to-absolute-path/" class="article-date">
-            <time datetime="2019-08-21T15:57:53.000Z" itemprop="datePublished">2019-08-22</time>
+        <a href="/2019/09/08/ubuntu-ssh-welcome-message/" class="article-date">
+            <time datetime="2019-09-08T10:59:05.000Z" itemprop="datePublished">2019-09-08</time>
         </a>
     </div>
 
@@ -195,22 +195,18 @@ ga('send', 'pageview');
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/cmake/">CMake</a>
+        <a class="tag-link" href="/tags/ssh/">SSH</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="CMake-에서-상대경로를-절대경로로-바꿔보자"><a href="#CMake-에서-상대경로를-절대경로로-바꿔보자" class="headerlink" title="CMake 에서 상대경로를 절대경로로 바꿔보자"></a>CMake 에서 상대경로를 절대경로로 바꿔보자</h2><blockquote>
-<p>왜 필요한가?</p>
-</blockquote>
-<p><code>CMake</code> 에서 지원하는 여러 명령들 중에 상대 경로로 입력하면 오류가 출력되는 function 들이 있습니다.<br>이때, 상대 경로를 절대 경로로 변환하기 위해 <code>get_filename_component</code> 을 사용하면 됩니다.</p>
-<p>원형:</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">get_filename_component</span>(&lt;var&gt; &lt;FileName&gt; &lt;mode&gt; [CACHE])</span><br></pre></td></tr></table></figure>
+            <p>client 가 SSH 에 접속할 때마다 나오는 <code>Welcome message</code> 를 추가하는 방법이다.<br><em>(Ubuntu 18.04 기준)</em></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># /etc/update-motd.d 에 99-custom 을 생성해줌.</span></span><br><span class="line">vi /etc/update-motd.d/99-custom</span><br><span class="line"></span><br><span class="line"><span class="comment"># 내용 예제</span></span><br><span class="line"><span class="built_in">printf</span> <span class="string">"### 내용 입력 ###"</span></span><br><span class="line">who</span><br></pre></td></tr></table></figure>
 
-<p>아래는 ../../.. 에 해당하는 상대경로를 절대경로로 변환해서, MY_ABSOLUTE_PATH 라는 변수로 저장 시키는 예제 입니다.</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">get_filename_component</span>(MY_ABSOLUTE_PATH <span class="string">"../../.."</span> ABSOLUTE)</span><br></pre></td></tr></table></figure>
+<p>who 는 현재 SSH connect 되어있는 client 목록을 보여준다.<br>출력하고 싶은 내용을 자유롭게 입력하면 된다.</p>
+
         </div>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
@@ -287,21 +283,19 @@ ga('send', 'pageview');
             "@type": "Person",
             "name": "yhwanp"
         },
-        "headline": "CMake 에서 상대경로를 절대경로로 바꾸기",
+        "headline": "Ubuntu SSH Welcome message 추가하기",
         "image": "https://yhwanp.github.io",
-        "keywords": "CMake",
-        "genre": "ETC CMake",
-        "datePublished": "2019-08-22",
-        "dateCreated": "2019-08-22",
-        "dateModified": "2019-08-22",
-        "url": "https://yhwanp.github.io/2019/08/22/cmake-convert-to-absolute-path/",
-        "description": "CMake 에서 상대경로를 절대경로로 바꿔보자
-왜 필요한가?
+        "keywords": "SSH",
+        "genre": "Linux",
+        "datePublished": "2019-09-08",
+        "dateCreated": "2019-09-08",
+        "dateModified": "2019-09-08",
+        "url": "https://yhwanp.github.io/2019/09/08/ubuntu-ssh-welcome-message/",
+        "description": "client 가 SSH 에 접속할 때마다 나오는 Welcome message 를 추가하는 방법이다.(Ubuntu 18.04 기준)
+123456# /etc/update-motd.d 에 99-custom 을 생성해줌.vi /etc/update-motd.d/99-custom# 내용 예제printf "### 내용 입력 ###"who
 
-CMake 에서 지원하는 여러 명령들 중에 상대 경로로 입력하면 오류가 출력되는 function 들이 있습니다.이때, 상대 경로를 절대 경로로 변환하기 위해 get_filename_component 을 사용하면 됩니다.
-원형:
-1get_filename_component(&lt;var&gt; &l"
-        "wordCount": 70
+who 는 현재 SSH con"
+        "wordCount": 59
     }
 </script>
 
@@ -357,20 +351,10 @@ CMake 에서 지원하는 여러 명령들 중에 상대 경로로 입력하면 
         
 <nav id="article-nav">
     
-        <a href="/2019/08/22/iterm2-3-3-update/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            iTerm2 3.3 release 이후 Theme 변경 및 Status Bar 사용하기
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/07/28/OpenSSL을-NDK로-빌드하기/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/09/08/rvalue-and-move/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">OpenSSL을 NDK로 빌드하기</p>
+        <p class="article-nav-title">C++ Rvalue 와 std::move 에 대한 이해</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -536,7 +520,7 @@ CMake 에서 지원하는 여러 명령들 중에 상대 경로로 입력하면 
     var disqus_shortname = 'https-yhwanp-github-io';
     
     
-    var disqus_url = 'https://yhwanp.github.io/2019/08/22/cmake-convert-to-absolute-path/';
+    var disqus_url = 'https://yhwanp.github.io/2019/09/08/ubuntu-ssh-welcome-message/';
     
     (function() {
     var dsq = document.createElement('script');

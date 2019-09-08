@@ -8,8 +8,28 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>yhwanp&#39;s devNote</description>
-    <pubDate>Sun, 08 Sep 2019 10:48:09 GMT</pubDate>
+    <pubDate>Sun, 08 Sep 2019 11:11:58 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Ubuntu SSH Welcome message 추가하기</title>
+      <link>https://yhwanp.github.io/2019/09/08/ubuntu-ssh-welcome-message/</link>
+      <guid>https://yhwanp.github.io/2019/09/08/ubuntu-ssh-welcome-message/</guid>
+      <pubDate>Sun, 08 Sep 2019 10:59:05 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;p&gt;client 가 SSH 에 접속할 때마다 나오는 &lt;code&gt;Welcome message&lt;/code&gt; 를 추가하는 방법이다.&lt;br&gt;&lt;em&gt;(Ubuntu 18.04 기준)&lt;/em&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;ta
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>client 가 SSH 에 접속할 때마다 나오는 <code>Welcome message</code> 를 추가하는 방법이다.<br><em>(Ubuntu 18.04 기준)</em></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># /etc/update-motd.d 에 99-custom 을 생성해줌.</span></span><br><span class="line">vi /etc/update-motd.d/99-custom</span><br><span class="line"></span><br><span class="line"><span class="comment"># 내용 예제</span></span><br><span class="line"><span class="built_in">printf</span> <span class="string">"### 내용 입력 ###"</span></span><br><span class="line">who</span><br></pre></td></tr></table></figure><p>who 는 현재 SSH connect 되어있는 client 목록을 보여준다.<br>출력하고 싶은 내용을 자유롭게 입력하면 된다.</p>]]></content:encoded>
+      
+      <comments>https://yhwanp.github.io/2019/09/08/ubuntu-ssh-welcome-message/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>C++ Rvalue 와 std::move 에 대한 이해</title>
@@ -51,7 +71,7 @@
     </item>
     
     <item>
-      <title>plink, pscp 로 SSH, SCP 써보기 (command-line, 자동화)</title>
+      <title>plink, pscp 로 SSH, SCP 사용하는 방법 (command-line, 자동화)</title>
       <link>https://yhwanp.github.io/2019/09/01/how-to-ssh-scp-with-command-line/</link>
       <guid>https://yhwanp.github.io/2019/09/01/how-to-ssh-scp-with-command-line/</guid>
       <pubDate>Sun, 01 Sep 2019 08:24:56 GMT</pubDate>
