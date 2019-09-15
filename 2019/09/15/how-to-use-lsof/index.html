@@ -6,24 +6,28 @@
     
 
     
-    <title>Category: NDK | yhwanp&#39;s devNote</title>
+    <title>lsof - open 된 파일에 대한 정보 출력 | yhwanp&#39;s devNote</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta name="description" content="yhwanp&apos;s devNote">
-<meta property="og:type" content="website">
-<meta property="og:title" content="yhwanp&#39;s devNote">
-<meta property="og:url" content="https://yhwanp.github.io/categories/android/ndk/index.html">
+        <meta name="keywords" content="Linux">
+    
+    <meta name="description" content="lsof 란 ?lsof 는 List Open Files 의 약자이고, 시스템에서 열린 파일 목록을 보여준다.여러가지 옵션이 많지만 주로 아래 명령어들만 사용했다. 특히 특정 프로세스가 file 을 열고 닫지 않아서 발생하는 error 및 crash 를 잡을 때 lsof - p  를 이용하면 어떤 파일을 닫지 않아 fd leak 이 발생하는지 알 수 있어서">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="lsof - open 된 파일에 대한 정보 출력">
+<meta property="og:url" content="https://yhwanp.github.io/2019/09/15/how-to-use-lsof/index.html">
 <meta property="og:site_name" content="yhwanp&#39;s devNote">
-<meta property="og:description" content="yhwanp&apos;s devNote">
+<meta property="og:description" content="lsof 란 ?lsof 는 List Open Files 의 약자이고, 시스템에서 열린 파일 목록을 보여준다.여러가지 옵션이 많지만 주로 아래 명령어들만 사용했다. 특히 특정 프로세스가 file 을 열고 닫지 않아서 발생하는 error 및 crash 를 잡을 때 lsof - p  를 이용하면 어떤 파일을 닫지 않아 fd leak 이 발생하는지 알 수 있어서">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://yhwanp.github.io/images/opimage.jpg">
+<meta property="og:updated_time" content="2019-09-15T13:21:59.256Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yhwanp&#39;s devNote">
-<meta name="twitter:description" content="yhwanp&apos;s devNote">
+<meta name="twitter:title" content="lsof - open 된 파일에 대한 정보 출력">
+<meta name="twitter:description" content="lsof 란 ?lsof 는 List Open Files 의 약자이고, 시스템에서 열린 파일 목록을 보여준다.여러가지 옵션이 많지만 주로 아래 명령어들만 사용했다. 특히 특정 프로세스가 file 을 열고 닫지 않아서 발생하는 error 및 crash 를 잡을 때 lsof - p  를 이용하면 어떤 파일을 닫지 않아 fd leak 이 발생하는지 알 수 있어서">
 <meta name="twitter:image" content="https://yhwanp.github.io/images/opimage.jpg">
     
-    <link rel="canonical" href="https://yhwanp.github.io/categories/android/ndk/">
+    <link rel="canonical" href="https://yhwanp.github.io/2019/09/15/how-to-use-lsof/">
 
     
         <link rel="alternate" href="/feed.xml" title="yhwanp&#39;s devNote" type="application/atom+xml">
@@ -152,7 +156,7 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-folder-open"></i>Category: <em class="page-title-link">NDK</em>
+    <a class="page-title-link" href="/categories/linux/">Linux</a>
     </h1>
 </div>
 
@@ -164,50 +168,153 @@ ga('send', 'pageview');
     enable_page_level_ads: true
   });
 </script>
-                            
-
-    
-    
+                            <article id="post-how-to-use-lsof" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/android/">Android</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/android/ndk/">NDK</a>
-            </div>
-            <div class="date"><time datetime="2019-07-28T10:02:06.000Z" itemprop="datePublished">2019-07-28</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2019/07/28/OpenSSL을-NDK로-빌드하기/">OpenSSL을 NDK로 빌드하기</a>
+        lsof - open 된 파일에 대한 정보 출력
         </h1>
     
 
-        <p class="article-excerpt">
-            시작에 앞서보통 실습 용도나 로컬에서 테스트를 할 경우에는 Precompiled library 를 사용해도 되지만 상용 프로그램에 포함할 경우 암호화 알고리즘 라이센스 문제가 발생할 수 있습니다.문제가 되는 암호화 알고리즘을 제외한 Precompiled library 가 있으면 해결되지만, 특정 NDK, OpenSSL 버전을 맞춰야 하는 경우 이에 만족하는
-        </p>
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2019/09/15/how-to-use-lsof/" class="article-date">
+            <time datetime="2019-09-15T13:00:40.000Z" itemprop="datePublished">2019-09-15</time>
+        </a>
     </div>
-</article>
-    
+
+		
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/linux/">Linux</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="lsof-란"><a href="#lsof-란" class="headerlink" title="lsof 란 ?"></a>lsof 란 ?</h2><p><code>lsof</code> 는 <code>List Open Files</code> 의 약자이고, 시스템에서 열린 파일 목록을 보여준다.<br>여러가지 옵션이 많지만 주로 아래 명령어들만 사용했다.</p>
+<p>특히 특정 프로세스가 file 을 열고 닫지 않아서 발생하는 error 및 crash 를 잡을 때 <code>lsof - p</code>  를 이용하면 어떤 파일을 닫지 않아 <code>fd leak</code> 이 발생하는지 알 수 있어서 코드 상 수정해야할 부분을 캐치하기 쉽다.<br>또 소켓 프로그래밍을 하는 경우엔 포트 점유 목록을 출력하는 명령어가 도움이 될 수 있겠다.</p>
+<p>A. 열린 파일 목록 모두 출력</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof</span><br></pre></td></tr></table></figure>
+
+<p>B. 특정 프로세스의 열린 파일 목록 출력</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -p 다음에 pid 를 입력하면 된다</span></span><br><span class="line">lsof -p &lt;pid&gt;</span><br></pre></td></tr></table></figure>
+
+<p>C. TCP 포트 점유 목록 출력</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 아래는 22번 TCP 포트를 점유하는 pid 및 fd 를 출력한다</span></span><br><span class="line">lsof -i TCP:22</span><br></pre></td></tr></table></figure>
+
+
         </div>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-3048351155943387",
+    enable_page_level_ads: true
+  });
+</script>
+        <footer class="article-footer">
+            
+
+
+    <div class="a2a_kit a2a_default_style">
+    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <span class="a2a_divider"></span>
+    <a class="a2a_button_facebook"></a>
+    <a class="a2a_button_twitter"></a>
+    <a class="a2a_button_google_plus"></a>
+    <a class="a2a_button_pinterest"></a>
+    <a class="a2a_button_tumblr"></a>
+</div>
+<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<style>
+    .a2a_menu {
+        border-radius: 4px;
+    }
+    .a2a_menu a {
+        margin: 2px 0;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 4px;
+        color: inherit !important;
+        font-family: 'Microsoft Yahei';
+    }
+    #a2apage_dropdown {
+        margin: 10px 0;
+    }
+    .a2a_mini_services {
+        padding: 10px;
+    }
+    a.a2a_i,
+    i.a2a_i {
+        width: 122px;
+        line-height: 16px;
+    }
+    a.a2a_i .a2a_svg,
+    a.a2a_more .a2a_svg {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        vertical-align: top;
+        background-size: 16px;
+    }
+    a.a2a_i {
+        border: none !important;
+    }
+    a.a2a_menu_show_more_less {
+        margin: 0;
+        padding: 10px 0;
+        line-height: 16px;
+    }
+    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .a2a_mini_services{*+height:1%;}
+</style>
+
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "yhwanp"
+        },
+        "headline": "lsof - open 된 파일에 대한 정보 출력",
+        "image": "https://yhwanp.github.io",
+        "keywords": "Linux",
+        "genre": "Linux",
+        "datePublished": "2019-09-15",
+        "dateCreated": "2019-09-15",
+        "dateModified": "2019-09-15",
+        "url": "https://yhwanp.github.io/2019/09/15/how-to-use-lsof/",
+        "description": "lsof 란 ?lsof 는 List Open Files 의 약자이고, 시스템에서 열린 파일 목록을 보여준다.여러가지 옵션이 많지만 주로 아래 명령어들만 사용했다.
+특히 특정 프로세스가 file 을 열고 닫지 않아서 발생하는 error 및 crash 를 잡을 때 lsof - p  를 이용하면 어떤 파일을 닫지 않아 fd leak 이 발생하는지 알 수 있어서 ",
+        "wordCount": 136
+    }
+</script>
+
+</article>
+
+    <section id="comments">
     
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
 
-
-    </div></section>
-
+    
+    </section>
 
 
 
@@ -245,6 +352,19 @@ ga('send', 'pageview');
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2019/09/09/c-vector-emplace-back/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">older</strong>
+        <p class="article-nav-title">C++ std::vector push_back 보단 emplace_back 을 사용하자</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -405,11 +525,13 @@ ga('send', 'pageview');
     var disqus_shortname = 'https-yhwanp-github-io';
     
     
+    var disqus_url = 'https://yhwanp.github.io/2019/09/15/how-to-use-lsof/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>

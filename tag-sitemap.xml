@@ -3,6 +3,20 @@
 
 
     <url>
+        <loc>https://yhwanp.github.io/tags/linux/</loc>
+        <lastmod>2019-09-15T13:21:59.256Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://yhwanp.github.io/tags/mount/</loc>
+        <lastmod>2019-09-11T11:58:32.034Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://yhwanp.github.io/tags/vector/</loc>
         <lastmod>2019-09-08T17:58:44.427Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -47,20 +61,6 @@
     <url>
         <loc>https://yhwanp.github.io/tags/scp/</loc>
         <lastmod>2019-09-08T10:55:22.604Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://yhwanp.github.io/tags/mount/</loc>
-        <lastmod>2019-09-08T09:13:13.067Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://yhwanp.github.io/tags/linux/</loc>
-        <lastmod>2019-09-08T09:13:13.067Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

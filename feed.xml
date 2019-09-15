@@ -8,8 +8,27 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>yhwanp&#39;s devNote</description>
-    <pubDate>Sun, 08 Sep 2019 17:58:44 GMT</pubDate>
+    <pubDate>Sun, 15 Sep 2019 13:21:59 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>lsof - open 된 파일에 대한 정보 출력</title>
+      <link>https://yhwanp.github.io/2019/09/15/how-to-use-lsof/</link>
+      <guid>https://yhwanp.github.io/2019/09/15/how-to-use-lsof/</guid>
+      <pubDate>Sun, 15 Sep 2019 13:00:40 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;h2 id=&quot;lsof-란&quot;&gt;&lt;a href=&quot;#lsof-란&quot; class=&quot;headerlink&quot; title=&quot;lsof 란 ?&quot;&gt;&lt;/a&gt;lsof 란 ?&lt;/h2&gt;&lt;p&gt;&lt;code&gt;lsof&lt;/code&gt; 는 &lt;code&gt;List Open Files&lt;/code&gt; 의
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="lsof-란"><a href="#lsof-란" class="headerlink" title="lsof 란 ?"></a>lsof 란 ?</h2><p><code>lsof</code> 는 <code>List Open Files</code> 의 약자이고, 시스템에서 열린 파일 목록을 보여준다.<br>여러가지 옵션이 많지만 주로 아래 명령어들만 사용했다.</p><p>특히 특정 프로세스가 file 을 열고 닫지 않아서 발생하는 error 및 crash 를 잡을 때 <code>lsof - p</code>  를 이용하면 어떤 파일을 닫지 않아 <code>fd leak</code> 이 발생하는지 알 수 있어서 코드 상 수정해야할 부분을 캐치하기 쉽다.<br>또 소켓 프로그래밍을 하는 경우엔 포트 점유 목록을 출력하는 명령어가 도움이 될 수 있겠다.</p><p>A. 열린 파일 목록 모두 출력</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lsof</span><br></pre></td></tr></table></figure><p>B. 특정 프로세스의 열린 파일 목록 출력</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -p 다음에 pid 를 입력하면 된다</span></span><br><span class="line">lsof -p &lt;pid&gt;</span><br></pre></td></tr></table></figure><p>C. TCP 포트 점유 목록 출력</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 아래는 22번 TCP 포트를 점유하는 pid 및 fd 를 출력한다</span></span><br><span class="line">lsof -i TCP:22</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      <comments>https://yhwanp.github.io/2019/09/15/how-to-use-lsof/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>C++ std::vector push_back 보단 emplace_back 을 사용하자</title>
@@ -84,7 +103,7 @@
       
       </description>
       
-      <content:encoded><![CDATA[<h2 id="mount-기본-명령어"><a href="#mount-기본-명령어" class="headerlink" title="mount 기본 명령어"></a>mount 기본 명령어</h2><p>기본적으로 아래 명령어를 사용하면 된다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># /dev/sda1 저장매체를 /mnt/myMount 로 마운트한다.</span></span><br><span class="line">mount /dev/sda1 /mnt/myMount</span><br></pre></td></tr></table></figure><p>이 때 마운트할 대상의 이름을 모르겠다면 ( 위 예제에서 /dev/sda1 과 같은 )<br>fdisk -l 과 df -h 로 확인하자.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 디스크 / 파티션 정보 출력</span></span><br><span class="line">sudo fdisk -l</span><br><span class="line"><span class="comment"># 현재 linux system 에 mount 된 list 및 용량 출력</span></span><br><span class="line">df -h</span><br></pre></td></tr></table></figure><h2 id="자동으로-mount-하기"><a href="#자동으로-mount-하기" class="headerlink" title="자동으로 mount 하기"></a>자동으로 mount 하기</h2><p>위 설명대로 mount 하면 시스템을 종료하기 전까지는 mount 가 유지되지만 리붓하면 mount를 다시 해줘야 하는 불편함이 있다.<br>reboot 이후에도 mount 상태를 유지하고 싶으면 <code>/etc/fstab</code> 을 수정하면 된다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># stock fstab - you probably want to override this with a machine specific one</span></span><br><span class="line"></span><br><span class="line">/dev/root/autodefaults11</span><br><span class="line">proc/procprocdefaults00</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">/dev/sda1/mnt/myMountautodefaults11</span><br></pre></td></tr></table></figure><p>사용자마다 /etc/fstab 내용은 다를 수 있다. 기본으로 입력되어 있는 정보들은 잘 못 건드리면 부팅이 안될 수도 있으니 건드리지 말고, 마지막 줄에 mount 하고자 하는 내용을 입력하면 된다.<br>나는 마지막 줄에 /dev/sda1 을 /mnt/myMount 로 mount 하는 line 을 추가했다. </p>]]></content:encoded>
+      <content:encoded><![CDATA[<h2 id="mount-기본-명령어"><a href="#mount-기본-명령어" class="headerlink" title="mount 기본 명령어"></a>mount 기본 명령어</h2><p>기본적으로 아래 명령어를 사용하면 된다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># /dev/sda1 저장매체를 /mnt/myMount 로 마운트한다.</span></span><br><span class="line">mount /dev/sda1 /mnt/myMount</span><br></pre></td></tr></table></figure><p>이 때 마운트할 대상의 이름을 모르겠다면 ( 위 예제에서 /dev/sda1 과 같은 )<br>fdisk -l 과 df -h 로 확인하자.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 디스크 / 파티션 정보 출력</span></span><br><span class="line">sudo fdisk -l</span><br><span class="line"><span class="comment"># 현재 linux system 에 mount 된 list 및 용량 출력</span></span><br><span class="line">df -h</span><br></pre></td></tr></table></figure><h2 id="자동으로-mount-하기"><a href="#자동으로-mount-하기" class="headerlink" title="자동으로 mount 하기"></a>자동으로 mount 하기</h2><p>위 설명대로 mount 하면 시스템을 종료하기 전까지는 mount 가 유지되지만 리붓하면 mount를 다시 해줘야 하는 불편함이 있다.<br>reboot 이후에도 mount 상태를 유지하고 싶으면 <code>/etc/fstab</code> 을 수정하면 된다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># stock fstab - you probably want to override this with a machine specific one</span></span><br><span class="line"></span><br><span class="line">/dev/root/autodefaults11</span><br><span class="line">proc/procprocdefaults00</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">/dev/sda1/mnt/myMountautodefaults02</span><br></pre></td></tr></table></figure><p>사용자마다 /etc/fstab 내용은 다를 수 있다. 기본으로 입력되어 있는 정보들은 잘 못 건드리면 부팅이 안될 수도 있으니 건드리지 말고, 마지막 줄에 mount 하고자 하는 내용을 입력하면 된다.<br>나는 마지막 줄에 /dev/sda1 을 /mnt/myMount 로 mount 하는 line 을 추가했다.<br>마지막에 숫자 0 2 의 의미는 각각 dump 생성 여부 / fsck 실행 순서를 나타내는데, 잘 모르겠다면 0, 2 로 셋팅하면 문제 없을 것이다.</p>]]></content:encoded>
       
       <comments>https://yhwanp.github.io/2019/09/08/linux-mount-and-auto-mount/#disqus_thread</comments>
     </item>
