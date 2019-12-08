@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://yhwanp.github.io/2019/10/06/cpp-korea-6th-semina/</loc>
+        <lastmod>2019-12-08T18:25:50.703Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://yhwanp.github.io/2019/09/15/std-function-and-std-bind/</loc>
         <lastmod>2019-09-16T12:46:01.111Z</lastmod>
         <changefreq>weekly</changefreq>
