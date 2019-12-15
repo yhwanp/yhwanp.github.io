@@ -6,28 +6,27 @@
     
 
     
-    <title>C++ Rvalue 와 std::move 에 대한 이해 | yhwanp&#39;s devNote</title>
+    <title>C++ delete(free) when process exit | yhwanp&#39;s devNote</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="C++,Rvalue,std">
+        <meta name="keywords" content>
     
-    <meta name="description" content="Rvalue 란 무엇인가?Rvalue, 우측값은 대입 시에 항상 오른쪽에만 오는 식을 말한다.예제로 이해하는 것이 쉽다. 123456789101112131415int doSomething()&amp;#123;  ...  return z;&amp;#125;int x = 10;		// x 는 Lvalue, 10은 Rvalueint y = 20;		// y 는 Lvalue,">
-<meta name="keywords" content="C++,Rvalue,std">
+    <meta name="description" content="yhwanp&apos;s devNote">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++ Rvalue 와 std::move 에 대한 이해">
-<meta property="og:url" content="https://yhwanp.github.io/2019/09/08/rvalue-and-move/index.html">
+<meta property="og:title" content="C++ delete(free) when process exit">
+<meta property="og:url" content="https://yhwanp.github.io/2019/12/16/c-delete-free-when-process-exit/index.html">
 <meta property="og:site_name" content="yhwanp&#39;s devNote">
-<meta property="og:description" content="Rvalue 란 무엇인가?Rvalue, 우측값은 대입 시에 항상 오른쪽에만 오는 식을 말한다.예제로 이해하는 것이 쉽다. 123456789101112131415int doSomething()&amp;#123;  ...  return z;&amp;#125;int x = 10;		// x 는 Lvalue, 10은 Rvalueint y = 20;		// y 는 Lvalue,">
+<meta property="og:description" content="yhwanp&apos;s devNote">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://yhwanp.github.io/images/opimage.jpg">
-<meta property="og:updated_time" content="2019-09-08T16:58:15.649Z">
+<meta property="og:updated_time" content="2019-12-15T18:05:16.392Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++ Rvalue 와 std::move 에 대한 이해">
-<meta name="twitter:description" content="Rvalue 란 무엇인가?Rvalue, 우측값은 대입 시에 항상 오른쪽에만 오는 식을 말한다.예제로 이해하는 것이 쉽다. 123456789101112131415int doSomething()&amp;#123;  ...  return z;&amp;#125;int x = 10;		// x 는 Lvalue, 10은 Rvalueint y = 20;		// y 는 Lvalue,">
+<meta name="twitter:title" content="C++ delete(free) when process exit">
+<meta name="twitter:description" content="yhwanp&apos;s devNote">
 <meta name="twitter:image" content="https://yhwanp.github.io/images/opimage.jpg">
     
-    <link rel="canonical" href="https://yhwanp.github.io/2019/09/08/rvalue-and-move/">
+    <link rel="canonical" href="https://yhwanp.github.io/2019/12/16/c-delete-free-when-process-exit/">
 
     
         <link rel="alternate" href="/feed.xml" title="yhwanp&#39;s devNote" type="application/atom+xml">
@@ -156,7 +155,7 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/c/">C++</a>
+    uncategorized
     </h1>
 </div>
 
@@ -168,14 +167,14 @@ ga('send', 'pageview');
     enable_page_level_ads: true
   });
 </script>
-                            <article id="post-rvalue-and-move" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-c-delete-free-when-process-exit" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        C++ Rvalue 와 std::move 에 대한 이해
+        C++ delete(free) when process exit
         </h1>
     
 
@@ -185,47 +184,19 @@ ga('send', 'pageview');
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/09/08/rvalue-and-move/" class="article-date">
-            <time datetime="2019-09-08T09:23:29.000Z" itemprop="datePublished">2019-09-08</time>
+        <a href="/2019/12/16/c-delete-free-when-process-exit/" class="article-date">
+            <time datetime="2019-12-15T18:04:24.000Z" itemprop="datePublished">2019-12-16</time>
         </a>
     </div>
 
 		
 
                 
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/c/">C++</a>, <a class="tag-link" href="/tags/rvalue/">Rvalue</a>, <a class="tag-link" href="/tags/std/">std</a>
-    </div>
-
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <h2 id="Rvalue-란-무엇인가"><a href="#Rvalue-란-무엇인가" class="headerlink" title="Rvalue 란 무엇인가?"></a>Rvalue 란 무엇인가?</h2><p>Rvalue, 우측값은 대입 시에 항상 오른쪽에만 오는 식을 말한다.<br>예제로 이해하는 것이 쉽다.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">doSomething</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  ...</span><br><span class="line">  <span class="keyword">return</span> z;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> x = <span class="number">10</span>;		<span class="comment">// x 는 Lvalue, 10은 Rvalue</span></span><br><span class="line"><span class="keyword">int</span> y = <span class="number">20</span>;		<span class="comment">// y 는 Lvalue, 20은 Rvalue</span></span><br><span class="line"></span><br><span class="line">x = y; 				<span class="comment">// x 와 y 모두 Lvalue</span></span><br><span class="line">x = (x + y);		<span class="comment">// x 는 Lvalue, x + y 는 Rvalue</span></span><br><span class="line"></span><br><span class="line">x + y = <span class="number">30</span>;		<span class="comment">// 잘 못된 코드, Rvalue 인 x + y 에 대입하고 있다.</span></span><br><span class="line"></span><br><span class="line">x = doSomething()		<span class="comment">// doSomething() 은 Rvalue</span></span><br></pre></td></tr></table></figure>
-
-<p>x, y 처럼 이름을 가지고 있고, 그 이름으로 접근할 수 있는 것이 Lvalue 이다.<br>그와 반대로 (x + y) 나 상수 10, 20 등은 이름을 가지고 있지 않고 식이 끝난 후 다음 라인에서 그 값에 접근할 수 없다.</p>
-<p>Rvalue 를 함수의 매개변수로 받고 싶으면 A&amp;&amp; 로 선언한다.<br>참고로 doSomethingWithRvalue 안에서 rhs 를 다시 사용할 때는 rhs 가 Lvalue 라는 것을 주의하자. Rvalue 로 사용하고 싶으면 다시 std::move(rhs) 와 같이 사용해주어야 한다.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>;</span></span><br><span class="line"><span class="comment">// class A의 instance를 Rvalue 로 받고 싶을 때</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">doSomethingWithRvalue</span><span class="params">(A&amp;&amp; rhs)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="std-move-를-사용해서-성능을-개선해보자"><a href="#std-move-를-사용해서-성능을-개선해보자" class="headerlink" title="std::move 를 사용해서 성능을 개선해보자"></a>std::move 를 사용해서 성능을 개선해보자</h2><p><code>std::move</code> 는 이름 때문에 부르는 것과 동시에 어떤 이동 작업이 이뤄질 것 같지만, 실제로 Lvalue 를 Rvalue 로 casting 해줄 뿐이다.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">myClass</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">  myClass()</span><br><span class="line">  &#123;</span><br><span class="line">  &#125;</span><br><span class="line">  myClass(<span class="built_in">std</span>::<span class="built_in">string</span> str)</span><br><span class="line">  : data(str)</span><br><span class="line">  &#123;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">string</span> data;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">myClass <span class="title">A</span><span class="params">(<span class="string">"aaa"</span>)</span></span>;</span><br><span class="line">myClass B;</span><br><span class="line">myClass C;</span><br><span class="line"></span><br><span class="line">B = A;</span><br><span class="line">C = <span class="built_in">std</span>::move(A);	<span class="comment">// Lvalue 인 A를 Rvalue 로 casting</span></span><br></pre></td></tr></table></figure>
-
-<p><em>(std::string 은 실제 작은 문자열은 stack memory 에 저장하고 큰 문자열은 heap memory 에 저장하지만, 설명에선 편의를 위해 항상 heap 에 저장한다고 가정한다.)</em></p>
-<p>위 코드에서 B = A 수행 시 copy 가 일어난다. (copy assignment operator)<br>C = std::move(A) 수행 시 move 가 일어난다. (move assignment operator)</p>
-<p>B = A 를 할 때는 copy 하기 때문에 B.data 는 당연히 “aaa” 가 복사되고 A.data 도 여전히 “aaa”를 가지고 있지만<br>C = std::move(A) 를 하면 move 하기 때문에 A.data 는 C.data 로 이동이 되어서 A.data 는 빈 문자열이 되고 C.data 는 “aaa” 를 가진다. 얻을 수 있는 이점은, 새로 메모리를 <code>할당(malloc)</code>하지 않아도 되고 이미 메모리에 할당된 것을 소유권만 C 에게 넘겨주기 때문에 copy 동작보다 빠르다. (move 로 할당한 이후로는 A를 사용하지 못하므로 주의)</p>
-<p>예제를 하나 더 보자.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt; stringList;</span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">string</span> input = <span class="string">"example"</span>;</span><br><span class="line">  stringList.push_back(input);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>std::string 을 원소로 가지는 vector stringList 가 선언되어 있고, input 을 push_back 해준다.<br>push_back 이 후에 input은 다시 쓰이지 않기 때문에 위 코드에서 input 은 vector에 string 을 넣기위해서만 만들어진 임시객체의 역할 밖에 되지 않는다. 이럴 때 std::move 를 사용하면 성능 향상이 될 수 있다.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span>&gt; stringList;</span><br><span class="line">&#123;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">string</span> input = <span class="string">"example"</span>;</span><br><span class="line">  stringList.push_back(<span class="built_in">std</span>::move(input));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>그리고 예제에선 std::string 이 move constructor / move assignment operator 를 지원하기 때문에 move로 기대하는 동작을 얻을 수 있는 것이고, 사용자가 정의한 class 의 경우 destructors 나 assignment operators 를 명시적으로 선언했다면 move constructor 나 move assignment operators 가 암시적으로 생성되지 않으므로 직접 작성해주거나 default 로 선언해줘야 할 것이다.</p>
-<p>암시적으로 생성되는 move constructors 의 형태는 아래와 같다. 기본적으로 클래스 멤버변수를 std::move 해서 Rvalue 로 casting 해 초기화한다.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">myClass</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">  myClass(myClass&amp;&amp; rhs)</span><br><span class="line">  : A(<span class="built_in">std</span>::move(rhs.A))</span><br><span class="line">  , B(<span class="built_in">std</span>::move(rhs.B))</span><br><span class="line">  &#123;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">string</span> A;</span><br><span class="line">  <span class="built_in">std</span>::<span class="built_in">string</span> B;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+            
         </div>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
@@ -302,17 +273,16 @@ ga('send', 'pageview');
             "@type": "Person",
             "name": "yhwanp"
         },
-        "headline": "C++ Rvalue 와 std::move 에 대한 이해",
+        "headline": "C++ delete(free) when process exit",
         "image": "https://yhwanp.github.io",
-        "keywords": "C++ Rvalue std",
-        "genre": "C++",
-        "datePublished": "2019-09-08",
-        "dateCreated": "2019-09-08",
-        "dateModified": "2019-09-09",
-        "url": "https://yhwanp.github.io/2019/09/08/rvalue-and-move/",
-        "description": "Rvalue 란 무엇인가?Rvalue, 우측값은 대입 시에 항상 오른쪽에만 오는 식을 말한다.예제로 이해하는 것이 쉽다.
-123456789101112131415int doSomething()&#123;  ...  return z;&#125;int x = 10;		// x 는 Lvalue, 10은 Rvalueint y = 20;		// y 는 Lvalue, ",
-        "wordCount": 711
+        "keywords": "",
+        "genre": "",
+        "datePublished": "2019-12-16",
+        "dateCreated": "2019-12-16",
+        "dateModified": "2019-12-16",
+        "url": "https://yhwanp.github.io/2019/12/16/c-delete-free-when-process-exit/",
+        "description": "",
+        "wordCount": 1
     }
 </script>
 
@@ -368,20 +338,10 @@ ga('send', 'pageview');
         
 <nav id="article-nav">
     
-        <a href="/2019/09/08/ubuntu-ssh-welcome-message/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            Ubuntu SSH Welcome message 추가하기
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
     
-    
-        <a href="/2019/09/08/linux-mount-and-auto-mount/" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/2019/12/10/c-try-catch-예외처리가-성능에-미치는-영향/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">Linux mount 및 reboot 후에도 자동으로 mount 시켜주기</p>
+        <p class="article-nav-title">C++ try-catch 예외처리가 성능에 미치는 영향</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
         </a>
     
@@ -547,7 +507,7 @@ ga('send', 'pageview');
     var disqus_shortname = 'https-yhwanp-github-io';
     
     
-    var disqus_url = 'https://yhwanp.github.io/2019/09/08/rvalue-and-move/';
+    var disqus_url = 'https://yhwanp.github.io/2019/12/16/c-delete-free-when-process-exit/';
     
     (function() {
     var dsq = document.createElement('script');

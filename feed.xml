@@ -8,8 +8,20 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>yhwanp&#39;s devNote</description>
-    <pubDate>Sun, 15 Dec 2019 17:56:12 GMT</pubDate>
+    <pubDate>Sun, 15 Dec 2019 18:05:16 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>C++ delete(free) when process exit</title>
+      <link>https://yhwanp.github.io/2019/12/16/c-delete-free-when-process-exit/</link>
+      <guid>https://yhwanp.github.io/2019/12/16/c-delete-free-when-process-exit/</guid>
+      <pubDate>Sun, 15 Dec 2019 18:04:24 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>https://yhwanp.github.io/2019/12/16/c-delete-free-when-process-exit/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>C++ try-catch 예외처리가 성능에 미치는 영향</title>
