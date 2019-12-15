@@ -16,18 +16,18 @@
 <meta name="keywords" content="try-catch,예외처리,exception">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++ try-catch 예외처리가 성능에 미치는 영향">
-<meta property="og:url" content="https://yhwanp.github.io/2019/12/10/c-try-catch-예외처리가-성능에-미치는-영향/index.html">
+<meta property="og:url" content="https://yhwanp.github.io/2019/12/10/c-try-catch-exeption-with-performance/index.html">
 <meta property="og:site_name" content="yhwanp&#39;s devNote">
 <meta property="og:description" content="C++ 에서 예외처리는 overhead 가 있다는 것은 익히 들어왔을 것이다.그럼에도 try-catch 구문이 꼭 필요한 경우가 있는데, overhead 가 있다는 것이 예상만 되지 exception 발생 유무에 따른 성능 차이에 대해서 궁금해져서 성능 상 얼마나 차이가 있을지 찾아보았다. 결론은 ‘try-catch 를 사용하더라도, exception 이">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://yhwanp.github.io/images/opimage.jpg">
-<meta property="og:updated_time" content="2019-12-15T17:56:12.791Z">
+<meta property="og:updated_time" content="2019-12-15T18:08:58.356Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++ try-catch 예외처리가 성능에 미치는 영향">
 <meta name="twitter:description" content="C++ 에서 예외처리는 overhead 가 있다는 것은 익히 들어왔을 것이다.그럼에도 try-catch 구문이 꼭 필요한 경우가 있는데, overhead 가 있다는 것이 예상만 되지 exception 발생 유무에 따른 성능 차이에 대해서 궁금해져서 성능 상 얼마나 차이가 있을지 찾아보았다. 결론은 ‘try-catch 를 사용하더라도, exception 이">
 <meta name="twitter:image" content="https://yhwanp.github.io/images/opimage.jpg">
     
-    <link rel="canonical" href="https://yhwanp.github.io/2019/12/10/c-try-catch-예외처리가-성능에-미치는-영향/">
+    <link rel="canonical" href="https://yhwanp.github.io/2019/12/10/c-try-catch-exeption-with-performance/">
 
     
         <link rel="alternate" href="/feed.xml" title="yhwanp&#39;s devNote" type="application/atom+xml">
@@ -168,7 +168,7 @@ ga('send', 'pageview');
     enable_page_level_ads: true
   });
 </script>
-                            <article id="post-c-try-catch-예외처리가-성능에-미치는-영향" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-c-try-catch-exeption-with-performance" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
@@ -185,7 +185,7 @@ ga('send', 'pageview');
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2019/12/10/c-try-catch-예외처리가-성능에-미치는-영향/" class="article-date">
+        <a href="/2019/12/10/c-try-catch-exeption-with-performance/" class="article-date">
             <time datetime="2019-12-09T17:36:58.000Z" itemprop="datePublished">2019-12-10</time>
         </a>
     </div>
@@ -289,7 +289,7 @@ ga('send', 'pageview');
         "datePublished": "2019-12-10",
         "dateCreated": "2019-12-10",
         "dateModified": "2019-12-16",
-        "url": "https://yhwanp.github.io/2019/12/10/c-try-catch-예외처리가-성능에-미치는-영향/",
+        "url": "https://yhwanp.github.io/2019/12/10/c-try-catch-exeption-with-performance/",
         "description": "C++ 에서 예외처리는 overhead 가 있다는 것은 익히 들어왔을 것이다.그럼에도 try-catch 구문이 꼭 필요한 경우가 있는데, overhead 가 있다는 것이 예상만 되지 exception 발생 유무에 따른 성능 차이에 대해서 궁금해져서 성능 상 얼마나 차이가 있을지 찾아보았다.
 결론은 ‘try-catch 를 사용하더라도, exception 이 ",
         "wordCount": 85
@@ -393,7 +393,7 @@ ga('send', 'pageview');
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/c/">C++</a></p>
-                            <p class="item-title"><a href="/2019/12/10/c-try-catch-예외처리가-성능에-미치는-영향/" class="title">C++ try-catch 예외처리가 성능에 미치는 영향</a></p>
+                            <p class="item-title"><a href="/2019/12/10/c-try-catch-exeption-with-performance/" class="title">C++ try-catch 예외처리가 성능에 미치는 영향</a></p>
                             <p class="item-date"><time datetime="2019-12-09T17:36:58.000Z" itemprop="datePublished">2019-12-10</time></p>
                         </div>
                     </li>
@@ -527,7 +527,7 @@ ga('send', 'pageview');
     var disqus_shortname = 'https-yhwanp-github-io';
     
     
-    var disqus_url = 'https://yhwanp.github.io/2019/12/10/c-try-catch-예외처리가-성능에-미치는-영향/';
+    var disqus_url = 'https://yhwanp.github.io/2019/12/10/c-try-catch-exeption-with-performance/';
     
     (function() {
     var dsq = document.createElement('script');
