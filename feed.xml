@@ -8,8 +8,27 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>yhwanp&#39;s devNote</description>
-    <pubDate>Sun, 08 Dec 2019 18:27:29 GMT</pubDate>
+    <pubDate>Sun, 15 Dec 2019 17:56:12 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>C++ try-catch 예외처리가 성능에 미치는 영향</title>
+      <link>https://yhwanp.github.io/2019/12/10/c-try-catch-%E1%84%8B%E1%85%A8%E1%84%8B%E1%85%AC%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%E1%84%80%E1%85%A1-%E1%84%89%E1%85%A5%E1%86%BC%E1%84%82%E1%85%B3%E1%86%BC%E1%84%8B%E1%85%A6-%E1%84%86%E1%85%B5%E1%84%8E%E1%85%B5%E1%84%82%E1%85%B3%E1%86%AB-%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%92%E1%85%A3%E1%86%BC/</link>
+      <guid>https://yhwanp.github.io/2019/12/10/c-try-catch-%E1%84%8B%E1%85%A8%E1%84%8B%E1%85%AC%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%E1%84%80%E1%85%A1-%E1%84%89%E1%85%A5%E1%86%BC%E1%84%82%E1%85%B3%E1%86%BC%E1%84%8B%E1%85%A6-%E1%84%86%E1%85%B5%E1%84%8E%E1%85%B5%E1%84%82%E1%85%B3%E1%86%AB-%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%92%E1%85%A3%E1%86%BC/</guid>
+      <pubDate>Mon, 09 Dec 2019 17:36:58 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;p&gt;C++ 에서 &lt;code&gt;예외처리&lt;/code&gt;는 overhead 가 있다는 것은 익히 들어왔을 것이다.&lt;br&gt;그럼에도 &lt;code&gt;try-catch&lt;/code&gt; 구문이 꼭 필요한 경우가 있는데, overhead 가 있다는 것이 예상만 되지 &lt;code
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>C++ 에서 <code>예외처리</code>는 overhead 가 있다는 것은 익히 들어왔을 것이다.<br>그럼에도 <code>try-catch</code> 구문이 꼭 필요한 경우가 있는데, overhead 가 있다는 것이 예상만 되지 <code>exception</code> 발생 유무에 따른 성능 차이에 대해서 궁금해져서 성능 상 얼마나 차이가 있을지 찾아보았다.</p><p>결론은 ‘<code>try-catch</code> 를 사용하더라도, <code>exception</code> 이 실제로 발생하지 않거나, 거의 발생하지 않는다면 성능에 영향은 거의 없다’ 이다. 위와 같은 경우에는 사용 시 괜한 걱정하지 않아도 된다.</p><p>아래 정말 자세하게 테스트한 실험글이 있어서, 좀 더 자세한 데이터를 원하면 아래를 참고.<br><a href="https://yesarang.tistory.com/371" rel="external nofollow noopener noreferrer" target="_blank">C++ 이야기 서른두번째: 예외가 성능에 미치는 영향</a></p>]]></content:encoded>
+      
+      <comments>https://yhwanp.github.io/2019/12/10/c-try-catch-%E1%84%8B%E1%85%A8%E1%84%8B%E1%85%AC%E1%84%8E%E1%85%A5%E1%84%85%E1%85%B5%E1%84%80%E1%85%A1-%E1%84%89%E1%85%A5%E1%86%BC%E1%84%82%E1%85%B3%E1%86%BC%E1%84%8B%E1%85%A6-%E1%84%86%E1%85%B5%E1%84%8E%E1%85%B5%E1%84%82%E1%85%B3%E1%86%AB-%E1%84%8B%E1%85%A7%E1%86%BC%E1%84%92%E1%85%A3%E1%86%BC/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>C++ Korea 6th Semina 후기 (2019-09-29)</title>
