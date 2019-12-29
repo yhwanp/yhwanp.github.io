@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://yhwanp.github.io/2019/12/16/ubuntu-dns-setting/</loc>
+        <lastmod>2019-12-29T18:02:10.730Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://yhwanp.github.io/2019/12/25/const-and-constexpr/</loc>
         <lastmod>2019-12-29T17:55:24.283Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -18,14 +26,6 @@
     <url>
         <loc>https://yhwanp.github.io/2019/12/20/c-web-ide/</loc>
         <lastmod>2019-12-29T17:34:49.144Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://yhwanp.github.io/2019/12/20/ubuntu-dns-setting/</loc>
-        <lastmod>2019-12-29T15:58:15.108Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

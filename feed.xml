@@ -51,9 +51,9 @@
     
     <item>
       <title>Ubuntu 18.04 DNS 설정하기 (초기화 문제 해결)</title>
-      <link>https://yhwanp.github.io/2019/12/20/ubuntu-dns-setting/</link>
-      <guid>https://yhwanp.github.io/2019/12/20/ubuntu-dns-setting/</guid>
-      <pubDate>Thu, 19 Dec 2019 15:54:23 GMT</pubDate>
+      <link>https://yhwanp.github.io/2019/12/16/ubuntu-dns-setting/</link>
+      <guid>https://yhwanp.github.io/2019/12/16/ubuntu-dns-setting/</guid>
+      <pubDate>Sun, 15 Dec 2019 15:54:23 GMT</pubDate>
       <description>
       
         
@@ -65,7 +65,7 @@
       
       <content:encoded><![CDATA[<p>Linux OS의 DNS 셋팅하기 위해서 일반적으로 <code>/etc/resolv.conf</code> 를 수정하는데,<br>Ubuntu 18.04 환경에서 수정 후 도메인 서버가 변경은 되는데, 재부팅 후 다시 초기화 되는 현상이 있어 불편하게 사용하다가 해결한 방법을 정리한다.</p><p>구글링 해보면 다양한 해결 방법이 있는데, 이 방법이 가장 올바른 수정 방법으로 보인다.<br>/etc/resolv.conf 를 열어보면 주석으로 generated 된 파일이며, 수동으로 변경하지 말 것을 권하고 있다.<br>Ubuntu 18.04 에서는 <code>systemd-resolved</code> 를 사용하기 때문에 아래 파일을 수정하면 된다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/systemd/resolved.conf</span><br></pre></td></tr></table></figure><p>옵션들에 대한 자세한 설명은 <a href="https://wiki.archlinux.org/index.php/Systemd-resolved" rel="external nofollow noopener noreferrer" target="_blank">wiki page</a> 를 참고한다.</p>]]></content:encoded>
       
-      <comments>https://yhwanp.github.io/2019/12/20/ubuntu-dns-setting/#disqus_thread</comments>
+      <comments>https://yhwanp.github.io/2019/12/16/ubuntu-dns-setting/#disqus_thread</comments>
     </item>
     
     <item>
