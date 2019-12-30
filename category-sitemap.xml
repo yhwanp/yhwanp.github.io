@@ -8,6 +8,13 @@
     </url>
 
     <url>
+        <loc>https://yhwanp.github.io/categories/algorithm/</loc>
+        <lastmod>2019-12-30T18:09:52.037Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://yhwanp.github.io/categories/linux/</loc>
         <lastmod>2019-12-29T18:02:10.730Z</lastmod>
         <changefreq>weekly</changefreq>

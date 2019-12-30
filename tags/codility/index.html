@@ -6,28 +6,24 @@
     
 
     
-    <title>C++ std::function 와 std::bind 사용법 | yhwanp&#39;s devNote</title>
+    <title>Tag: codility | yhwanp&#39;s devNote</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="C++,std">
-    
-    <meta name="description" content="std::function 란?C++11 부터 추가된 기능으로, C의 함수 포인터를 대체한다.아래와 같이 사용할 수 있다. 1234567891011void addAndPrint(int a, int b)&amp;#123;	int sum = a + b;	std::cout &amp;lt;&amp;lt; sum &amp;lt;&amp;lt; &quot;\n&quot;;&amp;#125;std::function&amp;lt;void(">
-<meta name="keywords" content="C++,std">
-<meta property="og:type" content="article">
-<meta property="og:title" content="C++ std::function 와 std::bind 사용법">
-<meta property="og:url" content="https://yhwanp.github.io/2019/09/15/std-function-and-std-bind/index.html">
+    <meta name="description" content="yhwanp&apos;s devNote">
+<meta property="og:type" content="website">
+<meta property="og:title" content="yhwanp&#39;s devNote">
+<meta property="og:url" content="https://yhwanp.github.io/tags/codility/index.html">
 <meta property="og:site_name" content="yhwanp&#39;s devNote">
-<meta property="og:description" content="std::function 란?C++11 부터 추가된 기능으로, C의 함수 포인터를 대체한다.아래와 같이 사용할 수 있다. 1234567891011void addAndPrint(int a, int b)&amp;#123;	int sum = a + b;	std::cout &amp;lt;&amp;lt; sum &amp;lt;&amp;lt; &quot;\n&quot;;&amp;#125;std::function&amp;lt;void(">
+<meta property="og:description" content="yhwanp&apos;s devNote">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://yhwanp.github.io/images/opimage.jpg">
-<meta property="og:updated_time" content="2019-09-16T12:46:01.111Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++ std::function 와 std::bind 사용법">
-<meta name="twitter:description" content="std::function 란?C++11 부터 추가된 기능으로, C의 함수 포인터를 대체한다.아래와 같이 사용할 수 있다. 1234567891011void addAndPrint(int a, int b)&amp;#123;	int sum = a + b;	std::cout &amp;lt;&amp;lt; sum &amp;lt;&amp;lt; &quot;\n&quot;;&amp;#125;std::function&amp;lt;void(">
+<meta name="twitter:title" content="yhwanp&#39;s devNote">
+<meta name="twitter:description" content="yhwanp&apos;s devNote">
 <meta name="twitter:image" content="https://yhwanp.github.io/images/opimage.jpg">
     
-    <link rel="canonical" href="https://yhwanp.github.io/2019/09/15/std-function-and-std-bind/">
+    <link rel="canonical" href="https://yhwanp.github.io/tags/codility/">
 
     
         <link rel="alternate" href="/feed.xml" title="yhwanp&#39;s devNote" type="application/atom+xml">
@@ -156,7 +152,7 @@ ga('send', 'pageview');
                         <div class="main-body-header">
     <h1 class="header">
     
-    <a class="page-title-link" href="/categories/c/">C++</a>
+    <i class="icon fa fa-tag"></i>Tag: <em>codility</em>
     </h1>
 </div>
 
@@ -168,157 +164,55 @@ ga('send', 'pageview');
     enable_page_level_ads: true
   });
 </script>
-                            <article id="post-std-function-and-std-bind" class="article article-single article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
+                            
+
+    
+    
         
-            <header class="article-header">
-                
+        
+        <section class="archives-wrap">
+            <div class="archive-year-wrap">
+                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
+            </div>
+            <div class="archives">
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/algorithm/">Algorithm</a>
+            </div>
+            <div class="date"><time datetime="2019-12-30T14:57:32.000Z" itemprop="datePublished">2019-12-30</time></div>
+        </div>
+        
     
         <h1 class="article-title" itemprop="name">
-        C++ std::function 와 std::bind 사용법
+        <a href="/2019/12/30/codility-4-4-maxcounters/">Codility 4-4 MaxCounters</a>
         </h1>
     
 
-            </header>
-        
-        
-            <div class="article-meta">
-                
-    <div class="article-date">
-        <a href="/2019/09/15/std-function-and-std-bind/" class="article-date">
-            <time datetime="2019-09-15T14:17:24.000Z" itemprop="datePublished">2019-09-15</time>
-        </a>
-    </div>
-
-		
-
-                
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/c/">C++</a>, <a class="tag-link" href="/tags/std/">std</a>
-    </div>
-
-            </div>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-            <h2 id="std-function-란"><a href="#std-function-란" class="headerlink" title="std::function 란?"></a>std::function 란?</h2><p>C++11 부터 추가된 기능으로, C의 함수 포인터를 대체한다.<br>아래와 같이 사용할 수 있다.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">addAndPrint</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> sum = a + b;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; sum &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">std</span>::function&lt;<span class="keyword">void</span>(<span class="keyword">int</span>, <span class="keyword">int</span>)&gt; func1 = addAndPrint;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 아래 두 줄은 똑같이 작동한다</span></span><br><span class="line">addAndPrint(<span class="number">10</span>, <span class="number">20</span>);</span><br><span class="line">func1(<span class="number">10</span>, <span class="number">20</span>);</span><br></pre></td></tr></table></figure>
-
-<p>위에선 전역으로 선언된 addAndPrint 함수를 std::function 으로 받고 있다.<br>만약 class 의 멤버함수를 가르키고 싶으면, 위와는 조금 다르게 사용해야 한다.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">addAndPrint</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = a + b;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"sum: "</span> &lt;&lt; sum &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">A test;</span><br><span class="line"><span class="comment">// 매개변수로 객체를 전달해야한다</span></span><br><span class="line"><span class="built_in">std</span>::function&lt;<span class="keyword">void</span>(A&amp;, <span class="keyword">int</span>, <span class="keyword">int</span>)&gt; func3 = &amp;A::addAndPrint;</span><br><span class="line">func3(test, <span class="number">10</span>, <span class="number">20</span>);</span><br></pre></td></tr></table></figure>
-
-<p>위처럼 멤버함수를 위해서 어떤 객체의 멤버함수를 실행할 지 알 수 있도록 객체를 전달해야 한다.<br>그리고 13번째 줄에서 A의 addAndPrint 를 대입하기 위해 &amp;A::addAndPrint 처럼 앞에 &amp; 를 사용하고 있는데, 이 이유는 멤버함수의 경우엔 함수의 주소값으로 암시적 형변환이 되지 않아서, 명시적으로 &amp;를 사용해서 주소값을 전달해줘야 하기 때문이다.</p>
-<h2 id="std-bind-란"><a href="#std-bind-란" class="headerlink" title="std::bind 란?"></a>std::bind 란?</h2><p>std::function 과 마찬가지로 C++11 기능이며, 함수의 인자를 지정할 수 있다.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">addAndPrint</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> sum = a + b;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; sum &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">auto</span> func2 = <span class="built_in">std</span>::bind(addAndPrint, <span class="number">10</span>, <span class="built_in">std</span>::placeholders::_1);</span><br><span class="line">func2(<span class="number">100</span>);	<span class="comment">// addAndPrint(10, 100); 과 동일한 결과를 보장함</span></span><br></pre></td></tr></table></figure>
-
-<p>위 코드부턴 auto 를 사용했는데, 여기선 std::function&lt;void(int)&gt; 와 동일하다.<br>std::bind(addAndPrint, 10, std::placeholders::_1) 의 의미는 addAndPrint(int, int) 함수의 첫 번째 파라메터는 10, 두 번째 파라메터는 func2 를 호출할 때 들어오는 첫번째 인자를 넣어준다는 의미다.</p>
-<p>클래스 멤버함수를 클래스 내부에서 bind 시켜주는 예제를 한번 작성해보자</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">addAndPrint</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> sum = a + b;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"sum: "</span> &lt;&lt; sum &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">bindFunction</span><span class="params">(<span class="built_in">std</span>::function&lt;<span class="keyword">void</span>(<span class="keyword">int</span>, <span class="keyword">int</span>)&gt;&amp; dest)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        dest = <span class="built_in">std</span>::bind(&amp;A::addAndPrint, <span class="keyword">this</span>, <span class="built_in">std</span>::placeholders::_1, <span class="built_in">std</span>::placeholders::_2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">A test;</span><br><span class="line"><span class="built_in">std</span>::function&lt;<span class="keyword">void</span>(<span class="keyword">int</span>, <span class="keyword">int</span>)&gt; func4;</span><br><span class="line">test.bindFunction(func4);</span><br><span class="line">func4(<span class="number">100</span>, <span class="number">200</span>);</span><br></pre></td></tr></table></figure>
-
-<p>func4는 객체 바깥에서 선언되고, A::bindFunction 에 의해서 test.addAndPrint 와 동일한 동작을 하는 함수로 bind 되었다.</p>
-
-        </div>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-3048351155943387",
-    enable_page_level_ads: true
-  });
-</script>
-        <footer class="article-footer">
+        <p class="article-excerpt">
             
+Codility 4-4 MaxCounters
 
+For example, given integer N = 5 and array A such that:
+1234567A[0] = 3   A[1] = 4    A[2] = 4    A[3] = 6    A[4] = 1    A[5] = 4    A[6] = 4
 
-    <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
-    <span class="a2a_divider"></span>
-    <a class="a2a_button_facebook"></a>
-    <a class="a2a_button_twitter"></a>
-    <a class="a2a_button_google_plus"></a>
-    <a class="a2a_button_pinterest"></a>
-    <a class="a2a_button_tumblr"></a>
-</div>
-<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
-<style>
-    .a2a_menu {
-        border-radius: 4px;
-    }
-    .a2a_menu a {
-        margin: 2px 0;
-        font-size: 14px;
-        line-height: 16px;
-        border-radius: 4px;
-        color: inherit !important;
-        font-family: 'Microsoft Yahei';
-    }
-    #a2apage_dropdown {
-        margin: 10px 0;
-    }
-    .a2a_mini_services {
-        padding: 10px;
-    }
-    a.a2a_i,
-    i.a2a_i {
-        width: 122px;
-        line-height: 16px;
-    }
-    a.a2a_i .a2a_svg,
-    a.a2a_more .a2a_svg {
-        width: 16px;
-        height: 16px;
-        line-height: 16px;
-        vertical-align: top;
-        background-size: 16px;
-    }
-    a.a2a_i {
-        border: none !important;
-    }
-    a.a2a_menu_show_more_less {
-        margin: 0;
-        padding: 10px 0;
-        line-height: 16px;
-    }
-    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
-    .a2a_mini_services{*+height:1%;}
-</style>
-
-
-        </footer>
+the values of the counters af
+        </p>
     </div>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "author": {
-            "@type": "Person",
-            "name": "yhwanp"
-        },
-        "headline": "C++ std::function 와 std::bind 사용법",
-        "image": "https://yhwanp.github.io",
-        "keywords": "C++ std",
-        "genre": "C++",
-        "datePublished": "2019-09-15",
-        "dateCreated": "2019-09-15",
-        "dateModified": "2019-09-16",
-        "url": "https://yhwanp.github.io/2019/09/15/std-function-and-std-bind/",
-        "description": "std::function 란?C++11 부터 추가된 기능으로, C의 함수 포인터를 대체한다.아래와 같이 사용할 수 있다.
-1234567891011void addAndPrint(int a, int b)&#123;	int sum = a + b;	std::cout &lt;&lt; sum &lt;&lt; "\n";&#125;std::function&lt;void(",
-        "wordCount": 554
-    }
-</script>
-
 </article>
-
-    <section id="comments">
     
-        
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-
+        </div>
     
-    </section>
+
+
+    </div></section>
 
 
 
@@ -356,29 +250,6 @@ ga('send', 'pageview');
             
         </ul>
     </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2019/10/06/cpp-korea-6th-semina/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">newer</strong>
-        <p class="article-nav-title">
-        
-            C++ Korea 6th Semina 후기 (2019-09-29)
-        
-        </p>
-        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
-    </a>
-    
-    
-        <a href="/2019/09/15/how-to-use-lsof/" id="article-nav-older" class="article-nav-link-wrap">
-        <strong class="article-nav-caption">older</strong>
-        <p class="article-nav-title">lsof - open 된 파일에 대한 정보 출력</p>
-        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
-        </a>
-    
-</nav>
-
     
     <div class="widgets-container">
         
@@ -539,13 +410,11 @@ ga('send', 'pageview');
     var disqus_shortname = 'https-yhwanp-github-io';
     
     
-    var disqus_url = 'https://yhwanp.github.io/2019/09/15/std-function-and-std-bind/';
-    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
