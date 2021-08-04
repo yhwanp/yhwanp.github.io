@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
 
     
@@ -12,19 +12,20 @@
     
         <meta name="keywords" content="const,constexpr">
     
-    <meta name="description" content="constconst 를 선언함으로서 값을 고정할 수 있다.실수를 줄일 수 있기 때문에 const 를 쓸 수 있는 상황에서는 무조건 사용하는 게 좋다.아래와 같은 쓰임새가 있다. 12345678910111213class Example&amp;#123;  public:		// 파라메터를 const 로 해서, 함수 내부에서 inpString을 변경하지 못하게 함  	v">
-<meta name="keywords" content="const,constexpr">
+    <meta name="description" content="constconst 를 선언함으로서 값을 고정할 수 있다.실수를 줄일 수 있기 때문에 const 를 쓸 수 있는 상황에서는 무조건 사용하는 게 좋다.아래와 같은 쓰임새가 있다. 12345678910111213class Example&amp;#123;  public:		&#x2F;&#x2F; 파라메터를 const 로 해서, 함수 내부에서 inpString을 변경하지 못하게 함  	v">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++ const 와 constexpr">
 <meta property="og:url" content="https://yhwanp.github.io/2019/12/25/const-and-constexpr/index.html">
 <meta property="og:site_name" content="yhwanp&#39;s devNote">
-<meta property="og:description" content="constconst 를 선언함으로서 값을 고정할 수 있다.실수를 줄일 수 있기 때문에 const 를 쓸 수 있는 상황에서는 무조건 사용하는 게 좋다.아래와 같은 쓰임새가 있다. 12345678910111213class Example&amp;#123;  public:		// 파라메터를 const 로 해서, 함수 내부에서 inpString을 변경하지 못하게 함  	v">
-<meta property="og:locale" content="en">
+<meta property="og:description" content="constconst 를 선언함으로서 값을 고정할 수 있다.실수를 줄일 수 있기 때문에 const 를 쓸 수 있는 상황에서는 무조건 사용하는 게 좋다.아래와 같은 쓰임새가 있다. 12345678910111213class Example&amp;#123;  public:		&#x2F;&#x2F; 파라메터를 const 로 해서, 함수 내부에서 inpString을 변경하지 못하게 함  	v">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://yhwanp.github.io/images/opimage.jpg">
-<meta property="og:updated_time" content="2019-12-29T17:55:24.283Z">
+<meta property="article:published_time" content="2019-12-25T14:34:10.000Z">
+<meta property="article:modified_time" content="2019-12-29T17:55:24.283Z">
+<meta property="article:author" content="yhwanp">
+<meta property="article:tag" content="const">
+<meta property="article:tag" content="constexpr">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C++ const 와 constexpr">
-<meta name="twitter:description" content="constconst 를 선언함으로서 값을 고정할 수 있다.실수를 줄일 수 있기 때문에 const 를 쓸 수 있는 상황에서는 무조건 사용하는 게 좋다.아래와 같은 쓰임새가 있다. 12345678910111213class Example&amp;#123;  public:		// 파라메터를 const 로 해서, 함수 내부에서 inpString을 변경하지 못하게 함  	v">
 <meta name="twitter:image" content="https://yhwanp.github.io/images/opimage.jpg">
     
     <link rel="canonical" href="https://yhwanp.github.io/2019/12/25/const-and-constexpr/">
@@ -35,19 +36,33 @@
 
     
 
-    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
-    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
 
-    <script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/3.3.1/jquery.min.js"></script>
+
     
     
-        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
     
     
-        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
     
     
         <script type="text/javascript">
@@ -67,11 +82,17 @@ ga('send', 'pageview');
 
 <!--custom font setting-->
     <link rel="stylesheet" type="text/css" href>
-    <link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">	
-    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
-</html>
+    
+<link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">
+	
+    
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
 <body>
     <div id="wrap">
         <header id="header">
@@ -82,10 +103,6 @@ ga('send', 'pageview');
                     <h1 class="logo-wrap">
                         <a href="/" class="logo"></a>
                     </h1>
-                    
-                        <h2 class="subtitle-wrap">
-                            <p class="subtitle">yhwanp&#39;s devNote</p>
-                        </h2>
                     
                 </div>
                 <div id="header-inner" class="nav-container">
@@ -139,7 +156,9 @@ ga('send', 'pageview');
     window.INSIGHT_CONFIG = INSIGHT_CONFIG;
 })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
 
 </div>
                         </nav>
@@ -195,7 +214,7 @@ ga('send', 'pageview');
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/const/">const</a>, <a class="tag-link" href="/tags/constexpr/">constexpr</a>
+        <a class="tag-link-link" href="/tags/const/" rel="tag">const</a>, <a class="tag-link-link" href="/tags/constexpr/" rel="tag">constexpr</a>
     </div>
 
             </div>
@@ -203,11 +222,11 @@ ga('send', 'pageview');
         
         <div class="article-entry" itemprop="articleBody">
             <h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><p><code>const</code> 를 선언함으로서 값을 고정할 수 있다.<br>실수를 줄일 수 있기 때문에 const 를 쓸 수 있는 상황에서는 무조건 사용하는 게 좋다.<br>아래와 같은 쓰임새가 있다.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">		<span class="comment">// 파라메터를 const 로 해서, 함수 내부에서 inpString을 변경하지 못하게 함</span></span><br><span class="line">  	<span class="function"><span class="keyword">void</span> <span class="title">setString</span><span class="params">(<span class="keyword">const</span> <span class="built_in">std</span>::<span class="built_in">string</span>&amp; inpString)</span></span>;</span><br><span class="line">  	<span class="comment">// 리턴을 const 로 해서, 외부에서 멤버 str 을 변경하지 못하게 함</span></span><br><span class="line">		<span class="keyword">const</span> <span class="built_in">std</span>::<span class="function"><span class="built_in">string</span>&amp; <span class="title">getStringRef</span><span class="params">()</span></span>;</span><br><span class="line">  	<span class="comment">// print 만 수행하는 함수이므로 함수 내부에서 멤버 변수를 변경하지 못하게 함</span></span><br><span class="line">  	<span class="function"><span class="keyword">void</span> <span class="title">printString</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">private</span>:</span><br><span class="line">  	<span class="built_in">std</span>::<span class="built_in">string</span> str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Example</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">		<span class="comment">// 파라메터를 const 로 해서, 함수 내부에서 inpString을 변경하지 못하게 함</span></span><br><span class="line">  	<span class="function"><span class="keyword">void</span> <span class="title">setString</span><span class="params">(<span class="keyword">const</span> std::string&amp; inpString)</span></span>;</span><br><span class="line">  	<span class="comment">// 리턴을 const 로 해서, 외부에서 멤버 str 을 변경하지 못하게 함</span></span><br><span class="line">		<span class="function"><span class="keyword">const</span> std::string&amp; <span class="title">getStringRef</span><span class="params">()</span></span>;</span><br><span class="line">  	<span class="comment">// print 만 수행하는 함수이므로 함수 내부에서 멤버 변수를 변경하지 못하게 함</span></span><br><span class="line">  	<span class="function"><span class="keyword">void</span> <span class="title">printString</span><span class="params">()</span> <span class="keyword">const</span></span>;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">private</span>:</span><br><span class="line">  	std::string str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="constexpr"><a href="#constexpr" class="headerlink" title="constexpr"></a>constexpr</h3><p>C++11 에 도입된 것으로, const 와 비슷하지만  <code>constexpr</code> 은 <code>Compile time</code>에 값이 결정되기를 원할 때 사용한다. 또 compile time 에 값을 결정하는 방법으로는 <code>템플릿 메타 프로그래밍</code>을 이용하는 방법이 있는데 가독성이나 사용성면에서나 constexpr 로 사용하는 것이 좋겠다.</p>
 <p>그런데 함수를 constexpr 로 선언하더라도 compile time 에 결정될 수 있고 runtime 에 결정될 수도 있다. 이는 컴파일러의 어떤 평가 기준에 따라 결정 되는데 항상 compile time 에 결정되기 원하는 값이라면 리턴을 받는 변수를 constexpr 로 선언하면 된다.<br>연산량이 너무 많다면 compile time 에 결정하지 못할 수도 있다. (Compile error 발생)<br>아래 코드를 보면서 이해해보자.</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="keyword">int</span> <span class="title">Factorial</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> n &lt;= <span class="number">1</span> ? <span class="number">1</span> : n * Factorial(n - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// "constexpr int retVal" 로 받기 때문에 compile time 에 결정한다.</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> retVal = Factorial(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 변수를 사용할 시 runtime 에 결정</span></span><br><span class="line"><span class="keyword">int</span> a = getInp;</span><br><span class="line"><span class="keyword">int</span> retVal = Factorial(a);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="keyword">int</span> <span class="title">Factorial</span><span class="params">(<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">return</span> n &lt;= <span class="number">1</span> ? <span class="number">1</span> : n * <span class="built_in">Factorial</span>(n - <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// &quot;constexpr int retVal&quot; 로 받기 때문에 compile time 에 결정한다.</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> retVal = <span class="built_in">Factorial</span>(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 변수를 사용할 시 runtime 에 결정</span></span><br><span class="line"><span class="keyword">int</span> a = getInp;</span><br><span class="line"><span class="keyword">int</span> retVal = <span class="built_in">Factorial</span>(a);</span><br></pre></td></tr></table></figure>
 
 
         </div>
@@ -223,7 +242,7 @@ ga('send', 'pageview');
 
 
     <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share" rel="external nofollow noopener noreferrer" target="_blank">Share</a>
+    <a class="a2a_dd" target="_blank" rel="external nofollow noopener noreferrer" href="https://www.addtoany.com/share">Share</a>
     <span class="a2a_divider"></span>
     <a class="a2a_button_facebook"></a>
     <a class="a2a_button_twitter"></a>
@@ -296,7 +315,7 @@ ga('send', 'pageview');
         "url": "https://yhwanp.github.io/2019/12/25/const-and-constexpr/",
         "description": "constconst 를 선언함으로서 값을 고정할 수 있다.실수를 줄일 수 있기 때문에 const 를 쓸 수 있는 상황에서는 무조건 사용하는 게 좋다.아래와 같은 쓰임새가 있다.
 12345678910111213class Example&#123;  public:		// 파라메터를 const 로 해서, 함수 내부에서 inpString을 변경하지 못하게 함  	v",
-        "wordCount": 322
+        "wordCount": 319
     }
 </script>
 
@@ -306,7 +325,7 @@ ga('send', 'pageview');
     
         
     <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
     
@@ -387,6 +406,24 @@ ga('send', 'pageview');
                     <li>
                         
                         <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/etc/">ETC</a></p>
+                            <p class="item-title"><a href="/2021/08/04/change-dns-to-make-internet-speed-faster/" class="title">DNS 를 바꾸면 인터넷 속도가 빨라지는 이유?</a></p>
+                            <p class="item-date"><time datetime="2021-08-04T08:35:14.000Z" itemprop="datePublished">2021-08-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/etc/">ETC</a></p>
+                            <p class="item-title"><a href="/2021/07/18/about-cloudflare/" class="title">Cloudflare 에 대해</a></p>
+                            <p class="item-date"><time datetime="2021-07-18T14:44:53.000Z" itemprop="datePublished">2021-07-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/algorithm/">Algorithm</a></p>
                             <p class="item-title"><a href="/2019/12/30/codility-4-4-maxcounters/" class="title">Codility 4-4 MaxCounters</a></p>
                             <p class="item-date"><time datetime="2019-12-30T14:57:32.000Z" itemprop="datePublished">2019-12-30</time></p>
@@ -411,24 +448,6 @@ ga('send', 'pageview');
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/linux/">Linux</a></p>
-                            <p class="item-title"><a href="/2019/12/16/ubuntu-dns-setting/" class="title">Ubuntu 18.04 DNS 설정하기 (초기화 문제 해결)</a></p>
-                            <p class="item-date"><time datetime="2019-12-15T15:54:23.000Z" itemprop="datePublished">2019-12-16</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/c/">C++</a></p>
-                            <p class="item-title"><a href="/2019/12/14/c-delete-free-when-process-exit/" class="title">C/C++ free/delete 없이 프로그램을 종료한다면?</a></p>
-                            <p class="item-date"><time datetime="2019-12-14T11:04:24.000Z" itemprop="datePublished">2019-12-14</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -438,7 +457,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">categories</h3>
         <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/android/">Android</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/android/ndk/">NDK</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/c/">C++</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">ETC</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/etc/cmake/">CMake</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/hexo/">Hexo</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">Linux</a><span class="category-list-count">4</span></li></ul>
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/android/">Android</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/android/ndk/">NDK</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/c/">C++</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">ETC</a><span class="category-list-count">8</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/etc/cmake/">CMake</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/hexo/">Hexo</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">Linux</a><span class="category-list-count">4</span></li></ul>
         </div>
     </div>
 
@@ -448,7 +467,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">3</span></li></ul>
         </div>
     </div>
 
@@ -458,7 +477,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/">Algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automation/">Automation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/">C++</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cmake/">CMake</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dns/">DNS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elon-musk/">Elon Musk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font/">Font</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">Hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">Linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ndk/">NDK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/neuralink/">Neuralink</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openssl/">OpenSSL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/process/">Process</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvalue/">Rvalue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scp/">SCP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">SSH</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/semina/">Semina</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">Ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codility/">codility</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/const/">const</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/constexpr/">constexpr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/delete/">delete</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/exception/">exception</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/free/">free</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm2/">iTerm2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/memory/">memory</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mount/">mount</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/std/">std</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/try-catch/">try-catch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vector/">vector</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-ide/">web ide</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/예외처리/">예외처리</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">Algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/" rel="tag">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automation/" rel="tag">Automation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">C++</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cmake/" rel="tag">CMake</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dns/" rel="tag">DNS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elon-musk/" rel="tag">Elon Musk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font/" rel="tag">Font</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">Hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">Linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ndk/" rel="tag">NDK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/" rel="tag">Network</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/neuralink/" rel="tag">Neuralink</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openssl/" rel="tag">OpenSSL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/process/" rel="tag">Process</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvalue/" rel="tag">Rvalue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scp/" rel="tag">SCP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/" rel="tag">SSH</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/semina/" rel="tag">Semina</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/" rel="tag">VPN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codility/" rel="tag">codility</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/const/" rel="tag">const</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/constexpr/" rel="tag">constexpr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/delete/" rel="tag">delete</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/exception/" rel="tag">exception</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/free/" rel="tag">free</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm2/" rel="tag">iTerm2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/memory/" rel="tag">memory</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mount/" rel="tag">mount</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/std/" rel="tag">std</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/try-catch/" rel="tag">try-catch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vector/" rel="tag">vector</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-ide/" rel="tag">web ide</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/" rel="tag">예외처리</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -468,7 +487,7 @@ ga('send', 'pageview');
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/android/" style="font-size: 10px;">Android</a> <a href="/tags/automation/" style="font-size: 10px;">Automation</a> <a href="/tags/c/" style="font-size: 20px;">C++</a> <a href="/tags/cmake/" style="font-size: 10px;">CMake</a> <a href="/tags/dns/" style="font-size: 10px;">DNS</a> <a href="/tags/elon-musk/" style="font-size: 10px;">Elon Musk</a> <a href="/tags/font/" style="font-size: 10px;">Font</a> <a href="/tags/hexo/" style="font-size: 13.33px;">Hexo</a> <a href="/tags/linux/" style="font-size: 13.33px;">Linux</a> <a href="/tags/markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/ndk/" style="font-size: 10px;">NDK</a> <a href="/tags/neuralink/" style="font-size: 10px;">Neuralink</a> <a href="/tags/openssl/" style="font-size: 10px;">OpenSSL</a> <a href="/tags/process/" style="font-size: 10px;">Process</a> <a href="/tags/rvalue/" style="font-size: 10px;">Rvalue</a> <a href="/tags/scp/" style="font-size: 10px;">SCP</a> <a href="/tags/ssh/" style="font-size: 13.33px;">SSH</a> <a href="/tags/semina/" style="font-size: 10px;">Semina</a> <a href="/tags/ubuntu/" style="font-size: 10px;">Ubuntu</a> <a href="/tags/codility/" style="font-size: 10px;">codility</a> <a href="/tags/const/" style="font-size: 10px;">const</a> <a href="/tags/constexpr/" style="font-size: 10px;">constexpr</a> <a href="/tags/delete/" style="font-size: 10px;">delete</a> <a href="/tags/exception/" style="font-size: 10px;">exception</a> <a href="/tags/free/" style="font-size: 10px;">free</a> <a href="/tags/iterm2/" style="font-size: 10px;">iTerm2</a> <a href="/tags/memory/" style="font-size: 10px;">memory</a> <a href="/tags/mount/" style="font-size: 10px;">mount</a> <a href="/tags/std/" style="font-size: 16.67px;">std</a> <a href="/tags/try-catch/" style="font-size: 10px;">try-catch</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/web-ide/" style="font-size: 10px;">web ide</a> <a href="/tags/예외처리/" style="font-size: 10px;">예외처리</a>
+            <a href="/tags/algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/android/" style="font-size: 10px;">Android</a> <a href="/tags/automation/" style="font-size: 10px;">Automation</a> <a href="/tags/c/" style="font-size: 20px;">C++</a> <a href="/tags/cmake/" style="font-size: 10px;">CMake</a> <a href="/tags/dns/" style="font-size: 16.67px;">DNS</a> <a href="/tags/elon-musk/" style="font-size: 10px;">Elon Musk</a> <a href="/tags/font/" style="font-size: 10px;">Font</a> <a href="/tags/hexo/" style="font-size: 13.33px;">Hexo</a> <a href="/tags/linux/" style="font-size: 13.33px;">Linux</a> <a href="/tags/markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/ndk/" style="font-size: 10px;">NDK</a> <a href="/tags/network/" style="font-size: 13.33px;">Network</a> <a href="/tags/neuralink/" style="font-size: 10px;">Neuralink</a> <a href="/tags/openssl/" style="font-size: 10px;">OpenSSL</a> <a href="/tags/process/" style="font-size: 10px;">Process</a> <a href="/tags/rvalue/" style="font-size: 10px;">Rvalue</a> <a href="/tags/scp/" style="font-size: 10px;">SCP</a> <a href="/tags/ssh/" style="font-size: 13.33px;">SSH</a> <a href="/tags/semina/" style="font-size: 10px;">Semina</a> <a href="/tags/ubuntu/" style="font-size: 10px;">Ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">VPN</a> <a href="/tags/codility/" style="font-size: 10px;">codility</a> <a href="/tags/const/" style="font-size: 10px;">const</a> <a href="/tags/constexpr/" style="font-size: 10px;">constexpr</a> <a href="/tags/delete/" style="font-size: 10px;">delete</a> <a href="/tags/exception/" style="font-size: 10px;">exception</a> <a href="/tags/free/" style="font-size: 10px;">free</a> <a href="/tags/iterm2/" style="font-size: 10px;">iTerm2</a> <a href="/tags/memory/" style="font-size: 10px;">memory</a> <a href="/tags/mount/" style="font-size: 10px;">mount</a> <a href="/tags/std/" style="font-size: 16.67px;">std</a> <a href="/tags/try-catch/" style="font-size: 10px;">try-catch</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/web-ide/" style="font-size: 10px;">web ide</a> <a href="/tags/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/" style="font-size: 10px;">예외처리</a>
         </div>
     </div>
 
@@ -481,7 +500,7 @@ ga('send', 'pageview');
             <ul>
                 
                     <li>
-                        <a href="http://hexo.io" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a>
+                        <a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io">Hexo</a>
                     </li>
                 
             </ul>
@@ -512,7 +531,7 @@ ga('send', 'pageview');
                 <h1 class="logo-wrap">
                     <a href="/" class="logo"></a>
                 </h1>
-                <p>&copy; 2019 yhwanp</p>
+                <p>&copy; 2021 yhwanp</p>
                 <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
             </div>
             <div class="footer-plugins">
@@ -546,26 +565,48 @@ ga('send', 'pageview');
 
 
     
-        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
     
     
-        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
     
     
 
 
 
 <!-- Custom Scripts -->
+
 <script src="/js/main.js"></script>
+
 
     </div>
 </body>
-
+</html>

@@ -2,14 +2,22 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://yhwanp.github.io</loc>
+        <loc>https://yhwanp.github.io/</loc>
         <changefreq>daily</changefreq>
         <priority>1</priority>
     </url>
 
+
     <url>
         <loc>https://yhwanp.github.io/categories/algorithm/</loc>
-        <lastmod>2019-12-30T18:09:52.037Z</lastmod>
+        <lastmod>2021-08-04T11:03:13.447Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://yhwanp.github.io/categories/etc/</loc>
+        <lastmod>2021-08-04T10:44:25.181Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -24,13 +32,6 @@
     <url>
         <loc>https://yhwanp.github.io/categories/c/</loc>
         <lastmod>2019-12-29T17:55:24.283Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://yhwanp.github.io/categories/etc/</loc>
-        <lastmod>2019-09-08T10:55:22.604Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
