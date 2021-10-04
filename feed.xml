@@ -8,8 +8,67 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>yhwanp&#39;s devNote</description>
-    <pubDate>Wed, 04 Aug 2021 11:44:48 GMT</pubDate>
+    <pubDate>Mon, 04 Oct 2021 17:21:51 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>툴 추천 - Everything</title>
+      <link>https://yhwanp.github.io/2021/09/25/tool-everything/</link>
+      <guid>https://yhwanp.github.io/2021/09/25/tool-everything/</guid>
+      <pubDate>Sat, 25 Sep 2021 05:04:10 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;p&gt;가장 잘 쓰고 있는 툴 한가지를 추천하려고 한다.&lt;br&gt;&lt;a href=&quot;https://www.voidtools.com/ko-kr/&quot;&gt;Everything&lt;/a&gt; 이라고 하는 프로그램인데, Windows 전용 프로그램이며 실시간 파일/폴더 검색을 지
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>가장 잘 쓰고 있는 툴 한가지를 추천하려고 한다.<br><a href="https://www.voidtools.com/ko-kr/">Everything</a> 이라고 하는 프로그램인데, Windows 전용 프로그램이며 실시간 파일/폴더 검색을 지원한다. </p><p>컴퓨터에 저장한 파일이 많아지다보면 꼭 필요한 프로그램이라고 생각한다.<br>개발할 때도 특정 설정 파일이나 소스코드를 파일 이름으로 찾는 경우가 많기 때문에 효율을 높여줄 수 있다.<br>Windows 에 내장된 속터지는 검색은 너무 오래 걸려서 포기하기 일쑤였는데, 이 프로그램은 거의 딜레이 없이 파일을 찾아주고, 정규 표현식도 지원한다.</p><p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http://cfile22.uf.tistory.com/image/99CC6F455F30177F141D70"></p>]]></content:encoded>
+      
+      <comments>https://yhwanp.github.io/2021/09/25/tool-everything/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>CMake - feature_summary</title>
+      <link>https://yhwanp.github.io/2021/09/22/cmake-featuresummary/</link>
+      <guid>https://yhwanp.github.io/2021/09/22/cmake-featuresummary/</guid>
+      <pubDate>Wed, 22 Sep 2021 14:13:43 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;p&gt;&lt;code&gt;feature_summary&lt;/code&gt; 는 CMake 에 정의된 옵션이나 종속성을 확인할 때 유용한 기능이다.&lt;/p&gt;
+&lt;p&gt;e.g&lt;/p&gt;
+&lt;figure class=&quot;highlight cmake&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p><code>feature_summary</code> 는 CMake 에 정의된 옵션이나 종속성을 확인할 때 유용한 기능이다.</p><p>e.g</p><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># include 필요</span></span><br><span class="line"><span class="keyword">include</span>(FeatureSummary)</span><br><span class="line"></span><br><span class="line"><span class="keyword">find_package</span>(Boost REQUIRED)</span><br><span class="line"></span><br><span class="line"><span class="comment"># summary 출력 원하는 옵션은 add_feature_info 로 추가</span></span><br><span class="line"><span class="keyword">option</span>(BUILD_TEST <span class="string">&quot;Build test executable&quot;</span> <span class="keyword">OFF</span>)</span><br><span class="line">add_feature_info(<span class="string">&quot;BUILD_TEST&quot;</span> BUILD_TEST <span class="string">&quot;Build test executable&quot;</span>)</span><br><span class="line"><span class="keyword">option</span>(ENABLE_SOMETHING <span class="string">&quot;Enable something&quot;</span> <span class="keyword">ON</span>)</span><br><span class="line">add_feature_info(<span class="string">&quot;ENABLE_SOMETHING&quot;</span> ENABLE_SOMETHING <span class="string">&quot;Enable something&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 출력</span></span><br><span class="line">feature_summary(WHAT ALL)</span><br></pre></td></tr></table></figure><p>Configure 하면 아래와 같이 종속 패키지 목록이나, 옵션 on/off 여부에 대한 summary 가 출력된다.</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">-- The following features have been enabled:</span><br><span class="line"></span><br><span class="line"> * ENABLE_SOMETHING, Enable something</span><br><span class="line"></span><br><span class="line">-- The following REQUIRED packages have been found:</span><br><span class="line"></span><br><span class="line"> * boost_headers (required version == 1.76.0)</span><br><span class="line"> * Boost</span><br><span class="line"></span><br><span class="line">-- The following features have been disabled:</span><br><span class="line"></span><br><span class="line"> * BUILD_TEST, Build <span class="built_in">test</span> executable</span><br><span class="line"></span><br><span class="line">-- Configuring <span class="keyword">done</span></span><br><span class="line">-- Generating <span class="keyword">done</span></span><br></pre></td></tr></table></figure><p>프로젝트가 커질수록 dependency 나 custom option 사용이 많아져서 복잡해질 수 있는데, Configure 시 description 과 함께 출력되니 문서 대용으로 쓰일 수도 있고 한 눈에 적용 옵션들을 파악할 수도 있어서 유용해보인다.</p>]]></content:encoded>
+      
+      <comments>https://yhwanp.github.io/2021/09/22/cmake-featuresummary/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>SSH Portforwarding</title>
+      <link>https://yhwanp.github.io/2021/08/14/ssh-portfowarding/</link>
+      <guid>https://yhwanp.github.io/2021/08/14/ssh-portfowarding/</guid>
+      <pubDate>Sat, 14 Aug 2021 11:13:47 GMT</pubDate>
+      <description>
+      
+        
+        
+          &lt;p&gt;&lt;code&gt;SSH Portforwarding&lt;/code&gt; (&lt;code&gt;SSH Tunnelling&lt;/code&gt;) 은 ssh 연결을 기반으로 대상 서버의 특정 port 를 외부에 공개할 때 사용한다.&lt;br&gt;3가지 옵션이 있는데, 그 중  &lt;code&gt;
+        
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p><code>SSH Portforwarding</code> (<code>SSH Tunnelling</code>) 은 ssh 연결을 기반으로 대상 서버의 특정 port 를 외부에 공개할 때 사용한다.<br>3가지 옵션이 있는데, 그 중  <code>local portforwarding</code>, <code>remote portforwarding</code> 에 대해 알아보자.<br>두 옵션의 차이는 간단히 말해서 최종 목적지까지 터널링을 구성하는 작업의 <code>실행 주체</code> 에 따라 다르다.</p><h3 id="Local-Portforwarding"><a href="#Local-Portforwarding" class="headerlink" title="Local Portforwarding"></a>Local Portforwarding</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -L &#123;접근할 port&#125;:&#123;목적지 ip&#125;:&#123;목적지 port&#125; &#123;목적지 ip:port에 접근 가능한 host ip&#125;</span><br></pre></td></tr></table></figure><p>e.g. </p><ul><li>목적지 서버(192.168.200.200)의 HTTP(:80) 가 외부에서 접근 불가하며</li><li>목적지 서버에 접근 권한이 있는 host(192.168.10.10) 와의 ssh 연결은 가능할 때</li><li>로컬의 8080 포트와 연결하고 싶다면?</li><li>아래 커맨드를 실행한다.<br>ssh -L 8080:192.168.200.200:80 192.168.10.10</li><li>로컬에서 localhost:8080 로 접근하면 192.168.200.200:80 으로 연결된다.</li></ul><p>(마지막 파라메터는 꼭 목적지 ip 와 동일한 것이 아니고, 목적지 ip:port 에 접근이 가능한 host 의 ip 일 뿐이다.)</p><h3 id="Remote-Portforwarding"><a href="#Remote-Portforwarding" class="headerlink" title="Remote Portforwarding"></a>Remote Portforwarding</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -R &#123;접근할 port&#125;:&#123;목적지 ip&#125;:&#123;목적지 port&#125; &#123;목적지 ip:port에 접근할 수 있도록 해줄  host ip&#125;</span><br></pre></td></tr></table></figure><p>e.g.</p><ul><li><p>목적지 서버(192.168.200.200)의 HTTP(:80) 가 외부에서 접근 불가하며</p></li><li><p>목적지 서버에 접근하고자 하는 client 에게 (192.168.100.100) 8080 포트를 열어주려면?<br>(client 또한 sshd 가 실행되고 있어야 한다)</p></li><li><p>아래 커맨드를 실행한다.</p><p>ssh -R 8080:192.168.200.200:80 192.168.100.100</p></li></ul><p>둘의 차이점은 <code>Local Portforwarding</code> 은 대상 ip:port 에 접근 권한이 없는 호스트가 목적지 서버와 연결하기 위해 사용, <code>Remote Portforwarding</code> 은 접근 권한을 가진 호스트가 접근하고자 하는 또 다른 호스트에게 접근할 수 있도록 할 때 사용한다는 것이다.</p>]]></content:encoded>
+      
+      <comments>https://yhwanp.github.io/2021/08/14/ssh-portfowarding/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>DNS 를 바꾸면 인터넷 속도가 빨라지는 이유?</title>

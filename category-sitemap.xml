@@ -9,8 +9,22 @@
 
 
     <url>
+        <loc>https://yhwanp.github.io/categories/etc/cmake/</loc>
+        <lastmod>2021-10-04T18:03:24.184Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://yhwanp.github.io/categories/etc/</loc>
-        <lastmod>2021-08-04T11:44:48.954Z</lastmod>
+        <lastmod>2021-10-04T18:03:24.184Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://yhwanp.github.io/categories/etc/hexo/</loc>
+        <lastmod>2021-10-04T11:14:09.836Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
@@ -32,20 +46,6 @@
     <url>
         <loc>https://yhwanp.github.io/categories/c/</loc>
         <lastmod>2019-12-29T17:55:24.283Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://yhwanp.github.io/categories/etc/hexo/</loc>
-        <lastmod>2019-09-03T17:36:59.158Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://yhwanp.github.io/categories/etc/cmake/</loc>
-        <lastmod>2019-08-21T16:14:39.261Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
