@@ -1,525 +1,143 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-
-    
-
-    
-    <title>Tag: CMake | yhwanp&#39;s devNote</title>
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="description" content="yhwanp&#39;s devNote">
-<meta property="og:type" content="website">
-<meta property="og:title" content="yhwanp&#39;s devNote">
-<meta property="og:url" content="https://yhwanp.github.io/tags/cmake/index.html">
-<meta property="og:site_name" content="yhwanp&#39;s devNote">
-<meta property="og:description" content="yhwanp&#39;s devNote">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://yhwanp.github.io/images/opimage.jpg">
-<meta property="article:author" content="yhwanp">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://yhwanp.github.io/images/opimage.jpg">
-    
-    <link rel="canonical" href="https://yhwanp.github.io/tags/cmake/">
-
-    
-        <link rel="alternate" href="/feed.xml" title="yhwanp&#39;s devNote" type="application/atom+xml">
-    
-
-    
-
-    
-<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
-
-    
-<link rel="stylesheet" href="/libs/titillium-web/styles.css">
-
-    
-<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
-
-
-    
-<link rel="stylesheet" href="/css/style.css">
-
-
-    
-<script src="/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    
-    
-        
-<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
-
-    
-    
-        
-<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
-
-    
-    
-        <script type="text/javascript">
-(function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-143811384-1', 'auto');
-ga('send', 'pageview');
-
-</script>
-
-    
-    
-
-
-<!--custom font setting-->
-    <link rel="stylesheet" type="text/css" href>
-    
-<link rel="stylesheet" href="https://cdn.rawgit.com/innks/NanumSquareRound/master/nanumsquareround.css">
-	
-    
-<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css">
-
-    
-<link rel="stylesheet" href="/css/style.css">
-
-<meta name="generator" content="Hexo 5.4.0"></head>
-
-<body>
-    <div id="wrap">
-        <header id="header">
-    <div id="header-outer" class="outer">
-        <div class="container">
-            <div class="container-inner">
-                <div id="header-title">
-                    <h1 class="logo-wrap">
-                        <a href="/" class="logo"></a>
-                    </h1>
-                    
-                </div>
-                <div id="header-inner" class="nav-container">
-                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
-                    <div class="nav-container-inner">
-                        <ul id="main-nav">
-                            
-                                <li class="main-nav-list-item">
-                                    <a class="main-nav-list-link" href="/">Home</a>
-                                </li>
-                            
-                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/algorithm/">Algorithm</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/android/">Android</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/android/ndk/">NDK</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/c/">C++</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/etc/">ETC</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/etc/cmake/">CMake</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/etc/hexo/">Hexo</a></li></ul></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/linux/">Linux</a></li></ul>
-                                    
-                                <li class="main-nav-list-item">
-                                    <a class="main-nav-list-link" href="/about/index.html">About</a>
-                                </li>
-                            
-                        </ul>
-                        <nav id="sub-nav">
-                            <div id="search-form-wrap">
-
-    <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search">
-        <button type="submit" class="search-form-submit"></button>
-    </form>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something...">
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: 'Posts',
-            PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
-            UNTITLED: '(Untitled)',
-        },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-
-<script src="/js/insight.js"></script>
-
-
-</div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-        <div class="container">
-            <div class="main-body container-inner">
-                <div class="main-body-inner">
-                    <section id="main">
-                        <div class="main-body-header">
-    <h1 class="header">
-    
-    <i class="icon fa fa-tag"></i>Tag: <em>CMake</em>
-    </h1>
-</div>
-
-                        <div class="main-body-content">
-                            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-3048351155943387",
-    enable_page_level_ads: true
-  });
-</script>
-                            
-
-    
-    
-        
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2021" class="archive-year"><i class="icon fa fa-calendar-o"></i>2021</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/etc/">ETC</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/etc/cmake/">CMake</a>
-            </div>
-            <div class="date"><time datetime="2021-09-22T14:13:43.000Z" itemprop="datePublished">2021-09-22</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2021/09/22/cmake-featuresummary/">CMake - feature_summary</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            feature_summary 는 CMake 에 정의된 옵션이나 종속성을 확인할 때 유용한 기능이다.
-e.g
-12345678910111213# include 필요include(FeatureSummary)find_package(Boost REQUIRED)# summary 출력 원하는 옵션은 add_feature_info 로 추가option(BUILD_TEST 
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-        
-            </div></div></section>
-        
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2019" class="archive-year"><i class="icon fa fa-calendar-o"></i>2019</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/etc/">ETC</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/etc/cmake/">CMake</a>
-            </div>
-            <div class="date"><time datetime="2019-08-21T15:57:53.000Z" itemprop="datePublished">2019-08-22</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2019/08/22/cmake-convert-to-absolute-path/">CMake 에서 상대경로를 절대경로로 바꾸기</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            CMake 에서 상대경로를 절대경로로 바꿔보자
-왜 필요한가?
-
-CMake 에서 지원하는 여러 명령들 중에 상대 경로로 입력하면 오류가 출력되는 function 들이 있습니다.이때, 상대 경로를 절대 경로로 변환하기 위해 get_filename_component 을 사용하면 됩니다.
-원형:
-1get_filename_component(&lt;var&gt; &l
-        </p>
-    </div>
-</article>
-    
-
-
-    </div></div></section>
-
-
-
-                        </div>
-                    </section>
-                    <aside id="sidebar">
-    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
-    <div class="sidebar-top">
-        <p>follow:</p>
-        <ul class="social-links">
-            
-                
-            
-                
-            
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="github" href="https://github.com/yhwanp" target="_blank" rel="external nofollow noopener noreferrer">
-                        <i class="icon fa fa-github"></i>
-                    </a>
-                </li>
-                
-            
-                
-            
-                
-                <li>
-                    <a class="social-tooltip" title="rss" href="/feed.xml" target="_blank" rel="noopener">
-                        <i class="icon fa fa-rss"></i>
-                    </a>
-                </li>
-                
-            
-        </ul>
-    </div>
-    
-    <div class="widgets-container">
-        
-            
-                
-
-            
-                
-    <div class="widget-wrap">
-        <h3 class="widget-title">recents</h3>
-        <div class="widget">
-            <ul id="recent-post" class="no-thumbnail">
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/etc/">ETC</a></p>
-                            <p class="item-title"><a href="/2021/09/25/tool-everything/" class="title">툴 추천 - Everything</a></p>
-                            <p class="item-date"><time datetime="2021-09-25T05:04:10.000Z" itemprop="datePublished">2021-09-25</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/etc/">ETC</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/etc/cmake/">CMake</a></p>
-                            <p class="item-title"><a href="/2021/09/22/cmake-featuresummary/" class="title">CMake - feature_summary</a></p>
-                            <p class="item-date"><time datetime="2021-09-22T14:13:43.000Z" itemprop="datePublished">2021-09-22</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/etc/">ETC</a></p>
-                            <p class="item-title"><a href="/2021/08/14/ssh-portfowarding/" class="title">SSH Portforwarding</a></p>
-                            <p class="item-date"><time datetime="2021-08-14T11:13:47.000Z" itemprop="datePublished">2021-08-14</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/etc/">ETC</a></p>
-                            <p class="item-title"><a href="/2021/08/04/change-dns-to-make-internet-speed-faster/" class="title">DNS 를 바꾸면 인터넷 속도가 빨라지는 이유?</a></p>
-                            <p class="item-date"><time datetime="2021-08-04T08:35:14.000Z" itemprop="datePublished">2021-08-04</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/etc/">ETC</a></p>
-                            <p class="item-title"><a href="/2021/07/18/about-cloudflare/" class="title">Cloudflare 에 대해</a></p>
-                            <p class="item-date"><time datetime="2021-07-18T14:44:53.000Z" itemprop="datePublished">2021-07-18</time></p>
-                        </div>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-
-            
-                
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">categories</h3>
-        <div class="widget">
-            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">Algorithm</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/android/">Android</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/android/ndk/">NDK</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/c/">C++</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/">ETC</a><span class="category-list-count">11</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/etc/cmake/">CMake</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/etc/hexo/">Hexo</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/linux/">Linux</a><span class="category-list-count">4</span></li></ul>
-        </div>
-    </div>
-
-
-            
-                
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">archives</h3>
-        <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">September 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">August 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/09/">September 2019</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">3</span></li></ul>
-        </div>
-    </div>
-
-
-            
-                
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">tags</h3>
-        <div class="widget">
-            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">Algorithm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/" rel="tag">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automation/" rel="tag">Automation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c/" rel="tag">C++</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cmake/" rel="tag">CMake</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dns/" rel="tag">DNS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/elon-musk/" rel="tag">Elon Musk</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font/" rel="tag">Font</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">Hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">Linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ndk/" rel="tag">NDK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/" rel="tag">Network</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/neuralink/" rel="tag">Neuralink</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/openssl/" rel="tag">OpenSSL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/process/" rel="tag">Process</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rvalue/" rel="tag">Rvalue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scp/" rel="tag">SCP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/" rel="tag">SSH</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/semina/" rel="tag">Semina</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">Ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vpn/" rel="tag">VPN</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/codility/" rel="tag">codility</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/const/" rel="tag">const</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/constexpr/" rel="tag">constexpr</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/delete/" rel="tag">delete</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/exception/" rel="tag">exception</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/free/" rel="tag">free</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm2/" rel="tag">iTerm2</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/memory/" rel="tag">memory</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mount/" rel="tag">mount</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/std/" rel="tag">std</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/" rel="tag">tool</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/try-catch/" rel="tag">try-catch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vector/" rel="tag">vector</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web-ide/" rel="tag">web ide</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/" rel="tag">예외처리</a><span class="tag-list-count">1</span></li></ul>
-        </div>
-    </div>
-
-
-            
-                
-    <div class="widget-wrap widget-float">
-        <h3 class="widget-title">tag cloud</h3>
-        <div class="widget tagcloud">
-            <a href="/tags/algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/android/" style="font-size: 10px;">Android</a> <a href="/tags/automation/" style="font-size: 10px;">Automation</a> <a href="/tags/c/" style="font-size: 20px;">C++</a> <a href="/tags/cmake/" style="font-size: 13.33px;">CMake</a> <a href="/tags/dns/" style="font-size: 16.67px;">DNS</a> <a href="/tags/elon-musk/" style="font-size: 10px;">Elon Musk</a> <a href="/tags/font/" style="font-size: 10px;">Font</a> <a href="/tags/hexo/" style="font-size: 13.33px;">Hexo</a> <a href="/tags/linux/" style="font-size: 13.33px;">Linux</a> <a href="/tags/markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/ndk/" style="font-size: 10px;">NDK</a> <a href="/tags/network/" style="font-size: 16.67px;">Network</a> <a href="/tags/neuralink/" style="font-size: 10px;">Neuralink</a> <a href="/tags/openssl/" style="font-size: 10px;">OpenSSL</a> <a href="/tags/process/" style="font-size: 10px;">Process</a> <a href="/tags/rvalue/" style="font-size: 10px;">Rvalue</a> <a href="/tags/scp/" style="font-size: 10px;">SCP</a> <a href="/tags/ssh/" style="font-size: 16.67px;">SSH</a> <a href="/tags/semina/" style="font-size: 10px;">Semina</a> <a href="/tags/ubuntu/" style="font-size: 10px;">Ubuntu</a> <a href="/tags/vpn/" style="font-size: 10px;">VPN</a> <a href="/tags/codility/" style="font-size: 10px;">codility</a> <a href="/tags/const/" style="font-size: 10px;">const</a> <a href="/tags/constexpr/" style="font-size: 10px;">constexpr</a> <a href="/tags/delete/" style="font-size: 10px;">delete</a> <a href="/tags/exception/" style="font-size: 10px;">exception</a> <a href="/tags/free/" style="font-size: 10px;">free</a> <a href="/tags/iterm2/" style="font-size: 10px;">iTerm2</a> <a href="/tags/memory/" style="font-size: 10px;">memory</a> <a href="/tags/mount/" style="font-size: 10px;">mount</a> <a href="/tags/std/" style="font-size: 16.67px;">std</a> <a href="/tags/tool/" style="font-size: 10px;">tool</a> <a href="/tags/try-catch/" style="font-size: 10px;">try-catch</a> <a href="/tags/vector/" style="font-size: 10px;">vector</a> <a href="/tags/web-ide/" style="font-size: 10px;">web ide</a> <a href="/tags/%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC/" style="font-size: 10px;">예외처리</a>
-        </div>
-    </div>
-
-
-            
-                
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">links</h3>
-        <div class="widget">
-            <ul>
-                
-                    <li>
-                        <a target="_blank" rel="external nofollow noopener noreferrer" href="http://hexo.io">Hexo</a>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-
-
-            
-        
-    </div>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-3048351155943387",
-    enable_page_level_ads: true
-  });
-</script>
-</aside>
-
-                </div>
-            </div>
-        </div>
-        <footer id="footer">
-    <div class="container">
-        <div class="container-inner">
-            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
-            <div class="credit">
-                <h1 class="logo-wrap">
-                    <a href="/" class="logo"></a>
-                </h1>
-                <p>&copy; 2021 yhwanp</p>
-                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
-            </div>
-            <div class="footer-plugins">
-              
-    
-
-
-            </div>
-        </div>
-    </div>
-</footer>
-
-        
-    
-    <script>
-    var disqus_shortname = 'https-yhwanp-github-io';
-    
-    
-    (function() {
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-    </script>
-
-
-
-
-    
-        
-<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-share.min.js"></script>
-
-        
-<script src="/libs/lightgallery/js/lg-video.min.js"></script>
-
-    
-    
-        
-<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
-
-    
-    
-
-
-
-<!-- Custom Scripts -->
-
-<script src="/js/main.js"></script>
-
-
-    </div>
-</body>
-</html>
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Tag: CMake | yhwanp&#39;s devNote</title><meta name="description" content="개발 기록과 관심 있는 기술 소식을 정리합니다."><link rel="canonical" href="https://yhwanp.github.io/tags/cmake/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="alternate" type="application/rss+xml" title="yhwanp's devNote" href="/feed.xml"><link rel="sitemap" href="/sitemap.xml"><meta property="og:type" content="website"><meta property="og:title" content="Tag: CMake"><meta property="og:description" content="개발 기록과 관심 있는 기술 소식을 정리합니다."><meta property="og:url" content="https://yhwanp.github.io/tags/cmake/"><meta property="og:site_name" content="yhwanp's devNote"><meta property="og:locale" content="ko_KR"><meta property="og:image" content="https://yhwanp.github.io/og/default.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://yhwanp.github.io/og/default.png"><meta name="generator" content="Astro v7.4.0"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"><!-- 본문이 다 읽힌 뒤 첫 화면을 그려야 전환할 제목을 찾을 수 있다 --><link rel="expect" href="#vt-ready" blocking="render"><script>
+      // 페이지 전환: 누른 링크의 제목과 다음 페이지 글 제목을 그때그때 짝짓는다.
+      // (목록, 이전·다음 글, 연결된 글 어디서 눌러도 제목이 이어지고, 같은 이름이 두 번 생기지 않는다)
+      (() => {
+        const isPost = (path) => /^\/\d{4}\/\d{2}\/\d{2}\/[^/]+\/$/.test(path);
+        const pathOf = (url) => {
+          try {
+            return decodeURI(new URL(url, location.href).pathname);
+          } catch {
+            return '';
+          }
+        };
+        const inView = (el) => {
+          const r = el.getBoundingClientRect();
+          return r.bottom > 0 && r.top < innerHeight && r.width > 0;
+        };
+        const titleIn = (a) => (a.matches('[data-vt-title]') ? a : a.querySelector('[data-vt-title]'));
+        // anyVisible: 돌아온 페이지는 첫 화면을 그리기 전이라 스크롤 위치가 아직 복원되지 않았을 수 있어서, 보이는 것이 없으면 첫 번째 것을 쓴다
+        const linkTo = (path, preferred, anyVisible) => {
+          if (preferred && pathOf(preferred.href) === path && titleIn(preferred)) return titleIn(preferred);
+          let first = null;
+          for (const a of document.querySelectorAll('a[href]')) {
+            const t = titleIn(a);
+            if (!t || pathOf(a.href) !== path) continue;
+            if (inView(t)) return t;
+            first = first || t;
+          }
+          return anyVisible ? first : null;
+        };
+        const ownTitle = () => document.querySelector('.post-title > [data-vt-title]');
+        // 이름은 한 페이지에 하나만 있어야 한다. 앞 전환에서 남은 이름(뒤로 가기로 돌아온 페이지 등)은 먼저 지운다.
+        const clearAll = () => {
+          for (const el of document.querySelectorAll('[data-vt-title], .map-tip strong')) el.style.viewTransitionName = '';
+        };
+        // 확인용: localhost 에서 localStorage 'vt-log' 를 켜면 전환 기록을 sessionStorage 'vt-log' 에 남긴다
+        const log = (type, el, vt) => {
+          try {
+            if (location.hostname !== 'localhost' || !localStorage.getItem('vt-log')) return;
+            const a = JSON.parse(sessionStorage.getItem('vt-log') || '[]');
+            a.push({ type, here: pathOf(location.href), vt: !!vt, title: el ? el.textContent.slice(0, 24) : null });
+            sessionStorage.setItem('vt-log', JSON.stringify(a));
+          } catch {}
+        };
+        const mark = (el, vt, type) => {
+          clearAll();
+          log(type, el, vt);
+          if (!el || !vt) return;
+          el.style.viewTransitionName = 'post-title';
+          vt.finished.finally(() => (el.style.viewTransitionName = ''));
+        };
+        // 돌아오는 전환이 아직 진행 중일 때 바로 다른 글을 누르면 다음 전환이 취소되므로, 진행 중인 전환은 즉시 끝낸다
+        let activeVT = null;
+        let lastLink = null;
+        addEventListener('click', (e) => (lastLink = e.target.closest && e.target.closest('a[href]')), true);
+        // 뒤로 가기로 다시 보이는 페이지에는 예전 클릭 정보가 남아 있으니 비운다
+        addEventListener('pageshow', (e) => {
+          if (!e.persisted) return;
+          lastLink = null;
+          window.__vtSource = null;
+          clearAll();
+        });
+        addEventListener('pageswap', (e) => {
+          const here = pathOf(location.href);
+          // 다음 페이지가 "어디서 왔는지" 알 수 있게 남긴다(뒤로 가기에서도 쓴다)
+          try {
+            sessionStorage.setItem('vt-from', here);
+          } catch {}
+          if (activeVT) {
+            try {
+              activeVT.skipTransition();
+            } catch {}
+            activeVT = null;
+          }
+          if (!e.viewTransition) return log('swap-no-vt', null, null);
+          const to = pathOf((e.activation && e.activation.entry && e.activation.entry.url) || (lastLink && lastLink.href) || '');
+          // 홈 글 지도처럼 링크가 아닌 곳에서 이동하면 window.__vtSource 에 출발 제목을 넣어 둔다
+          const source = window.__vtSource;
+          window.__vtSource = null;
+          if (isPost(to)) mark(source || linkTo(to, lastLink), e.viewTransition, 'swap');
+          else if (isPost(here)) mark(ownTitle(), e.viewTransition, 'swap');
+          else clearAll();
+        });
+        addEventListener('pagereveal', (e) => {
+          let from = '';
+          try {
+            from = sessionStorage.getItem('vt-from') || '';
+          } catch {}
+          if (!e.viewTransition) return log('reveal-no-vt', null, null);
+          activeVT = e.viewTransition;
+          e.viewTransition.finished.finally(() => {
+            if (activeVT === e.viewTransition) activeVT = null;
+          });
+          const here = pathOf(location.href);
+          if (isPost(here)) mark(ownTitle(), e.viewTransition, 'reveal');
+          else if (isPost(from)) mark(linkTo(from, null, true), e.viewTransition, 'reveal');
+          else clearAll();
+        });
+      })();
+      // 확인용: localhost 에서 localStorage 'vt-slow' 를 켜면 전환을 10배 느리게 보여 준다(배포 사이트에는 영향 없음)
+      try {
+        if (location.hostname === 'localhost' && localStorage.getItem('vt-slow')) {
+          const st = document.createElement('style');
+          st.textContent = '::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation-duration:4s!important}';
+          document.head.appendChild(st);
+        }
+      } catch {}
+      try {
+        const t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+      } catch {}
+    </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3048351155943387" crossorigin="anonymous"></script><link rel="stylesheet" href="/_astro/Base.Dj2MZOuy.css"></head><body><div class="shell"><aside class="sidebar" aria-label="사이트 탐색"><div class="side-top"><a class="brand" href="/" aria-label="yhwanp's devNote"><span class="brand-mark" aria-hidden="true">y</span><span class="brand-text">yhwanp<span class="dot">.</span>devNote</span></a><button class="side-toggle" type="button" aria-expanded="false" aria-controls="side-body" aria-label="메뉴 열기"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button></div><div class="side-body" id="side-body"><button class="search-trigger" type="button" data-open-search><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg><span>검색</span><kbd>⌘K</kbd></button><nav class="side-nav" aria-label="주요 메뉴"><a href="/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"></path></svg>최근 글</a><a href="/archives/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v4H4zM6 9v10h12V9M10 13h4"></path></svg>전체 글</a><a href="/tags/" aria-current="page"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12l-8 8-9-9V3h8z M7.5 7.5h.01"></path></svg>태그</a><a href="/about/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21a8 8 0 0 1 16 0"></path></svg>About</a></nav><section class="side-section"><h2 class="side-label">폴더</h2><ul class="tree"><li><div class="leaf"><a href="/categories/news/">News</a><span class="count">10</span></div></li><li><div class="leaf"><a href="/categories/dev-notes/">Dev Notes<span class="cat-note">~2021</span></a><span class="count">24</span></div></li></ul></section><section class="side-section"><h2 class="side-label">자주 쓴 태그</h2><div class="tag-cloud"><a href="/tags/ai/">#AI</a><a href="/tags/c/">#C++</a><a href="/tags/dns/">#DNS</a><a href="/tags/linux/">#Linux</a><a href="/tags/network/">#Network</a><a href="/tags/ssh/">#SSH</a><a href="/tags/std/">#std</a><a href="/tags/cmake/">#CMake</a><a href="/tags/hexo/">#Hexo</a><a href="/tags/ai-코딩/">#AI 코딩</a><a href="/tags/algorithm/">#Algorithm</a><a href="/tags/android/">#Android</a><a href="/tags/app-store/">#App Store</a><a href="/tags/aside/">#Aside</a></div></section><div class="side-foot"><button class="theme-toggle" type="button" aria-label="밝게/어둡게 전환"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg><span>테마</span></button><nav class="side-links" aria-label="바깥 링크"><a href="https://www.linkedin.com/in/younghwan-park-840361186/" rel="me noopener" target="_blank">LinkedIn</a><a href="/feed.xml">RSS</a></nav><p class="copy">© 2026 yhwanp</p></div></div></aside><main class="content"><div class="content-inner"><p class="meta"><a href="/tags/">Tags</a></p><h1 class="page-title">#CMake</h1><p class="page-lead">2개의 글</p><section class="year-group"><h2 class="year">2021</h2><ul class="post-list"><li class="post-item"><div class="post-item-head"><time datetime="2021-09-22T14:13:43.000Z">2021-09-22</time><a class="chip" href="/categories/dev-notes/">Dev Notes</a></div><h3><a href="/2021/09/22/cmake-featuresummary/" data-vt-title>CMake - feature_summary</a></h3><p>featuresummary 는 CMake 에 정의된 옵션이나 종속성을 확인할 때 유용한 기능이다. e.g Configure 하면 아래와 같이 종속 패키지 목록이나, 옵션 on/off 여부에 대한 summary 가 출력된다. 프로젝트가 커질수록 dependency 나 custom o…</p></li></ul></section><section class="year-group"><h2 class="year">2019</h2><ul class="post-list"><li class="post-item"><div class="post-item-head"><time datetime="2019-08-21T15:57:53.000Z">2019-08-22</time><a class="chip" href="/categories/dev-notes/">Dev Notes</a></div><h3><a href="/2019/08/22/cmake-convert-to-absolute-path/" data-vt-title>CMake 에서 상대경로를 절대경로로 바꾸기</a></h3><p>CMake 에서 상대경로를 절대경로로 바꿔보자 왜 필요한가? CMake 에서 지원하는 여러 명령들 중에 상대 경로로 입력하면 오류가 출력되는 function 들이 있습니다. 이때, 상대 경로를 절대 경로로 변환하기 위해 getfilenamecomponent 을 사용하면 됩니다. 원…</p></li></ul></section><div id="vt-ready" hidden></div></div></main></div><dialog id="search" class="search-dialog" aria-label="글 검색"><div class="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg><input type="search" placeholder="제목, 태그로 글 찾기" autocomplete="off" spellcheck="false" aria-controls="search-results"><kbd>esc</kbd></div><ul class="search-results" id="search-results" role="listbox"></ul></dialog><script type="module">var e=null,t=()=>e??=fetch(`/search.json`).then(e=>e.json()).catch(()=>(e=null,[])),n=e=>/^\/\d{4}\/\d{2}\/\d{2}\/[^/]+\/$/.test(e),r=e=>{try{let t=new URL(e,location.href);return t.origin===location.origin?decodeURI(t.pathname):``}catch{return``}},i=e=>e.replace(/[&<>"]/g,e=>({"&":`&amp;`,"<":`&lt;`,">":`&gt;`,'"':`&quot;`})[e]);function a(){if(!matchMedia(`(hover: hover) and (pointer: fine)`).matches)return;let e=document.createElement(`div`);e.className=`preview-card`,e.hidden=!0,e.setAttribute(`role`,`tooltip`),document.body.appendChild(e);let a=0,o=null,s=()=>{clearTimeout(a),o=null,e.hidden=!0},c=async n=>{let a=r(n.href),s=(await t()).find(e=>e.u===a);if(!s||o!==n)return;e.innerHTML=`<span class="pc-meta">${i(s.c)} · ${i(s.d)}</span><strong>${i(s.t)}</strong>${s.s?`<p>${i(s.s)}</p>`:``}`,e.hidden=!1;let c=n.getBoundingClientRect(),l=e.offsetWidth,u=e.offsetHeight,d=Math.min(Math.max(8,c.left+c.width/2-l/2),innerWidth-l-8),f=c.bottom+10+u<innerHeight;e.style.left=`${d+scrollX}px`,e.style.top=`${(f?c.bottom+10:c.top-u-10)+scrollY}px`};document.addEventListener(`pointerover`,e=>{let t=e.target.closest?.(`a[href]`);if(!t||t===o||!t.closest(`.prose, .conn-list, .post-nav`))return;let i=r(t.href);n(i)&&i!==decodeURI(location.pathname)&&(s(),o=t,a=window.setTimeout(()=>c(t),280))}),document.addEventListener(`pointerout`,e=>{let t=e.target.closest?.(`a[href]`);t&&t===o&&!t.contains(e.relatedTarget)&&s()}),addEventListener(`scroll`,s,{passive:!0}),addEventListener(`pagehide`,s)}function o(){let e=document.querySelector(`#search`);if(!e)return;let n=e.querySelector(`input`),r=e.querySelector(`.search-results`),a=[],o=0,s=(e,t)=>{let n=0,r=e.t.toLowerCase(),i=e.g.join(` `).toLowerCase(),a=`${e.c} ${e.s}`.toLowerCase();for(let e of t)if(r.includes(e))n+=r.startsWith(e)?6:4;else if(i.includes(e))n+=3;else if(a.includes(e))n+=1;else return 0;return n},c=async()=>{let e=await t(),c=n.value.trim().toLowerCase().split(/\s+/).filter(Boolean);a=c.length?e.map(e=>({e,s:s(e,c)})).filter(e=>e.s>0).sort((e,t)=>t.s-e.s).map(e=>e.e).slice(0,8):e.slice(0,6),o=0,r.innerHTML=a.length?a.map((e,t)=>`<li role="option" id="sr-${t}" aria-selected="${t===o}"><a href="${i(e.u)}"><strong>${i(e.t)}</strong><span>${i(e.c)} · ${i(e.d)}${e.g.length?` · ${e.g.map(e=>`#`+i(e)).join(` `)}`:``}</span></a></li>`).join(``):`<li class="empty">"${i(n.value.trim())}"에 맞는 글이 없어요.</li>`,n.setAttribute(`aria-activedescendant`,a.length?`sr-0`:``)},l=e=>{a.length&&(o=(o+e+a.length)%a.length,r.querySelectorAll(`li[role="option"]`).forEach((e,t)=>e.setAttribute(`aria-selected`,String(t===o))),r.querySelector(`#sr-${o}`)?.scrollIntoView({block:`nearest`}),n.setAttribute(`aria-activedescendant`,`sr-${o}`))},u=()=>{e.open||(e.showModal(),n.value=``,c(),n.focus())};document.querySelectorAll(`[data-open-search]`).forEach(e=>e.addEventListener(`click`,u)),document.addEventListener(`keydown`,e=>{let t=e.target.closest?.(`input, textarea, [contenteditable="true"]`);(e.key===`k`&&(e.metaKey||e.ctrlKey)||e.key===`/`&&!t)&&(e.preventDefault(),u())}),n.addEventListener(`input`,c),n.addEventListener(`keydown`,e=>{e.key===`ArrowDown`?(e.preventDefault(),l(1)):e.key===`ArrowUp`?(e.preventDefault(),l(-1)):e.key===`Enter`&&a[o]&&(e.preventDefault(),location.href=a[o].u)}),e.addEventListener(`click`,t=>{t.target===e&&e.close()}),addEventListener(`pagehide`,()=>e.open&&e.close())}a(),o();</script><script>
+      // 테마 전환: 버튼 자리에서 원이 퍼지며 바뀐다(지원 안 하거나 움직임 줄이기면 바로 바뀜).
+      document.querySelector('.theme-toggle')?.addEventListener('click', (e) => {
+        const root = document.documentElement;
+        const dark = root.dataset.theme
+          ? root.dataset.theme === 'dark'
+          : matchMedia('(prefers-color-scheme: dark)').matches;
+        const next = dark ? 'light' : 'dark';
+        const apply = () => {
+          root.dataset.theme = next;
+          try {
+            localStorage.setItem('theme', next);
+          } catch {}
+        };
+        const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!document.startViewTransition || reduce) return apply();
+        const r = e.currentTarget.getBoundingClientRect();
+        const x = r.left + r.width / 2;
+        const y = r.top + r.height / 2;
+        const far = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+        root.style.setProperty('--vt-x', `${x}px`);
+        root.style.setProperty('--vt-y', `${y}px`);
+        root.style.setProperty('--vt-r', `${far}px`);
+        root.classList.add('theme-anim');
+        document.startViewTransition(apply).finished.finally(() => root.classList.remove('theme-anim'));
+      });
+      const sideToggle = document.querySelector('.side-toggle');
+      sideToggle?.addEventListener('click', () => {
+        const open = document.body.classList.toggle('side-open');
+        sideToggle.setAttribute('aria-expanded', String(open));
+        sideToggle.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
+      });
+    </script></body></html>
