@@ -6,26 +6,20 @@
     <priority>1</priority>
   </url>
   <url>
-    <loc>https://yhwanp.github.io/2026/10/19/linus-torvalds-claude-code-linux-kernel/</loc>
-    <lastmod>2026-10-18T16:06:26.000Z</lastmod>
+    <loc>https://yhwanp.github.io/2026/10/20/app-promo-video-with-claude/</loc>
+    <lastmod>2026-10-19T16:00:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://yhwanp.github.io/2026/10/19/my-old-job-is-distant/</loc>
-    <lastmod>2026-10-18T16:05:00.000Z</lastmod>
+    <loc>https://yhwanp.github.io/2026/10/20/ai-jobs-and-developers/</loc>
+    <lastmod>2026-10-19T15:55:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://yhwanp.github.io/2026/10/19/pd-notebook-ai-dilemma-1/</loc>
-    <lastmod>2026-10-18T16:04:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yhwanp.github.io/2026/10/19/ai-reverse-engineering/</loc>
-    <lastmod>2026-10-18T16:03:00.000Z</lastmod>
+    <loc>https://yhwanp.github.io/2026/10/20/trusting-ai-written-code/</loc>
+    <lastmod>2026-10-19T15:50:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -38,24 +32,6 @@
   <url>
     <loc>https://yhwanp.github.io/2026/10/19/app-review-guidelines-2026-10/</loc>
     <lastmod>2026-10-18T16:00:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yhwanp.github.io/2026/10/19/aside-blog-automation/</loc>
-    <lastmod>2026-10-18T15:58:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yhwanp.github.io/2026/10/19/trust-ai-code-environment/</loc>
-    <lastmod>2026-10-18T15:55:00.000Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://yhwanp.github.io/2026/10/19/motion-graphics-with-claude/</loc>
-    <lastmod>2026-10-18T15:50:00.000Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>

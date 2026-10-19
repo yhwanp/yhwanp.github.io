@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://yhwanp.github.io/tags/ai-%EC%BD%94%EB%94%A9/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
     <loc>https://yhwanp.github.io/tags/ai/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -26,11 +21,6 @@
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://yhwanp.github.io/tags/aside/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
     <loc>https://yhwanp.github.io/tags/automation/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -41,12 +31,12 @@
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://yhwanp.github.io/tags/claude-code/</loc>
+    <loc>https://yhwanp.github.io/tags/claude/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://yhwanp.github.io/tags/claude/</loc>
+    <loc>https://yhwanp.github.io/tags/claudecode/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -112,11 +102,6 @@
   </url>
   <url>
     <loc>https://yhwanp.github.io/tags/iterm2/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://yhwanp.github.io/tags/kernel/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -236,22 +221,12 @@
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://yhwanp.github.io/tags/%EB%A6%AC%EB%B2%84%EC%8B%B1/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
     <loc>https://yhwanp.github.io/tags/%EB%AA%A8%EC%85%98%EA%B7%B8%EB%9E%98%ED%94%BD/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
     <loc>https://yhwanp.github.io/tags/%EB%B3%B4%EC%95%88/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://yhwanp.github.io/tags/%EB%B8%94%EB%A1%9C%EA%B7%B8/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -281,22 +256,12 @@
     <priority>0.2</priority>
   </url>
   <url>
-    <loc>https://yhwanp.github.io/tags/%EC%9E%90%EB%8F%99%ED%99%94/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://yhwanp.github.io/tags/%EC%BD%94%EB%93%9C-%EB%A6%AC%EB%B7%B0/</loc>
+    <loc>https://yhwanp.github.io/tags/%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   <url>
     <loc>https://yhwanp.github.io/tags/%ED%85%8C%EC%8A%AC%EB%9D%BC/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://yhwanp.github.io/tags/%ED%94%BC%EC%A7%80%EC%BB%AC-ai/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
