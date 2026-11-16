@@ -61,6 +61,11 @@
     <priority>0.2</priority>
   </url>
   <url>
+    <loc>https://yhwanp.github.io/tags/dart/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
     <loc>https://yhwanp.github.io/tags/delete/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -77,6 +82,11 @@
   </url>
   <url>
     <loc>https://yhwanp.github.io/tags/exception/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://yhwanp.github.io/tags/flutter/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
